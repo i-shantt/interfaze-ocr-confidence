@@ -1,0 +1,131 @@
+sample_id,stratum,doc,box,conf,verdict,note
+high_conf-00,high_conf,86328049_8050,"[169, 405, 201, 420]",0.99,label_wrong,
+high_conf-01,high_conf,86328049_8050,"[168, 561, 200, 577]",0.99,ocr_wrong,OCR split one word into 'NO' + 'NO.:' (text duplicated); label also wrong
+high_conf-02,high_conf,86079776_9777,"[430, 375, 440, 387]",1.0,ambiguous,
+high_conf-03,high_conf,83553333_3334,"[638, 722, 663, 825]",0.99,label_wrong,
+high_conf-04,high_conf,87428306,"[222, 262, 289, 277]",0.99,label_wrong,
+high_conf-05,high_conf,87125460,"[106, 698, 189, 744]",0.99,label_wrong,
+high_conf-06,high_conf,86328049_8050,"[169, 497, 199, 515]",0.99,ocr_wrong,duplicated text across split ('NONO.:')
+high_conf-07,high_conf,83635935,"[309, 172, 379, 199]",0.99,ocr_wrong,OCR dropped second line 'CORPORATION' of a logo
+high_conf-08,high_conf,87093315_87093318,"[476, 387, 544, 407]",0.99,label_wrong,
+high_conf-09,high_conf,86236474_6476,"[683, 800, 707, 912]",0.99,label_wrong,
+high_conf-10,high_conf,82562350,"[212, 522, 247, 539]",0.99,ocr_wrong,'lowa' for Iowa (l/I)
+high_conf-11,high_conf,87332450,"[572, 834, 625, 851]",0.99,label_wrong,
+high_conf-12,high_conf,82250337_0338,"[186, 437, 216, 451]",0.99,label_wrong,
+high_conf-13,high_conf,83594639,"[489, 881, 514, 893]",0.99,label_wrong,
+high_conf-14,high_conf,87594142_87594144,"[155, 884, 178, 896]",0.99,label_wrong,
+high_conf-15,high_conf,87528380,"[163, 700, 183, 715]",1.0,ambiguous,
+high_conf-16,high_conf,82573104,"[176, 390, 225, 403]",0.99,label_wrong,
+high_conf-17,high_conf,82250337_0338,"[279, 738, 306, 753]",0.99,label_wrong,
+high_conf-18,high_conf,83641919_1921,"[292, 513, 305, 525]",0.99,label_wrong,
+high_conf-19,high_conf,87528321,"[701, 66, 757, 81]",0.99,label_wrong,
+high_conf-20,high_conf,86328049_8050,"[444, 865, 457, 877]",1.0,ambiguous,
+high_conf-21,high_conf,86328049_8050,"[165, 733, 197, 748]",0.99,label_wrong,
+high_conf-22,high_conf,86328049_8050,"[167, 592, 197, 607]",0.99,ocr_wrong,duplicated text across split
+high_conf-23,high_conf,86230203_0206,"[388, 640, 418, 653]",0.99,label_wrong,
+high_conf-24,high_conf,82253245_3247,"[376, 236, 405, 249]",0.99,ocr_wrong,'Retall' for Retail
+high_conf-25,high_conf,82562350,"[381, 885, 409, 897]",0.99,label_wrong,
+high_conf-26,high_conf,83594639,"[148, 881, 173, 892]",0.99,label_wrong,
+high_conf-27,high_conf,86230203_0206,"[638, 927, 698, 943]",1.0,ocr_wrong,'Pago' for Page
+high_conf-28,high_conf,82253245_3247,"[35, 545, 60, 557]",0.99,ambiguous,
+high_conf-29,high_conf,89856243,"[727, 778, 754, 793]",0.99,ambiguous,
+high_conf-30,high_conf,82253058_3059,"[257, 60, 304, 74]",0.99,label_wrong,
+high_conf-31,high_conf,91814768_91814769,"[469, 932, 483, 947]",0.99,label_wrong,
+high_conf-32,high_conf,83772145,"[487, 857, 501, 869]",0.99,label_wrong,
+high_conf-33,high_conf,91814768_91814769,"[386, 522, 399, 537]",1.0,label_wrong,
+high_conf-34,high_conf,91814768_91814769,"[703, 902, 741, 917]",0.99,label_wrong,
+high_conf-35,high_conf,86328049_8050,"[165, 795, 197, 811]",0.99,ocr_wrong,duplicated text across split
+high_conf-36,high_conf,82562350,"[374, 787, 387, 799]",0.99,label_wrong,
+high_conf-37,high_conf,92380595,"[522, 840, 576, 858]",0.99,label_wrong,
+high_conf-38,high_conf,82250337_0338,"[180, 355, 209, 369]",0.99,label_wrong,
+high_conf-39,high_conf,82251504,"[288, 665, 304, 681]",1.0,label_wrong,
+low_conf-00,low_conf,87428306,"[115, 207, 127, 216]",0.44,ocr_wrong,OCR returned a symbol instead of the text 'pH'
+low_conf-01,low_conf,82254765,"[407, 811, 463, 840]",0.88,label_wrong,
+low_conf-02,low_conf,82573104,"[608, 75, 658, 104]",0.84,ambiguous,
+low_conf-03,low_conf,87528321,"[638, 900, 680, 919]",0.61,ambiguous,
+low_conf-04,low_conf,82092117,"[393, 732, 404, 747]",0.26,label_wrong,
+low_conf-05,low_conf,86263525,"[173, 388, 286, 426]",0.89,ocr_wrong,
+low_conf-06,low_conf,83635935,"[460, 788, 481, 799]",0.31,label_wrong,
+low_conf-07,low_conf,87528321,"[429, 236, 453, 251]",0.58,ambiguous,
+low_conf-08,low_conf,87137840,"[125, 716, 197, 733]",0.65,label_wrong,
+low_conf-09,low_conf,82562350,"[170, 776, 200, 788]",0.72,label_wrong,
+low_conf-10,low_conf,83573282,"[432, 272, 457, 297]",0.65,ocr_wrong,duplicated text across split ('3737' for 37)
+low_conf-11,low_conf,86263525,"[156, 591, 222, 640]",0.86,ocr_wrong,
+low_conf-12,low_conf,83553333_3334,"[659, 68, 680, 78]",0.75,ocr_wrong,
+low_conf-13,low_conf,83553333_3334,"[218, 906, 278, 918]",0.41,label_wrong,
+low_conf-14,low_conf,89856243,"[483, 753, 533, 766]",0.75,ocr_wrong,
+low_conf-15,low_conf,83573282,"[279, 892, 324, 904]",0.73,ocr_wrong,
+low_conf-16,low_conf,83624198,"[492, 83, 568, 96]",0.78,ocr_wrong,
+low_conf-17,low_conf,83635935,"[489, 807, 548, 818]",0.44,label_wrong,
+low_conf-18,low_conf,87086073,"[512, 601, 549, 617]",0.59,ambiguous,
+low_conf-19,low_conf,87428306,"[511, 880, 595, 904]",0.12,matching_artifact,tiny printed 'DATE' label inside a handwritten field; label for the handwriting missing
+low_conf-20,low_conf,87125460,"[431, 651, 626, 745]",0.85,ocr_wrong,
+low_conf-21,low_conf,83594639,"[433, 184, 524, 203]",0.67,label_wrong,OCR returned the service-mark sign that is printed; label omits it
+low_conf-22,low_conf,82092117,"[306, 941, 341, 954]",0.56,label_wrong,
+low_conf-23,low_conf,86230203_0206,"[196, 70, 235, 82]",0.58,label_wrong,
+low_conf-24,low_conf,83635935,"[398, 807, 416, 818]",0.83,label_wrong,
+low_conf-25,low_conf,83996357,"[293, 239, 352, 263]",0.68,ambiguous,
+low_conf-26,low_conf,91814768_91814769,"[60, 616, 113, 637]",0.44,label_wrong,
+low_conf-27,low_conf,89856243,"[469, 695, 512, 710]",0.7,label_wrong,
+low_conf-28,low_conf,83823750,"[564, 915, 579, 927]",0.8,label_wrong,
+low_conf-29,low_conf,92380595,"[489, 785, 583, 806]",0.11,ocr_wrong,
+low_conf-30,low_conf,87137840,"[172, 671, 322, 691]",0.24,ocr_wrong,
+low_conf-31,low_conf,83996357,"[317, 862, 349, 876]",0.46,ambiguous,
+low_conf-32,low_conf,87332450,"[191, 337, 208, 350]",0.75,ocr_wrong,
+low_conf-33,low_conf,92380595,"[341, 376, 455, 393]",0.43,matching_artifact,label box spans 'on 12-13-89 via:'; OCR words for 'on'/'via:' not in group
+low_conf-34,low_conf,83772145,"[528, 877, 556, 890]",0.7,label_wrong,
+low_conf-35,low_conf,86230203_0206,"[627, 63, 689, 79]",0.59,label_wrong,OCR returned a fax-icon symbol for the printed icon; label reads the icon as 0
+low_conf-36,low_conf,89856243,"[559, 24, 590, 38]",0.33,ocr_wrong,
+low_conf-37,low_conf,83624198,"[333, 794, 394, 808]",0.62,ocr_wrong,
+low_conf-38,low_conf,83772145,"[393, 856, 426, 868]",0.34,label_wrong,
+low_conf-39,low_conf,83553333_3334,"[42, 62, 99, 75]",0.29,ambiguous,
+format_only-00,format_only,86079776_9777,"[441, 480, 470, 493]",0.97,label_wrong,
+format_only-01,format_only,87332450,"[506, 850, 540, 866]",0.99,label_wrong,
+format_only-02,format_only,87528321,"[472, 891, 512, 906]",0.99,label_wrong,
+format_only-03,format_only,87528321,"[413, 388, 509, 405]",0.99,label_wrong,
+format_only-04,format_only,87147607,"[59, 42, 74, 53]",1.0,ambiguous,
+format_only-05,format_only,86079776_9777,"[109, 391, 120, 404]",0.6,ambiguous,
+format_only-06,format_only,87528380,"[494, 441, 511, 458]",0.14,ambiguous,
+format_only-07,format_only,83996357,"[175, 395, 276, 415]",0.98,label_wrong,
+format_only-08,format_only,93106788,"[560, 629, 600, 640]",0.86,label_wrong,
+format_only-09,format_only,82250337_0338,"[478, 413, 512, 428]",0.99,label_wrong,
+format_only-10,format_only,82254765,"[75, 877, 136, 893]",0.99,label_wrong,
+format_only-11,format_only,83553333_3334,"[466, 285, 539, 302]",0.99,label_wrong,
+format_only-12,format_only,83772145,"[483, 337, 561, 356]",0.99,label_wrong,
+format_only-13,format_only,87528321,"[519, 85, 545, 98]",1.0,label_wrong,
+format_only-14,format_only,82253058_3059,"[267, 506, 298, 522]",0.99,label_wrong,
+format_only-15,format_only,83594639,"[487, 297, 514, 314]",0.75,ambiguous,
+format_only-16,format_only,82253362_3364,"[103, 684, 130, 697]",0.94,label_wrong,
+format_only-17,format_only,93106788,"[115, 726, 150, 737]",0.78,label_wrong,
+format_only-18,format_only,92380595,"[103, 894, 141, 911]",0.98,label_wrong,
+format_only-19,format_only,93106788,"[277, 314, 341, 327]",0.78,label_wrong,
+unmatched_low-00,unmatched_low,83635935,"[124, 807, 142, 818]",0.58,ocr_right,
+unmatched_low-01,unmatched_low,87147607,"[536, 752, 558, 776]",0.57,ambiguous,handwritten initial
+unmatched_low-02,unmatched_low,82837252,"[561, 383, 570, 388]",0.87,spurious,tick mark read as a dash
+unmatched_low-03,unmatched_low,83553333_3334,"[411, 894, 437, 906]",0.67,ambiguous,fragment 'dressed' of 'addressed'
+unmatched_low-04,unmatched_low,86075409_5410,"[538, 548, 646, 607]",0.35,ocr_right,
+unmatched_low-05,unmatched_low,83635935,"[105, 806, 121, 818]",0.39,ocr_right,
+unmatched_low-06,unmatched_low,83635935,"[518, 817, 548, 827]",0.57,ocr_right,
+unmatched_low-07,unmatched_low,87428306,"[246, 885, 277, 907]",0.63,ocr_right,
+unmatched_low-08,unmatched_low,82837252,"[53, 495, 67, 501]",0.39,spurious,specks read as ':'
+unmatched_low-09,unmatched_low,82200067_0069,"[112, 602, 118, 615]",0.59,ocr_right,
+unmatched_low-10,unmatched_low,87594142_87594144,"[362, 676, 424, 689]",0.26,ocr_right,
+unmatched_low-11,unmatched_low,86075409_5410,"[120, 481, 129, 493]",0.7,ocr_right,
+unmatched_low-12,unmatched_low,85240939,"[447, 438, 462, 446]",0.35,spurious,speck read as 'X'
+unmatched_low-13,unmatched_low,85240939,"[20, 871, 43, 898]",0.75,spurious,speck read as '('
+unmatched_low-14,unmatched_low,82200067_0069,"[247, 557, 284, 569]",0.65,ocr_wrong,garbled text on a halftone background
+unmatched_low-15,unmatched_low,87528321,"[605, 69, 621, 85]",0.12,spurious,underline read as '|'
+unmatched_low-16,unmatched_low,82200067_0069,"[96, 914, 114, 923]",0.78,ocr_right,
+unmatched_low-17,unmatched_low,87086073,"[466, 647, 528, 692]",0.22,ambiguous,signature
+unmatched_low-18,unmatched_low,87428306,"[601, 885, 625, 904]",0.68,ocr_right,
+unmatched_low-19,unmatched_low,89856243,"[282, 657, 304, 670]",0.32,ocr_right,
+unmatched_low-20,unmatched_low,86075409_5410,"[121, 534, 130, 550]",0.24,ocr_right,
+unmatched_low-21,unmatched_low,85629964,"[265, 45, 273, 55]",0.75,ambiguous,part of a large curve
+unmatched_low-22,unmatched_low,83624198,"[516, 179, 585, 200]",0.62,ocr_right,
+unmatched_low-23,unmatched_low,83772145,"[305, 856, 317, 868]",0.77,ocr_right,
+unmatched_low-24,unmatched_low,82562350,"[456, 776, 501, 788]",0.82,ocr_right,
+unmatched_low-25,unmatched_low,83553333_3334,"[439, 894, 452, 906]",0.61,ocr_right,
+unmatched_low-26,unmatched_low,83641919_1921,"[76, 951, 102, 960]",0.43,ocr_right,
+unmatched_low-27,unmatched_low,87086073,"[675, 921, 689, 933]",0.28,ocr_wrong,'(90)' for '80)' in '(5/80)'
+unmatched_low-28,unmatched_low,83443897,"[66, 107, 83, 129]",0.15,spurious,speck read as '.*'
+unmatched_low-29,unmatched_low,82092117,"[354, 941, 397, 954]",0.59,ocr_right,
