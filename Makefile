@@ -6,7 +6,7 @@ FUNSD_URL = https://guillaumejaume.github.io/FUNSD/dataset.zip
 check: test report
 
 test:
-	$(PY) -m unittest discover -s tests
+	$(PY) -m unittest discover -s tests -t .
 
 report:
 	$(PY) -m ocr_trust.analyze --from-csv --out results
