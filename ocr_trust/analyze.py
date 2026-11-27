@@ -258,6 +258,18 @@ def breakdown(scored: list[dict], key) -> dict:
     return out
 
 
+def stable(obj, digits: int = 10):
+    """Round floats for publishing. Python 3.12 made sum() of floats compensated, so 3.10 and 3.12+ differ in
+    the last digits of the same sums; rounding keeps committed results identical across versions."""
+    if isinstance(obj, float):
+        return round(obj, digits)
+    if isinstance(obj, dict):
+        return {k: stable(v, digits) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [stable(v, digits) for v in obj]
+    return obj
+
+
 # ---------- report ----------
 
 def _p(x, digits=1):
@@ -424,6 +436,7 @@ def main(argv=None) -> None:
         rows, examples = score_documents(a.raw, a.annotations)
         write_csv(rows, a.out / "word_scores.csv")
         defect_scan = defects.scan(a.raw, a.annotations)
+        defect_scan = stable(defect_scan)
         (a.out / "defects.json").write_text(json.dumps(defect_scan, indent=1, ensure_ascii=False))
         if a.examples:
             a.examples.write_text(json.dumps(sorted(examples, key=lambda e: -e["conf"]), indent=1, ensure_ascii=False))
@@ -433,6 +446,7 @@ def main(argv=None) -> None:
         with adj_path.open() as f:
             adjudication = list(csv.DictReader(f))
     summary = {"dataset": a.name, **summarise(rows, adjudication, defect_scan)}
+    summary = stable(summary)
     (a.out / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))
     print(report(summary, a.out))
     if figure(rows, a.out, summary):
