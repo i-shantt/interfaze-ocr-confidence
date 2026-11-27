@@ -129,7 +129,7 @@ class PublishedNumbers(unittest.TestCase):
             a, b = rebuilt, committed
             for k in path:
                 a, b = a[k], b[k]
-            self.assertTrue(math.isclose(a, b, rel_tol=1e-9), f"{path}: {a} != {b}")
+            self.assertTrue(math.isclose(a, b, rel_tol=1e-9, abs_tol=1e-9), f"{path}: {a} != {b}")  # published floats are rounded to 10 places
 
     def test_word_scores_contain_no_ocr_text(self):
         with (ROOT / "results" / "word_scores.csv").open() as f:
