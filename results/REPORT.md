@@ -2,7 +2,7 @@
 
 Interfaze-1, OCR task, 50 FUNSD test forms. 8191 predicted words were scored against the labels; 317 had no labelled box under them and 40 were checkboxes, both left out. 42 labelled words had no predicted word over them.
 
-**Lenient** ignores case and punctuation (FUNSD labels routinely drop trailing punctuation; see the hand check). **Strict** compares exact text after Unicode normalisation.
+**Lenient** ignores case and punctuation. **Strict** compares exact text after Unicode normalisation.
 
 | | lenient | strict |
 |---|---|---|

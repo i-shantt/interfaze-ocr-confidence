@@ -1,4 +1,5 @@
 {
+ "dataset": "FUNSD test forms",
  "documents": 50,
  "predicted_words": 8548,
  "scored_words": 8191,

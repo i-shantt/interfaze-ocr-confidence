@@ -1,4 +1,4 @@
-"""Turn cached Interfaze responses + FUNSD annotations into word scores, summary numbers and a report.
+"""Turn cached Interfaze responses + labels (FUNSD or ocr_trust.synth) into word scores, summary numbers and a report.
 
     python -m ocr_trust.analyze --raw RAW_DIR --annotations FUNSD/testing_data/annotations --out results
 
@@ -224,7 +224,38 @@ def summarise(rows: list[dict], adjudication: list[dict] | None = None, defect_s
         summary["corrected"] = corrected(rows, adjudication)
     if defect_scan:
         summary["defects"] = defect_scan
+    if any(r.get("gt_kind") for r in scored):
+        summary["by_kind"] = breakdown(scored, lambda r: r["gt_kind"])
+        summary["by_level"] = breakdown(scored, lambda r: r["doc"].split("_")[0])
     return summary
+
+
+SILENT_AT = 0.9
+
+
+def breakdown(scored: list[dict], key) -> dict:
+    """Strict accuracy, calibration and silent errors per group of words (exact labels only).
+
+    A silent error is a wrong word at or above SILENT_AT: a review threshold there would accept it.
+    """
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for r in scored:
+        groups[key(r)].append(r)
+    out = {}
+    for name, rs in sorted(groups.items()):
+        conf = [r["conf"] for r in rs]
+        correct = [r["status"] == "correct" for r in rs]
+        accepted = [y for c, y in zip(conf, correct) if c >= SILENT_AT]
+        wrong = len(correct) - sum(correct)
+        out[name] = {
+            "words": len(rs), "accuracy": metrics.accuracy(correct), "mean_confidence": sum(conf) / len(conf),
+            "ece": metrics.ece(conf, correct),
+            "auroc_error_detection": metrics.auroc_error_detection(conf, correct),
+            "accepted_share": len(accepted) / len(rs),
+            "silent_error_rate": (len(accepted) - sum(accepted)) / len(accepted) if accepted else None,
+            "silent_share_of_errors": (len(accepted) - sum(accepted)) / wrong if wrong else None,
+        }
+    return out
 
 
 # ---------- report ----------
@@ -245,10 +276,10 @@ def report(summary: dict, out: Path) -> str:
 
     lines = [
         "# Results", "",
-        f"Interfaze-1, OCR task, {summary['documents']} FUNSD test forms. {summary['scored_words']} predicted words were scored "
+        f"Interfaze-1, OCR task, {summary['documents']} {summary['dataset']}. {summary['scored_words']} predicted words were scored "
         f"against the labels; {summary['unmatched_words']} had no labelled box under them and {summary['checkbox_words']} were checkboxes, "
         f"both left out. {summary['gt_words_missed']} labelled words had no predicted word over them.", "",
-        "**Lenient** ignores case and punctuation (FUNSD labels routinely drop trailing punctuation; see the hand check). "
+        "**Lenient** ignores case and punctuation. "
         "**Strict** compares exact text after Unicode normalisation.", "",
         "| | lenient | strict |", "|---|---|---|",
         f"| word accuracy vs. labels | {_p(L['accuracy'])} | {_p(S['accuracy'])} |",
@@ -304,6 +335,16 @@ def report(summary: dict, out: Path) -> str:
     for t, r in L["review_for_target"].items():
         lines.append(f"| {float(t) * 100:g}% | {_n(r['threshold'], 2)} | {_p(r['review_rate'])} | {_p(r['errors_caught'])} | "
                      f"{_p(r['oracle_review_rate'])} |")
+    for title, k in (("By field type", "by_kind"), ("By degradation level", "by_level")):
+        if k in summary:
+            lines += ["", f"## {title} (strict, exact labels)", "",
+                      f"Silent errors: wrong words with confidence ≥ {SILENT_AT}, which a review threshold at {SILENT_AT} would accept.", "",
+                      "| | words | accuracy | mean confidence | ECE | AUROC | accepted at ≥ 0.9 | silent error rate among accepted | share of errors that are silent |",
+                      "|---|---|---|---|---|---|---|---|---|"]
+            for name, b in summary[k].items():
+                lines.append(f"| {name} | {b['words']} | {_p(b['accuracy'])} | {_p(b['mean_confidence'])} | {_n(b['ece'])} | "
+                             f"{_n(b['auroc_error_detection'])} | {_p(b['accepted_share'])} | {_p(b['silent_error_rate'], 2)} | "
+                             f"{_p(b['silent_share_of_errors'])} |")
     if "defects" in summary:
         d = summary["defects"]
         ex = d["duplicated_split_examples"]
@@ -348,8 +389,8 @@ def figure(rows: list[dict], out: Path, summary: dict | None = None) -> bool:
             ax1.errorbar([mc], [b["est_accuracy"]], yerr=[[b["est_accuracy"] - lo], [hi - b["est_accuracy"]]], fmt="*", ms=12,
                          c="#dc2626", capsize=3, label="after hand-checking (incl. unlabelled words)" if k == "high" else None)
     ax1.set_xlabel("stated word confidence")
-    ax1.set_ylabel("accuracy vs. FUNSD labels")
-    ax1.set_title("Reliability (50 FUNSD test forms)")
+    ax1.set_ylabel("accuracy vs. labels")
+    ax1.set_title(f"Reliability ({(summary or {}).get('documents', '')} {(summary or {}).get('dataset', '')})")
     ax1.set_xlim(0, 1.02)
     ax1.set_ylim(0, 1.02)
     ax1.legend(loc="upper left", fontsize=8)
@@ -367,7 +408,8 @@ def figure(rows: list[dict], out: Path, summary: dict | None = None) -> bool:
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--raw", type=Path, help="folder of cached Interfaze responses")
-    ap.add_argument("--annotations", type=Path, help="FUNSD annotations folder")
+    ap.add_argument("--annotations", type=Path, help="labels folder: FUNSD annotations or synth/labels")
+    ap.add_argument("--name", default="FUNSD test forms", help="dataset name used in the report")
     ap.add_argument("--from-csv", action="store_true", help="rebuild from results/word_scores.csv (+ defects.json)")
     ap.add_argument("--out", type=Path, default=Path("results"))
     ap.add_argument("--examples", type=Path, help="write disagreements (contains OCR text) here for hand checking; keep private")
@@ -390,7 +432,7 @@ def main(argv=None) -> None:
     if adj_path.exists():
         with adj_path.open() as f:
             adjudication = list(csv.DictReader(f))
-    summary = summarise(rows, adjudication, defect_scan)
+    summary = {"dataset": a.name, **summarise(rows, adjudication, defect_scan)}
     (a.out / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))
     print(report(summary, a.out))
     if figure(rows, a.out, summary):
