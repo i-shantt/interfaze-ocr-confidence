@@ -1,0 +1,17 @@
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Tests and rebuild of every published number (no API calls, no dependencies)
+        run: make check
+      - name: Published results are unchanged by the rebuild
+        run: git diff --exit-code -- results/*.json results/*.md results/*.csv
