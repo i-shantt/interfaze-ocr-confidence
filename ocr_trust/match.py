@@ -25,6 +25,7 @@ class Word:
     box: Box
     conf: float | None = None
     line: int | None = None
+    kind: str | None = None  # synthetic labels only: word, rare_word, amount, quantity, date, id, phone, email, label
 
 
 @dataclass
@@ -34,13 +35,16 @@ class Group:
 
 
 def load_gt(annotation: Path) -> list[Word]:
-    form = json.loads(annotation.read_text())["form"]
+    """Labelled words from a FUNSD annotation or a synthetic label file (ocr_trust.synth)."""
+    data = json.loads(annotation.read_text())
+    if "form" in data:
+        raw = [(w["text"], w["box"], None) for entity in data["form"] for w in entity["words"]]
+    else:
+        raw = [(w["text"], w["box"], w["kind"]) for w in data["words"]]
     words = []
-    for entity in form:
-        for w in entity["words"]:
-            if w["text"].strip():
-                x0, y0, x1, y1 = w["box"]
-                words.append(Word(w["text"], (min(x0, x1), min(y0, y1), max(x0, x1), max(y0, y1))))
+    for text, (x0, y0, x1, y1), kind in raw:
+        if text.strip():
+            words.append(Word(text, (min(x0, x1), min(y0, y1), max(x0, x1), max(y0, y1)), kind=kind))
     return words
 
 
@@ -151,6 +155,13 @@ def _reading_order(words: list[Word], idx: list[int]) -> list[int]:
     return [i for row in rows for i in sorted(row, key=lambda i: words[i].box[0])]
 
 
+def _group_kind(kinds: list[str | None]) -> str | None:
+    distinct = set(kinds)
+    if distinct == {None}:
+        return None
+    return kinds[0] if len(distinct) == 1 else "mixed"
+
+
 def label_document(pred: list[Word], gt: list[Word]) -> tuple[list[dict], dict]:
     """Per predicted word: status ('correct' | 'wrong' | 'unmatched'), lenient match, box IoU.
 
@@ -182,7 +193,8 @@ def label_document(pred: list[Word], gt: list[Word]) -> tuple[list[dict], dict]:
             rows[i] = {"status": "correct" if strict else "wrong", "lenient_correct": lenient,
                        "iou": round(box_iou, 4), "group_size": len(p_idx) + len(g_idx),
                        "group_pred_text": p_text, "group_gt_text": g_text,
-                       "group_box": union_box([pred[i].box for i in p_idx] + [gt[j].box for j in g_idx])}
+                       "group_box": union_box([pred[i].box for i in p_idx] + [gt[j].box for j in g_idx]),
+                       "gt_kind": _group_kind([gt[j].kind for j in g_idx])}
     out = []
     for i, r in enumerate(rows):
         r = dict(r)

@@ -18,7 +18,7 @@ from pathlib import Path
 
 from . import defects, match, metrics
 
-CSV_FIELDS = ["doc", "word", "line", "conf", "status", "lenient_correct", "iou", "group_size", "group_box"]
+CSV_FIELDS = ["doc", "word", "line", "conf", "status", "lenient_correct", "iou", "group_size", "group_box", "gt_kind"]
 SCORED = ("correct", "wrong")
 TARGETS = (0.98, 0.99, 0.995)
 HIGH, LOW = 0.99, 0.9  # adjudication strata: conf >= HIGH, conf < LOW
@@ -69,6 +69,7 @@ def read_csv(path: Path) -> list[dict]:
                 "lenient_correct": None if r["lenient_correct"] == "" else r["lenient_correct"] == "True",
                 "iou": float(r["iou"]) if r["iou"] else None, "group_size": int(r["group_size"]),
                 "group_box": json.loads(r["group_box"]) if r["group_box"] else None,
+                "gt_kind": r.get("gt_kind") or None,
             })
     return out
 

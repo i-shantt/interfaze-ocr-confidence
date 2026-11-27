@@ -1,0 +1,2019 @@
+{
+"page": "L0_p02",
+"level": 0,
+"seed": 2,
+"width": 1275,
+"height": 1650,
+"words": [
+{
+"text": "STATEMENT",
+"kind": "label",
+"box": [
+90,
+97,
+252,
+118
+]
+},
+{
+"text": "SKU-KZ83G",
+"kind": "id",
+"box": [
+269.9,
+97,
+420.9,
+118
+]
+},
+{
+"text": "Report:",
+"kind": "label",
+"box": [
+90,
+152,
+147,
+167
+]
+},
+{
+"text": "$5,486.81",
+"kind": "amount",
+"box": [
+157.0,
+151,
+232.0,
+167
+]
+},
+{
+"text": "Approved:",
+"kind": "label",
+"box": [
+242.0,
+151,
+318.0,
+167
+]
+},
+{
+"text": "1986-06-15",
+"kind": "date",
+"box": [
+328.0,
+152,
+412.0,
+164
+]
+},
+{
+"text": "Of:",
+"kind": "label",
+"box": [
+90,
+179,
+113,
+192
+]
+},
+{
+"text": "CLM-UZW6CBO6",
+"kind": "id",
+"box": [
+123.0,
+180,
+243.0,
+192
+]
+},
+{
+"text": "Report:",
+"kind": "label",
+"box": [
+253.0,
+180,
+310.0,
+195
+]
+},
+{
+"text": "17.06.2017",
+"kind": "date",
+"box": [
+320.0,
+180,
+404.0,
+192
+]
+},
+{
+"text": "Signature:",
+"kind": "label",
+"box": [
+90,
+208,
+168,
+223
+]
+},
+{
+"text": "(387)656-6793",
+"kind": "phone",
+"box": [
+178.0,
+207,
+286.0,
+223
+]
+},
+{
+"text": "Sales:",
+"kind": "label",
+"box": [
+296.0,
+207,
+340.0,
+220
+]
+},
+{
+"text": "nonfamou76@myxangitis.com",
+"kind": "email",
+"box": [
+350.0,
+207,
+574.0,
+223
+]
+},
+{
+"text": "Note:",
+"kind": "label",
+"box": [
+90,
+236,
+132,
+248
+]
+},
+{
+"text": "REF-Z9M68Q2U",
+"kind": "id",
+"box": [
+142.0,
+236,
+255.0,
+250
+]
+},
+{
+"text": "Reference:",
+"kind": "label",
+"box": [
+265.0,
+235,
+347.0,
+248
+]
+},
+{
+"text": "(713)727-5798",
+"kind": "phone",
+"box": [
+357.0,
+235,
+465.0,
+251
+]
+},
+{
+"text": "Week:",
+"kind": "label",
+"box": [
+90,
+263,
+137,
+276
+]
+},
+{
+"text": "12.08.2014",
+"kind": "date",
+"box": [
+147.0,
+264,
+231.0,
+276
+]
+},
+{
+"text": "Signature:",
+"kind": "label",
+"box": [
+241.0,
+264,
+319.0,
+279
+]
+},
+{
+"text": "$4,916.94",
+"kind": "amount",
+"box": [
+329.0,
+263,
+404.0,
+279
+]
+},
+{
+"text": "Item",
+"kind": "label",
+"box": [
+90,
+292,
+127,
+304
+]
+},
+{
+"text": "Description",
+"kind": "label",
+"box": [
+137.0,
+291,
+228.0,
+307
+]
+},
+{
+"text": "Qty",
+"kind": "label",
+"box": [
+238.0,
+292,
+266.0,
+307
+]
+},
+{
+"text": "Amount",
+"kind": "label",
+"box": [
+276.0,
+292,
+339.0,
+304
+]
+},
+{
+"text": "YNG7ASTK4",
+"kind": "id",
+"box": [
+90,
+326,
+179,
+338
+]
+},
+{
+"text": "riverside",
+"kind": "rare_word",
+"box": [
+189.0,
+325,
+255.0,
+338
+]
+},
+{
+"text": "remit",
+"kind": "word",
+"box": [
+265.0,
+326,
+307.0,
+338
+]
+},
+{
+"text": "shalloon",
+"kind": "rare_word",
+"box": [
+317.0,
+325,
+379.0,
+338
+]
+},
+{
+"text": "175",
+"kind": "quantity",
+"box": [
+389.0,
+326,
+416.0,
+338
+]
+},
+{
+"text": "$55,936.66",
+"kind": "amount",
+"box": [
+426.0,
+325,
+510.0,
+341
+]
+},
+{
+"text": "4S9UBE",
+"kind": "id",
+"box": [
+90,
+354,
+146,
+366
+]
+},
+{
+"text": "vendor",
+"kind": "word",
+"box": [
+156.0,
+353,
+207.0,
+366
+]
+},
+{
+"text": "supply",
+"kind": "word",
+"box": [
+217.0,
+353,
+265.0,
+369
+]
+},
+{
+"text": "451",
+"kind": "quantity",
+"box": [
+274.0,
+354,
+301.0,
+366
+]
+},
+{
+"text": "$6.92",
+"kind": "amount",
+"box": [
+311.0,
+353,
+353.0,
+368
+]
+},
+{
+"text": "17OKD",
+"kind": "id",
+"box": [
+90,
+382,
+139,
+394
+]
+},
+{
+"text": "for",
+"kind": "word",
+"box": [
+149.0,
+381,
+171.0,
+394
+]
+},
+{
+"text": "buninahua",
+"kind": "rare_word",
+"box": [
+181.0,
+381,
+258.0,
+394
+]
+},
+{
+"text": "by",
+"kind": "word",
+"box": [
+268.0,
+381,
+286.0,
+397
+]
+},
+{
+"text": "81",
+"kind": "quantity",
+"box": [
+295.0,
+382,
+313.0,
+394
+]
+},
+{
+"text": "$10,464.70",
+"kind": "amount",
+"box": [
+323.0,
+381,
+407.0,
+397
+]
+},
+{
+"text": "PO-J0188",
+"kind": "id",
+"box": [
+90,
+410,
+160,
+422
+]
+},
+{
+"text": "helenioid",
+"kind": "rare_word",
+"box": [
+170.0,
+409,
+239.0,
+422
+]
+},
+{
+"text": "approved",
+"kind": "word",
+"box": [
+249.0,
+409,
+318.0,
+425
+]
+},
+{
+"text": "251",
+"kind": "quantity",
+"box": [
+328.0,
+410,
+355.0,
+422
+]
+},
+{
+"text": "$193,832.78",
+"kind": "amount",
+"box": [
+365.0,
+409,
+458.0,
+425
+]
+},
+{
+"text": "ACCT-B534HSOP",
+"kind": "id",
+"box": [
+90,
+438,
+212,
+450
+]
+},
+{
+"text": "patriciate",
+"kind": "rare_word",
+"box": [
+222.0,
+438,
+297.0,
+453
+]
+},
+{
+"text": "devilmonger",
+"kind": "rare_word",
+"box": [
+307.0,
+437,
+400.0,
+453
+]
+},
+{
+"text": "400",
+"kind": "quantity",
+"box": [
+410.0,
+438,
+437.0,
+450
+]
+},
+{
+"text": "$5,196.03",
+"kind": "amount",
+"box": [
+447.0,
+437,
+522.0,
+453
+]
+},
+{
+"text": "REF-1BZZSQ1",
+"kind": "id",
+"box": [
+90,
+466,
+189,
+480
+]
+},
+{
+"text": "paid",
+"kind": "word",
+"box": [
+199.0,
+465,
+231.0,
+481
+]
+},
+{
+"text": "syssarcosis",
+"kind": "rare_word",
+"box": [
+241.0,
+466,
+322.0,
+481
+]
+},
+{
+"text": "bearlike",
+"kind": "rare_word",
+"box": [
+332.0,
+465,
+394.0,
+478
+]
+},
+{
+"text": "363",
+"kind": "quantity",
+"box": [
+404.0,
+466,
+431.0,
+478
+]
+},
+{
+"text": "$9,944.81",
+"kind": "amount",
+"box": [
+441.0,
+465,
+516.0,
+481
+]
+},
+{
+"text": "ACCT-D4OEU90",
+"kind": "id",
+"box": [
+90,
+494,
+204,
+506
+]
+},
+{
+"text": "supply",
+"kind": "word",
+"box": [
+214.0,
+493,
+262.0,
+509
+]
+},
+{
+"text": "to",
+"kind": "word",
+"box": [
+271.0,
+495,
+287.0,
+506
+]
+},
+{
+"text": "210",
+"kind": "quantity",
+"box": [
+297.0,
+494,
+324.0,
+506
+]
+},
+{
+"text": "$16.70",
+"kind": "amount",
+"box": [
+334.0,
+493,
+385.0,
+508
+]
+},
+{
+"text": "3QQGV2LA4",
+"kind": "id",
+"box": [
+90,
+522,
+180,
+536
+]
+},
+{
+"text": "each",
+"kind": "word",
+"box": [
+190.0,
+521,
+225.0,
+534
+]
+},
+{
+"text": "amount",
+"kind": "word",
+"box": [
+235.0,
+523,
+292.0,
+534
+]
+},
+{
+"text": "223",
+"kind": "quantity",
+"box": [
+302.0,
+522,
+329.0,
+534
+]
+},
+{
+"text": "$311.07",
+"kind": "amount",
+"box": [
+339.0,
+521,
+399.0,
+536
+]
+},
+{
+"text": "CLM-U80KF",
+"kind": "id",
+"box": [
+90,
+550,
+175,
+562
+]
+},
+{
+"text": "yapman",
+"kind": "rare_word",
+"box": [
+185.0,
+553,
+243.0,
+565
+]
+},
+{
+"text": "nonslip",
+"kind": "rare_word",
+"box": [
+253.0,
+549,
+306.0,
+565
+]
+},
+{
+"text": "448",
+"kind": "quantity",
+"box": [
+316.0,
+550,
+343.0,
+562
+]
+},
+{
+"text": "$83,421.37",
+"kind": "amount",
+"box": [
+353.0,
+549,
+437.0,
+565
+]
+},
+{
+"text": "AY0I0FOK",
+"kind": "id",
+"box": [
+90,
+578,
+163,
+590
+]
+},
+{
+"text": "bellbird",
+"kind": "rare_word",
+"box": [
+173.0,
+577,
+231.0,
+590
+]
+},
+{
+"text": "received",
+"kind": "word",
+"box": [
+241.0,
+577,
+305.0,
+590
+]
+},
+{
+"text": "40",
+"kind": "quantity",
+"box": [
+315.0,
+578,
+333.0,
+590
+]
+},
+{
+"text": "$4,954.92",
+"kind": "amount",
+"box": [
+343.0,
+577,
+418.0,
+593
+]
+},
+{
+"text": "850I2",
+"kind": "id",
+"box": [
+90,
+606,
+131,
+618
+]
+},
+{
+"text": "cycloscope",
+"kind": "rare_word",
+"box": [
+141.0,
+605,
+221.0,
+621
+]
+},
+{
+"text": "pamphilius",
+"kind": "rare_word",
+"box": [
+231.0,
+605,
+312.0,
+621
+]
+},
+{
+"text": "hircosity",
+"kind": "rare_word",
+"box": [
+322.0,
+605,
+388.0,
+621
+]
+},
+{
+"text": "355",
+"kind": "quantity",
+"box": [
+397.0,
+606,
+424.0,
+618
+]
+},
+{
+"text": "$11.33",
+"kind": "amount",
+"box": [
+434.0,
+605,
+485.0,
+620
+]
+},
+{
+"text": "ACCT-77NS4FMB",
+"kind": "id",
+"box": [
+90,
+634,
+213,
+646
+]
+},
+{
+"text": "phone",
+"kind": "word",
+"box": [
+223.0,
+633,
+268.0,
+649
+]
+},
+{
+"text": "number",
+"kind": "word",
+"box": [
+278.0,
+633,
+335.0,
+646
+]
+},
+{
+"text": "sales",
+"kind": "word",
+"box": [
+345.0,
+633,
+382.0,
+646
+]
+},
+{
+"text": "133",
+"kind": "quantity",
+"box": [
+392.0,
+634,
+419.0,
+646
+]
+},
+{
+"text": "$54.76",
+"kind": "amount",
+"box": [
+429.0,
+633,
+480.0,
+648
+]
+},
+{
+"text": "I5421BFL",
+"kind": "id",
+"box": [
+90,
+662,
+159,
+674
+]
+},
+{
+"text": "date",
+"kind": "word",
+"box": [
+169.0,
+661,
+203.0,
+674
+]
+},
+{
+"text": "deducement",
+"kind": "rare_word",
+"box": [
+213.0,
+661,
+305.0,
+674
+]
+},
+{
+"text": "454",
+"kind": "quantity",
+"box": [
+315.0,
+662,
+342.0,
+674
+]
+},
+{
+"text": "$67.75",
+"kind": "amount",
+"box": [
+352.0,
+661,
+403.0,
+676
+]
+},
+{
+"text": "part",
+"kind": "word",
+"box": [
+90,
+691,
+122,
+705
+]
+},
+{
+"text": "return",
+"kind": "word",
+"box": [
+132.0,
+691,
+180.0,
+702
+]
+},
+{
+"text": "report",
+"kind": "word",
+"box": [
+190.0,
+691,
+238.0,
+705
+]
+},
+{
+"text": "credit",
+"kind": "word",
+"box": [
+248.0,
+689,
+293.0,
+702
+]
+},
+{
+"text": "estimate",
+"kind": "word",
+"box": [
+303.0,
+690,
+370.0,
+702
+]
+},
+{
+"text": "new",
+"kind": "word",
+"box": [
+380.0,
+693,
+411.0,
+702
+]
+},
+{
+"text": "thought",
+"kind": "rare_word",
+"box": [
+421.0,
+689,
+480.0,
+705
+]
+},
+{
+"text": "amount",
+"kind": "word",
+"box": [
+90,
+719,
+147,
+730
+]
+},
+{
+"text": "outdo",
+"kind": "rare_word",
+"box": [
+157.0,
+717,
+200.0,
+730
+]
+},
+{
+"text": "endochrome",
+"kind": "rare_word",
+"box": [
+210.0,
+717,
+302.0,
+730
+]
+},
+{
+"text": "billing",
+"kind": "word",
+"box": [
+312.0,
+717,
+359.0,
+733
+]
+},
+{
+"text": "order",
+"kind": "word",
+"box": [
+369.0,
+717,
+410.0,
+730
+]
+},
+{
+"text": "other",
+"kind": "word",
+"box": [
+420.0,
+717,
+461.0,
+730
+]
+},
+{
+"text": "resilial",
+"kind": "rare_word",
+"box": [
+471.0,
+717,
+523.0,
+730
+]
+},
+{
+"text": "memorandist",
+"kind": "rare_word",
+"box": [
+90,
+745,
+189,
+758
+]
+},
+{
+"text": "withstand",
+"kind": "rare_word",
+"box": [
+199.0,
+745,
+274.0,
+758
+]
+},
+{
+"text": "due",
+"kind": "word",
+"box": [
+284.0,
+745,
+311.0,
+758
+]
+},
+{
+"text": "delivery",
+"kind": "word",
+"box": [
+321.0,
+745,
+382.0,
+761
+]
+},
+{
+"text": "with",
+"kind": "word",
+"box": [
+391.0,
+745,
+425.0,
+758
+]
+},
+{
+"text": "transfer",
+"kind": "word",
+"box": [
+435.0,
+745,
+496.0,
+758
+]
+},
+{
+"text": "lochlin",
+"kind": "rare_word",
+"box": [
+506.0,
+745,
+556.0,
+758
+]
+},
+{
+"text": "please",
+"kind": "word",
+"box": [
+566.0,
+745,
+614.0,
+761
+]
+},
+{
+"text": "allochroite",
+"kind": "rare_word",
+"box": [
+90,
+773,
+172,
+786
+]
+},
+{
+"text": "details",
+"kind": "word",
+"box": [
+182.0,
+773,
+233.0,
+786
+]
+},
+{
+"text": "underripe",
+"kind": "rare_word",
+"box": [
+243.0,
+773,
+316.0,
+789
+]
+},
+{
+"text": "details",
+"kind": "word",
+"box": [
+326.0,
+773,
+377.0,
+786
+]
+},
+{
+"text": "chainette",
+"kind": "rare_word",
+"box": [
+387.0,
+773,
+459.0,
+786
+]
+},
+{
+"text": "signature",
+"kind": "word",
+"box": [
+469.0,
+774,
+540.0,
+789
+]
+},
+{
+"text": "fatidical",
+"kind": "rare_word",
+"box": [
+550.0,
+773,
+613.0,
+786
+]
+},
+{
+"text": "tricarinate",
+"kind": "rare_word",
+"box": [
+90,
+802,
+172,
+814
+]
+},
+{
+"text": "received",
+"kind": "word",
+"box": [
+182.0,
+801,
+246.0,
+814
+]
+},
+{
+"text": "curial",
+"kind": "rare_word",
+"box": [
+256.0,
+801,
+299.0,
+814
+]
+},
+{
+"text": "work",
+"kind": "word",
+"box": [
+309.0,
+801,
+347.0,
+814
+]
+},
+{
+"text": "from",
+"kind": "word",
+"box": [
+357.0,
+801,
+393.0,
+814
+]
+},
+{
+"text": "date",
+"kind": "word",
+"box": [
+403.0,
+801,
+437.0,
+814
+]
+},
+{
+"text": "description",
+"kind": "word",
+"box": [
+447.0,
+801,
+531.0,
+817
+]
+},
+{
+"text": "bolus",
+"kind": "rare_word",
+"box": [
+541.0,
+801,
+580.0,
+814
+]
+},
+{
+"text": "received",
+"kind": "word",
+"box": [
+90,
+829,
+154,
+842
+]
+},
+{
+"text": "with",
+"kind": "word",
+"box": [
+164.0,
+829,
+198.0,
+842
+]
+},
+{
+"text": "tubar",
+"kind": "rare_word",
+"box": [
+208.0,
+829,
+249.0,
+842
+]
+},
+{
+"text": "work",
+"kind": "word",
+"box": [
+259.0,
+829,
+297.0,
+842
+]
+},
+{
+"text": "raploch",
+"kind": "rare_word",
+"box": [
+307.0,
+829,
+363.0,
+845
+]
+},
+{
+"text": "remit",
+"kind": "word",
+"box": [
+373.0,
+830,
+415.0,
+842
+]
+},
+{
+"text": "cash",
+"kind": "word",
+"box": [
+425.0,
+829,
+458.0,
+842
+]
+},
+{
+"text": "mother",
+"kind": "rare_word",
+"box": [
+468.0,
+829,
+523.0,
+842
+]
+},
+{
+"text": "peganum",
+"kind": "rare_word",
+"box": [
+90,
+860,
+158,
+873
+]
+},
+{
+"text": "total",
+"kind": "word",
+"box": [
+168.0,
+857,
+205.0,
+870
+]
+},
+{
+"text": "crotaliform",
+"kind": "rare_word",
+"box": [
+215.0,
+857,
+301.0,
+870
+]
+},
+{
+"text": "reference",
+"kind": "word",
+"box": [
+311.0,
+857,
+384.0,
+870
+]
+},
+{
+"text": "please",
+"kind": "word",
+"box": [
+394.0,
+857,
+442.0,
+873
+]
+},
+{
+"text": "diclytra",
+"kind": "rare_word",
+"box": [
+452.0,
+857,
+510.0,
+873
+]
+},
+{
+"text": "signature",
+"kind": "word",
+"box": [
+520.0,
+858,
+591.0,
+873
+]
+},
+{
+"text": "nonswimmer",
+"kind": "rare_word",
+"box": [
+90,
+886,
+186,
+898
+]
+},
+{
+"text": "of",
+"kind": "word",
+"box": [
+196.0,
+885,
+212.0,
+898
+]
+},
+{
+"text": "description",
+"kind": "word",
+"box": [
+221.0,
+885,
+305.0,
+901
+]
+},
+{
+"text": "lida",
+"kind": "rare_word",
+"box": [
+315.0,
+885,
+343.0,
+898
+]
+},
+{
+"text": "company",
+"kind": "word",
+"box": [
+353.0,
+889,
+420.0,
+901
+]
+},
+{
+"text": "service",
+"kind": "word",
+"box": [
+429.0,
+886,
+482.0,
+898
+]
+},
+{
+"text": "lastage",
+"kind": "rare_word",
+"box": [
+492.0,
+885,
+547.0,
+901
+]
+},
+{
+"text": "item",
+"kind": "word",
+"box": [
+557.0,
+886,
+592.0,
+898
+]
+},
+{
+"text": "unit",
+"kind": "word",
+"box": [
+602.0,
+886,
+632.0,
+898
+]
+},
+{
+"text": "paganly",
+"kind": "rare_word",
+"box": [
+90,
+913,
+149,
+929
+]
+},
+{
+"text": "change",
+"kind": "word",
+"box": [
+158.0,
+913,
+211.0,
+929
+]
+},
+{
+"text": "description",
+"kind": "word",
+"box": [
+221.0,
+913,
+305.0,
+929
+]
+},
+{
+"text": "sales",
+"kind": "word",
+"box": [
+315.0,
+913,
+352.0,
+926
+]
+},
+{
+"text": "demonolatry",
+"kind": "rare_word",
+"box": [
+362.0,
+913,
+458.0,
+929
+]
+},
+{
+"text": "unstung",
+"kind": "rare_word",
+"box": [
+467.0,
+915,
+526.0,
+929
+]
+},
+{
+"text": "balance",
+"kind": "word",
+"box": [
+536.0,
+913,
+594.0,
+926
+]
+},
+{
+"text": "phone",
+"kind": "word",
+"box": [
+604.0,
+913,
+649.0,
+929
+]
+},
+{
+"text": "business",
+"kind": "word",
+"box": [
+90,
+941,
+152,
+954
+]
+},
+{
+"text": "clidastes",
+"kind": "rare_word",
+"box": [
+162.0,
+941,
+228.0,
+954
+]
+},
+{
+"text": "oreophasine",
+"kind": "rare_word",
+"box": [
+238.0,
+941,
+329.0,
+957
+]
+},
+{
+"text": "fossage",
+"kind": "rare_word",
+"box": [
+339.0,
+941,
+395.0,
+957
+]
+},
+{
+"text": "call",
+"kind": "word",
+"box": [
+405.0,
+941,
+432.0,
+954
+]
+},
+{
+"text": "note",
+"kind": "word",
+"box": [
+442.0,
+943,
+476.0,
+954
+]
+},
+{
+"text": "per",
+"kind": "word",
+"box": [
+486.0,
+945,
+511.0,
+957
+]
+},
+{
+"text": "company",
+"kind": "word",
+"box": [
+90,
+973,
+157,
+985
+]
+},
+{
+"text": "procreatrix",
+"kind": "rare_word",
+"box": [
+166.0,
+970,
+252.0,
+985
+]
+},
+{
+"text": "frier",
+"kind": "rare_word",
+"box": [
+262.0,
+969,
+296.0,
+982
+]
+},
+{
+"text": "mastful",
+"kind": "rare_word",
+"box": [
+306.0,
+969,
+363.0,
+982
+]
+},
+{
+"text": "estimate",
+"kind": "word",
+"box": [
+373.0,
+970,
+440.0,
+982
+]
+},
+{
+"text": "work",
+"kind": "word",
+"box": [
+450.0,
+969,
+488.0,
+982
+]
+},
+{
+"text": "epigynum",
+"kind": "rare_word",
+"box": [
+498.0,
+970,
+570.0,
+985
+]
+},
+{
+"text": "company",
+"kind": "word",
+"box": [
+580.0,
+973,
+647.0,
+985
+]
+},
+{
+"text": "shipping",
+"kind": "word",
+"box": [
+90,
+997,
+152,
+1013
+]
+},
+{
+"text": "parthenos",
+"kind": "rare_word",
+"box": [
+162.0,
+997,
+237.0,
+1013
+]
+},
+{
+"text": "mohnseed",
+"kind": "rare_word",
+"box": [
+247.0,
+997,
+322.0,
+1010
+]
+},
+{
+"text": "tax",
+"kind": "word",
+"box": [
+332.0,
+999,
+357.0,
+1010
+]
+},
+{
+"text": "your",
+"kind": "word",
+"box": [
+367.0,
+1001,
+400.0,
+1013
+]
+},
+{
+"text": "maintainer",
+"kind": "rare_word",
+"box": [
+410.0,
+998,
+493.0,
+1010
+]
+},
+{
+"text": "unwarned",
+"kind": "rare_word",
+"box": [
+503.0,
+997,
+577.0,
+1010
+]
+},
+{
+"text": "transfer",
+"kind": "word",
+"box": [
+90,
+1025,
+151,
+1038
+]
+},
+{
+"text": "norseler",
+"kind": "rare_word",
+"box": [
+161.0,
+1025,
+223.0,
+1038
+]
+},
+{
+"text": "price",
+"kind": "word",
+"box": [
+233.0,
+1026,
+271.0,
+1041
+]
+},
+{
+"text": "new",
+"kind": "word",
+"box": [
+281.0,
+1029,
+312.0,
+1038
+]
+},
+{
+"text": "change",
+"kind": "word",
+"box": [
+322.0,
+1025,
+375.0,
+1041
+]
+},
+{
+"text": "epopt",
+"kind": "rare_word",
+"box": [
+385.0,
+1027,
+428.0,
+1041
+]
+},
+{
+"text": "of",
+"kind": "word",
+"box": [
+438.0,
+1025,
+454.0,
+1038
+]
+},
+{
+"text": "amount",
+"kind": "word",
+"box": [
+463.0,
+1027,
+520.0,
+1038
+]
+},
+{
+"text": "new",
+"kind": "word",
+"box": [
+90,
+1057,
+121,
+1066
+]
+},
+{
+"text": "vendor",
+"kind": "word",
+"box": [
+131.0,
+1053,
+182.0,
+1066
+]
+},
+{
+"text": "ship",
+"kind": "word",
+"box": [
+192.0,
+1053,
+222.0,
+1069
+]
+},
+{
+"text": "tax",
+"kind": "word",
+"box": [
+232.0,
+1055,
+257.0,
+1066
+]
+},
+{
+"text": "hours",
+"kind": "word",
+"box": [
+267.0,
+1053,
+308.0,
+1066
+]
+},
+{
+"text": "cost",
+"kind": "word",
+"box": [
+318.0,
+1055,
+349.0,
+1066
+]
+}
+]
+}
