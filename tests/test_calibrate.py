@@ -40,7 +40,7 @@ class Features(unittest.TestCase):
         r = response([("INV-8O1l", 0, 0.97), ("Total", 50, 0.60)])
         f = calibrate.word_features(match.load_pred(r))
         self.assertEqual(f[0]["digit_and_alpha"], 1.0)
-        self.assertAlmostEqual(f[0]["lookalike_share"], 4 / 8)
+        self.assertAlmostEqual(f[0]["lookalike_share"], 5 / 8)  # I, 8, O, 1, l
         self.assertEqual(f[0]["neighbour_min_conf"], 0.60)
         self.assertAlmostEqual(f[1]["line_mean_conf"], (0.97 + 0.60) / 2)
         self.assertTrue(all(set(x) == set(calibrate.FEATURES) for x in f))
