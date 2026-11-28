@@ -1,3 +1,4 @@
+import json
 import math
 import random
 import unittest
@@ -31,7 +32,7 @@ class Fit(unittest.TestCase):
     def test_json_round_trip(self):
         feats = [{"logit_conf": v} for v in (-2.0, 0.0, 2.0, 3.0)]
         m = calibrate.Calibrator(["logit_conf"]).fit(feats, [False, True, True, True])
-        m2 = calibrate.Calibrator.from_json(m.to_json())
+        m2 = calibrate.Calibrator.from_dict(json.loads(json.dumps(m.to_dict())))
         self.assertEqual(m.predict(feats), m2.predict(feats))
 
 

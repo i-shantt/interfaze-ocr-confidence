@@ -5,7 +5,7 @@ import unittest
 from collections import defaultdict
 from pathlib import Path
 
-from ocr_trust import analyze, defects, match, metrics
+from ocr_trust import analyze, calibrate, defects, match, metrics
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -159,11 +159,19 @@ class PublishedNumbers(unittest.TestCase):
     def test_synthetic_summary_rebuilds_from_csv(self):
         self.assertSameTree(*self.rebuild_summary("synth"))
 
+    def test_routing_comparison_rebuilds_from_feature_csvs(self):
+        rebuilt = calibrate.evaluate(calibrate.read_words(ROOT / "results" / "synth" / "word_features.csv"),
+                                     calibrate.read_words(ROOT / "results" / "funsd" / "word_features.csv"))
+        committed = json.loads((ROOT / "results" / "synth" / "routing.json").read_text())
+        self.assertSameTree(json.loads(json.dumps(analyze.stable(rebuilt))), committed)
+
     def test_committed_tables_contain_no_ocr_text(self):
         for folder in ("funsd", "synth"):
             with (ROOT / "results" / folder / "word_scores.csv").open() as f:
                 self.assertEqual(next(csv.reader(f)), analyze.CSV_FIELDS)
-        self.assertFalse({"text", "pred", "gt", "group_pred_text"} & set(analyze.CSV_FIELDS))
+            with (ROOT / "results" / folder / "word_features.csv").open() as f:
+                self.assertEqual(next(csv.reader(f)), calibrate.CSV_FIELDS)
+        self.assertFalse({"text", "pred", "gt", "group_pred_text"} & set(analyze.CSV_FIELDS + calibrate.CSV_FIELDS))
 
 
 if __name__ == "__main__":

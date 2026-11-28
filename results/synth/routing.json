@@ -1,0 +1,287 @@
+{
+ "in_domain": {
+  "words": 3086,
+  "images": 15,
+  "folds": 5,
+  "target": "strict",
+  "raw": {
+   "auroc_error_detection": 0.9004178802,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1438755671,
+     "accepted": 2642,
+     "silent_errors": 31,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 21,
+      "rare_word": 5,
+      "word": 4
+     },
+     "silent_error_rate": 0.0117335352
+    },
+    "0.95": {
+     "review_rate": 0.1924821776,
+     "accepted": 2492,
+     "silent_errors": 14,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 11,
+      "rare_word": 1,
+      "word": 1
+     },
+     "silent_error_rate": 0.0056179775
+    }
+   }
+  },
+  "platt": {
+   "auroc_error_detection": 0.8966917817,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1438755671,
+     "accepted": 2642,
+     "silent_errors": 31,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 21,
+      "rare_word": 5,
+      "word": 4
+     },
+     "silent_error_rate": 0.0117335352
+    },
+    "0.95": {
+     "review_rate": 0.1924821776,
+     "accepted": 2492,
+     "silent_errors": 14,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 11,
+      "rare_word": 1,
+      "word": 1
+     },
+     "silent_error_rate": 0.0056179775
+    }
+   },
+   "auroc_gain_ci95": [
+    -0.0129236882,
+    0.0009060617
+   ]
+  },
+  "shape": {
+   "auroc_error_detection": 0.9116088388,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1438755671,
+     "accepted": 2642,
+     "silent_errors": 22,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 10,
+      "label": 1,
+      "rare_word": 5,
+      "word": 5
+     },
+     "silent_error_rate": 0.008327025
+    },
+    "0.95": {
+     "review_rate": 0.1924821776,
+     "accepted": 2492,
+     "silent_errors": 9,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 6,
+      "rare_word": 1,
+      "word": 1
+     },
+     "silent_error_rate": 0.003611557
+    }
+   },
+   "auroc_gain_ci95": [
+    -0.0016098901,
+    0.0287621039
+   ]
+  },
+  "lookalike": {
+   "auroc_error_detection": 0.9224199063,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1438755671,
+     "accepted": 2642,
+     "silent_errors": 22,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 7,
+      "label": 1,
+      "rare_word": 7,
+      "word": 6
+     },
+     "silent_error_rate": 0.008327025
+    },
+    "0.95": {
+     "review_rate": 0.1924821776,
+     "accepted": 2492,
+     "silent_errors": 9,
+     "silent_errors_by_kind": {
+      "amount": 1,
+      "id": 3,
+      "rare_word": 2,
+      "word": 3
+     },
+     "silent_error_rate": 0.003611557
+    }
+   },
+   "auroc_gain_ci95": [
+    0.0096420489,
+    0.0427291547
+   ]
+  },
+  "full": {
+   "auroc_error_detection": 0.9156974167,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1438755671,
+     "accepted": 2642,
+     "silent_errors": 21,
+     "silent_errors_by_kind": {
+      "amount": 5,
+      "id": 6,
+      "rare_word": 5,
+      "word": 5
+     },
+     "silent_error_rate": 0.0079485238
+    },
+    "0.95": {
+     "review_rate": 0.1924821776,
+     "accepted": 2492,
+     "silent_errors": 11,
+     "silent_errors_by_kind": {
+      "amount": 5,
+      "id": 3,
+      "rare_word": 1,
+      "word": 2
+     },
+     "silent_error_rate": 0.0044141252
+    }
+   },
+   "auroc_gain_ci95": [
+    -0.0045489623,
+    0.0459477775
+   ]
+  }
+ },
+ "transfer": {
+  "words": 8191,
+  "images": 50,
+  "target": "lenient",
+  "raw": {
+   "auroc_error_detection": 0.7808756728,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1430838725,
+     "accepted": 7019,
+     "silent_errors": 147,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0209431543
+    },
+    "0.95": {
+     "review_rate": 0.1856916127,
+     "accepted": 6670,
+     "silent_errors": 127,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0190404798
+    }
+   }
+  },
+  "platt": {
+   "auroc_error_detection": 0.7808756728,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1430838725,
+     "accepted": 7019,
+     "silent_errors": 147,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0209431543
+    },
+    "0.95": {
+     "review_rate": 0.1856916127,
+     "accepted": 6670,
+     "silent_errors": 127,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0190404798
+    }
+   },
+   "auroc_gain_ci95": [
+    0.0,
+    0.0
+   ]
+  },
+  "shape": {
+   "auroc_error_detection": 0.7848148926,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1430838725,
+     "accepted": 7019,
+     "silent_errors": 152,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0216555065
+    },
+    "0.95": {
+     "review_rate": 0.1856916127,
+     "accepted": 6670,
+     "silent_errors": 129,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0193403298
+    }
+   },
+   "auroc_gain_ci95": [
+    -0.0001369493,
+    0.0096809089
+   ]
+  },
+  "lookalike": {
+   "auroc_error_detection": 0.8068758128,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1430838725,
+     "accepted": 7019,
+     "silent_errors": 144,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.020515743
+    },
+    "0.95": {
+     "review_rate": 0.1856916127,
+     "accepted": 6670,
+     "silent_errors": 121,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0181409295
+    }
+   },
+   "auroc_gain_ci95": [
+    0.0111924147,
+    0.0406408619
+   ]
+  },
+  "full": {
+   "auroc_error_detection": 0.7648509599,
+   "at_budget_of_threshold": {
+    "0.9": {
+     "review_rate": 0.1430838725,
+     "accepted": 7019,
+     "silent_errors": 170,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0242199744
+    },
+    "0.95": {
+     "review_rate": 0.1856916127,
+     "accepted": 6670,
+     "silent_errors": 147,
+     "silent_errors_by_kind": {},
+     "silent_error_rate": 0.0220389805
+    }
+   },
+   "auroc_gain_ci95": [
+    -0.0350181853,
+    0.0019972476
+   ]
+  }
+ }
+}
