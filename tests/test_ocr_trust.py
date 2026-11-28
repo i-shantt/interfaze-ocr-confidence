@@ -126,7 +126,8 @@ class Defects(unittest.TestCase):
 
 
 class PublishedNumbers(unittest.TestCase):
-    """The committed CSVs reproduce every committed number without the API or the raw responses."""
+    """word_scores.csv and word_features.csv reproduce summary.json and routing.json without the API or the raw
+    responses. (confident_errors.*, consistency.json and defects.json need the raw responses; see the README.)"""
 
     def assertSameTree(self, rebuilt, committed, path=()):
         """Equal structure and values; floats within the 1e-9 that rounding to 10 places allows."""
@@ -165,7 +166,7 @@ class PublishedNumbers(unittest.TestCase):
         committed = json.loads((ROOT / "results" / "synth" / "routing.json").read_text())
         self.assertSameTree(json.loads(json.dumps(analyze.stable(rebuilt))), committed)
 
-    def test_committed_tables_contain_no_ocr_text(self):
+    def test_score_and_feature_tables_contain_no_ocr_text(self):
         for folder in ("funsd", "synth"):
             with (ROOT / "results" / folder / "word_scores.csv").open() as f:
                 self.assertEqual(next(csv.reader(f)), analyze.CSV_FIELDS)

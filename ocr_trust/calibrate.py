@@ -191,9 +191,13 @@ def read_words(path: Path) -> list[dict]:
 
 # ---------- evaluation ----------
 
-def cross_fitted(words: list[dict], feature_set: str, target: str = "strict", folds: int = 5, l2: float = 1.0) -> list[float]:
-    """Out-of-fold probabilities, folding by image so no page is scored by a model that saw it."""
+def cross_fitted(words: list[dict], feature_set: str, target: str = "strict", folds: int = 5, l2: float = 1.0,
+                 seed: int | None = None) -> list[float]:
+    """Out-of-fold probabilities, folding by image so no page is scored by a model that saw it. Images are dealt
+    to folds in sorted order (which spreads each degradation level over the folds), or shuffled with `seed`."""
     images = sorted({w["image"] for w in words})
+    if seed is not None:
+        random.Random(seed).shuffle(images)
     fold_of = {im: k % folds for k, im in enumerate(images)}
     probs = [0.0] * len(words)
     for k in range(folds):
@@ -226,12 +230,49 @@ def auroc_gain_ci(words: list[dict], scores: list[float], target: str, n_boot: i
     for _ in range(n_boot):
         idx = [i for im in (rng.choice(images) for _ in images) for i in by_image[im]]
         y = [words[i][target] for i in idx]
-        gain = (metrics.auroc_error_detection([scores[i] for i in idx], y)
-                - metrics.auroc_error_detection([words[i]["conf"] for i in idx], y))
-        if not math.isnan(gain):
-            gains.append(gain)
-    gains.sort()
-    return gains[int(0.025 * len(gains))], gains[min(len(gains) - 1, int(0.975 * len(gains)))]
+        gains.append(metrics.auroc_error_detection([scores[i] for i in idx], y)
+                     - metrics.auroc_error_detection([words[i]["conf"] for i in idx], y))
+    return metrics.percentile_interval(gains)
+
+
+def _silent(words: list[dict], scores: list[float], idx: list[int], threshold: float, target: str) -> tuple[int, int]:
+    """(silent errors, of which ID codes) when the words in idx are routed at the budget of `threshold`."""
+    sub = [words[i] for i in idx]
+    r = route(sub, [scores[i] for i in idx], sum(w["conf"] < threshold for w in sub), target)
+    return r["silent_errors"], r["silent_errors_by_kind"].get("id", 0)
+
+
+def versus_raw(words: list[dict], feature_set: str, target: str = "strict", folds: int = 5, n_boot: int = 1000,
+               n_splits: int = 30) -> dict:
+    """How sure is the change in silent errors (model minus raw confidence, total / ID codes / everything else)?
+
+    page_bootstrap: the out-of-fold scores are fixed and whole pages resampled; each resample is routed at its own
+    budget. fold_splits: the fold assignment is reshuffled n_splits times; min, median and max of the change.
+    """
+    raw = [w["conf"] for w in words]
+    model = cross_fitted(words, feature_set, target, folds)
+    by_image: dict[str, list[int]] = defaultdict(list)
+    for i, w in enumerate(words):
+        by_image[w["image"]].append(i)
+    images = sorted(by_image)
+    everything = list(range(len(words)))
+
+    def change(scores: list[float], idx: list[int], t: float) -> tuple[int, int, int]:
+        (m_all, m_id), (r_all, r_id) = _silent(words, scores, idx, t, target), _silent(words, raw, idx, t, target)
+        return m_all - r_all, m_id - r_id, (m_all - m_id) - (r_all - r_id)
+
+    out = {}
+    for t in BUDGET_THRESHOLDS:
+        rng = random.Random(0)
+        boot = [change(model, [i for im in (rng.choice(images) for _ in images) for i in by_image[im]], t) for _ in range(n_boot)]
+        splits = [change(cross_fitted(words, feature_set, target, folds, seed=s), everything, t) for s in range(n_splits)]
+        out[str(t)] = {
+            "change": dict(zip(("total", "id", "other"), change(model, everything, t))),
+            "page_bootstrap_ci95": {k: metrics.percentile_interval([b[j] for b in boot]) for j, k in enumerate(("total", "id", "other"))},
+            "fold_splits_min_median_max": {k: (min(v), statistics.median(v), max(v))
+                                           for k, v in zip(("total", "id", "other"), zip(*splits))},
+        }
+    return out
 
 
 def policy(words: list[dict], scores: list[float], target: str, compare_to_raw: bool = True) -> dict:
@@ -255,6 +296,9 @@ def evaluate(train: list[dict], transfer: list[dict] | None = None, folds: int =
                          "raw": policy(train, [w["conf"] for w in train], "strict", compare_to_raw=False)}}
     for name in FEATURE_SETS:
         out["in_domain"][name] = policy(train, cross_fitted(train, name, "strict", folds), "strict")
+    if any(w["kind"] for w in train):
+        for name in ("shape", "lookalike"):
+            out["in_domain"][name]["silent_errors_vs_raw"] = versus_raw(train, name, "strict", folds)
     if transfer:
         out["transfer"] = {"words": len(transfer), "images": len({w["image"] for w in transfer}), "target": "lenient",
                            "raw": policy(transfer, [w["conf"] for w in transfer], "lenient", compare_to_raw=False)}

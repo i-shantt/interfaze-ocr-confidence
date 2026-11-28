@@ -19,6 +19,7 @@ report:
 	$(PY) -m ocr_trust.analyze --from-csv --out results/synth --name "synthetic pages" --exclude $(SYNTH_EXCLUDE)
 	$(PY) -m ocr_trust.calibrate evaluate --train results/synth/word_features.csv \
 		--transfer results/funsd/word_features.csv --out results/synth/routing.json
+	$(PY) -m ocr_trust.calibrate fit --train results/synth/word_features.csv --set lookalike --out results/synth/calibrator.json
 
 # ---- FUNSD: 50 calls for run 1, 10 more for the repeat run ----
 
@@ -56,7 +57,6 @@ analyze-synth:
 		--exclude $(SYNTH_EXCLUDE)
 	$(PY) -m ocr_trust.calibrate features --raw raw_synth --labels synth/labels --exclude $(SYNTH_EXCLUDE) \
 		--out results/synth/word_features.csv
-	$(PY) -m ocr_trust.calibrate fit --train results/synth/word_features.csv --set lookalike --out results/synth/calibrator.json
 	$(PY) -m ocr_trust.consistency raw_synth --exclude $(SYNTH_EXCLUDE) --out results/synth/consistency.json
 	$(PY) -m ocr_trust.lookalike --raw raw_synth --labels synth/labels --images synth/images --exclude $(SYNTH_EXCLUDE) \
 		--out results/synth
