@@ -38,6 +38,23 @@ class Pages(unittest.TestCase):
                 x0, y0, x1, y1 = w["box"]
                 self.assertTrue(0 <= x0 < x1 <= lab["width"] and 0 <= y0 < y1 <= lab["height"], (path.name, w))
 
+    @unittest.skipUnless(HAVE_PIL, "Pillow not installed")
+    def test_label_boxes_cover_the_ink(self):
+        """On one committed page per level (rotated on level 2): no dark pixel lies outside every label box
+        (2 px margin), and every box contains a dark pixel. So each label sits on its word."""
+        from PIL import Image, ImageDraw
+        for page in ("L0_p01", "L1_p02", "L2_p03"):
+            label = json.loads((ROOT / "synth" / "labels" / f"{page}.json").read_text())
+            img = Image.open(ROOT / "synth" / "images" / f"{page}.png").convert("L")
+            covered = Image.new("L", img.size, 0)
+            draw = ImageDraw.Draw(covered)
+            for w in label["words"]:
+                x0, y0, x1, y1 = w["box"]
+                draw.rectangle((x0 - 2, y0 - 2, x1 + 2, y1 + 2), fill=255)
+                self.assertLess(min(img.crop((int(x0), int(y0), int(x1) + 1, int(y1) + 1)).tobytes()), 128, (page, w["text"]))
+            stray = sum(1 for p, c in zip(img.tobytes(), covered.tobytes()) if p < 128 and c == 0)
+            self.assertEqual(stray, 0, page)
+
     def test_labels_load_with_kinds(self):
         words = match.load_gt(ROOT / "synth" / "labels" / "L0_p00.json")
         self.assertTrue(words and all(w.kind for w in words))
