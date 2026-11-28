@@ -19,7 +19,7 @@ def reliability_table(conf: Sequence[float], correct: Sequence[bool], edges=DEFA
         if not idx:
             rows.append({"lo": lo, "hi": min(hi, 1.0), "n": 0, "mean_conf": None, "accuracy": None, "gap": None})
             continue
-        mc = sum(conf[i] for i in idx) / len(idx)
+        mc = math.fsum(conf[i] for i in idx) / len(idx)
         acc = sum(correct[i] for i in idx) / len(idx)
         rows.append({"lo": lo, "hi": min(hi, 1.0), "n": len(idx), "mean_conf": mc, "accuracy": acc, "gap": mc - acc})
     return rows
@@ -35,14 +35,14 @@ def ece(conf: Sequence[float], correct: Sequence[bool], n_bins: int = 10) -> flo
         lo, hi = b / n_bins, (b + 1) / n_bins
         idx = [i for i, c in enumerate(conf) if lo <= c < hi or (b == n_bins - 1 and c == hi)]
         if idx:
-            mc = sum(conf[i] for i in idx) / len(idx)
+            mc = math.fsum(conf[i] for i in idx) / len(idx)
             acc = sum(correct[i] for i in idx) / len(idx)
             total += len(idx) / n * abs(mc - acc)
     return total
 
 
 def brier(conf: Sequence[float], correct: Sequence[bool]) -> float:
-    return sum((c - float(y)) ** 2 for c, y in zip(conf, correct)) / len(conf) if conf else float("nan")
+    return math.fsum((c - float(y)) ** 2 for c, y in zip(conf, correct)) / len(conf) if conf else float("nan")
 
 
 def auroc_error_detection(conf: Sequence[float], correct: Sequence[bool]) -> float:
@@ -120,10 +120,10 @@ def spearman(x: Sequence[float], y: Sequence[float]) -> float:
             i = j + 1
         return r
     rx, ry = ranks(x), ranks(y)
-    mx, my = sum(rx) / len(rx), sum(ry) / len(ry)
-    cov = sum((a - mx) * (b - my) for a, b in zip(rx, ry))
-    sx = math.sqrt(sum((a - mx) ** 2 for a in rx))
-    sy = math.sqrt(sum((b - my) ** 2 for b in ry))
+    mx, my = math.fsum(rx) / len(rx), math.fsum(ry) / len(ry)
+    cov = math.fsum((a - mx) * (b - my) for a, b in zip(rx, ry))
+    sx = math.sqrt(math.fsum((a - mx) ** 2 for a in rx))
+    sy = math.sqrt(math.fsum((b - my) ** 2 for b in ry))
     return cov / (sx * sy) if sx and sy else float("nan")
 
 

@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import fnmatch
 import json
+import math
 from pathlib import Path
 
 from . import match
@@ -54,7 +55,7 @@ def compare(resp_a: dict, resp_b: dict) -> dict:
         "paired_same_conf": sum(a[i].conf == b[j].conf for i, j in pairs),
         "changed_same_conf": sum(a[i].conf == b[j].conf for i, j in changed),
         "changed_same_conf_above_half": sum(a[i].conf == b[j].conf > 0.5 for i, j in changed),
-        "conf_abs_diff_sum": sum(deltas),
+        "conf_abs_diff_sum": math.fsum(deltas),
         "conf_abs_diff_max": max(deltas, default=0.0),
         "flips": {str(t): sum((a[i].conf >= t) != (b[j].conf >= t) for i, j in pairs) for t in THRESHOLDS},
         "changed": [{"a": a[i].text, "b": b[j].text, "conf_a": a[i].conf, "conf_b": b[j].conf} for i, j in changed],
@@ -83,7 +84,7 @@ def run(raw_dir: Path, run_a: int = 1, run_b: int = 2, exclude: str | None = Non
         "changed_words": paired - tot("paired_same_text"),
         "changed_words_same_conf": tot("changed_same_conf"),
         "changed_words_same_conf_above_half": tot("changed_same_conf_above_half"),
-        "mean_abs_conf_diff": tot("conf_abs_diff_sum") / paired if paired else None,
+        "mean_abs_conf_diff": math.fsum(v["conf_abs_diff_sum"] for v in per_image.values()) / paired if paired else None,
         "max_abs_conf_diff": max(v["conf_abs_diff_max"] for v in per_image.values()),
         "flip_share": {t: sum(v["flips"][t] for v in per_image.values()) / paired for t in map(str, THRESHOLDS)} if paired else None,
         "per_image": {k: {kk: vv for kk, vv in v.items() if kk != "changed"} for k, v in per_image.items()},

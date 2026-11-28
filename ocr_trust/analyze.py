@@ -148,11 +148,11 @@ def corrected(rows: list[dict], adjudication: list[dict]) -> dict:
         comb = lambda m, u: (low["words"] * m + len(unl) * u) / (low["words"] + len(unl))
         out["low_unlabelled"] = {
             "words": len(unl), "checked": len(usample), "verdicts": dict(Counter(a["verdict"] for a in usample)),
-            "mean_conf": sum(r["conf"] for r in unl) / len(unl),
+            "mean_conf": math.fsum(r["conf"] for r in unl) / len(unl),
             "est_accuracy": u_point, "est_accuracy_range": (u_lo, u_hi)}
         out["low_combined"] = {
             "words": low["words"] + len(unl),
-            "mean_conf": (sum(r["conf"] for r in scored if r["conf"] < LOW) + sum(r["conf"] for r in unl)) / (low["words"] + len(unl)),
+            "mean_conf": (math.fsum(r["conf"] for r in scored if r["conf"] < LOW) + math.fsum(r["conf"] for r in unl)) / (low["words"] + len(unl)),
             "est_accuracy": comb(low["est_accuracy"], u_point),
             "est_accuracy_range": (comb(low["est_accuracy_range"][0], u_lo), comb(low["est_accuracy_range"][1], u_hi))}
     # Case/punctuation-only disagreements that are still disagreements under the current matching rules.
@@ -179,7 +179,7 @@ def set_aside(rows: list[dict], pattern: str) -> tuple[list[dict], dict]:
         "pattern": pattern, "documents": len({r["doc"] for r in out}), "predicted_words": sum(status.values()),
         "scored_words": len(scored), "no_box_words": status["no_box"], "unmatched_words": status["unmatched"],
         "strict_accuracy": metrics.accuracy([r["status"] == "correct" for r in scored]),
-        "mean_confidence": sum(r["conf"] for r in scored) / len(scored) if scored else None,
+        "mean_confidence": math.fsum(r["conf"] for r in scored) / len(scored) if scored else None,
         "share_at_or_above_0.9": sum(r["conf"] >= 0.9 for r in scored) / len(scored) if scored else None,
     }
 
@@ -198,7 +198,7 @@ def summarise(rows: list[dict], adjudication: list[dict] | None = None, defect_s
             docs[r["doc"]].append((r["conf"], y))
         out = {
             "accuracy": metrics.accuracy(correct),
-            "mean_confidence": sum(conf) / len(conf),
+            "mean_confidence": math.fsum(conf) / len(conf),
             "ece": metrics.ece(conf, correct),
             "ece_ci95": metrics.bootstrap_ci(docs, metrics.ece),
             "brier": metrics.brier(conf, correct),
@@ -219,7 +219,7 @@ def summarise(rows: list[dict], adjudication: list[dict] | None = None, defect_s
             "share_of_words": len(at_top) / len(conf),
             "accuracy": metrics.accuracy([correct[i] for i in at_top]),
             "share_of_all_errors": sum(1 for i in at_top if not correct[i]) / wrong_total}
-        doc_conf = [sum(c for c, _ in v) / len(v) for v in docs.values()]
+        doc_conf = [math.fsum(c for c, _ in v) / len(v) for v in docs.values()]
         doc_err = [1 - sum(y for _, y in v) / len(v) for v in docs.values()]
         out["doc_spearman_meanconf_vs_error"] = metrics.spearman(doc_conf, doc_err)
         return out
@@ -272,7 +272,7 @@ def breakdown(scored: list[dict], key) -> dict:
         for r, c, y in zip(rs, conf, correct):
             docs[r["doc"]].append((c, y))
         out[name] = {
-            "words": len(rs), "accuracy": metrics.accuracy(correct), "mean_confidence": sum(conf) / len(conf),
+            "words": len(rs), "accuracy": metrics.accuracy(correct), "mean_confidence": math.fsum(conf) / len(conf),
             "ece": metrics.ece(conf, correct),
             "auroc_error_detection": metrics.auroc_error_detection(conf, correct),
             "accepted": len(accepted), "accepted_share": len(accepted) / len(rs),
@@ -285,8 +285,9 @@ def breakdown(scored: list[dict], key) -> dict:
 
 
 def stable(obj, digits: int = 10):
-    """Prepare numbers for publishing as JSON. Floats are rounded: Python 3.12 made sum() of floats
-    compensated, so 3.10 and 3.12+ differ in the last digits of the same sums. NaN (a metric undefined for a
+    """Prepare numbers for publishing as JSON. Float sums use math.fsum, which is exactly rounded on every
+    Python version (3.12 changed what built-in sum() does with floats); rounding to 10 places on top keeps the
+    files short. NaN (a metric undefined for a
     group, e.g. AUROC with no errors) and infinity become null, since JSON has no such values."""
     if isinstance(obj, float):
         return round(obj, digits) if math.isfinite(obj) else None

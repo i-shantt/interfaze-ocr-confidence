@@ -70,7 +70,7 @@ def word_features(words: list[match.Word]) -> list[dict[str, float]]:
         digit, alpha = any(c.isdigit() for c in t), any(c.isalpha() for c in t)
         out.append({
             "logit_conf": _logit(w.conf),
-            "line_mean_conf": sum(by_line[w.line]) / len(by_line[w.line]),
+            "line_mean_conf": math.fsum(by_line[w.line]) / len(by_line[w.line]),
             "line_min_conf": min(by_line[w.line]),
             "neighbour_min_conf": min(prev, nxt),
             "has_digit": float(digit), "has_alpha": float(alpha), "digit_and_alpha": float(digit and alpha),
@@ -95,7 +95,7 @@ def _solve(a: list[list[float]], b: list[float]) -> list[float]:
                 m[r][c] -= f * m[col][c]
     x = [0.0] * n
     for r in range(n - 1, -1, -1):
-        x[r] = (m[r][n] - sum(m[r][c] * x[c] for c in range(r + 1, n))) / m[r][r]
+        x[r] = (m[r][n] - math.fsum(m[r][c] * x[c] for c in range(r + 1, n))) / m[r][r]
     return x
 
 
@@ -116,16 +116,16 @@ class Calibrator:
 
     def fit(self, feats: list[dict[str, float]], correct: list[bool], iterations: int = 30) -> "Calibrator":
         cols = [[f[name] for f in feats] for name in self.features]
-        self.mean = [sum(c) / len(c) for c in cols]
+        self.mean = [math.fsum(c) / len(c) for c in cols]
         self.scale = [statistics.pstdev(c) or 1.0 for c in cols]
         x = [self._row(f) for f in feats]
         y = [float(v) for v in correct]
         d = len(self.features) + 1
         w = [0.0] * d
         for _ in range(iterations):
-            p = [_sigmoid(sum(wi * xi for wi, xi in zip(w, row))) for row in x]
-            grad = [sum((pi - yi) * row[j] for pi, yi, row in zip(p, y, x)) + (self.l2 * w[j] if j else 0.0) for j in range(d)]
-            hess = [[sum(pi * (1 - pi) * row[i] * row[j] for pi, row in zip(p, x)) + (self.l2 if i == j and i else 0.0)
+            p = [_sigmoid(math.fsum(wi * xi for wi, xi in zip(w, row))) for row in x]
+            grad = [math.fsum((pi - yi) * row[j] for pi, yi, row in zip(p, y, x)) + (self.l2 * w[j] if j else 0.0) for j in range(d)]
+            hess = [[math.fsum(pi * (1 - pi) * row[i] * row[j] for pi, row in zip(p, x)) + (self.l2 if i == j and i else 0.0)
                      for j in range(d)] for i in range(d)]
             step = _solve(hess, grad)
             w = [wi - si for wi, si in zip(w, step)]
@@ -135,12 +135,12 @@ class Calibrator:
         return self
 
     def predict(self, feats: list[dict[str, float]]) -> list[float]:
-        return [_sigmoid(sum(wi * xi for wi, xi in zip(self.weights, self._row(f)))) for f in feats]
+        return [_sigmoid(math.fsum(wi * xi for wi, xi in zip(self.weights, self._row(f)))) for f in feats]
 
     def coefficients(self) -> dict[str, float]:
         """The fitted model in the features' own units: p = sigmoid(intercept + sum(coef * feature))."""
         coef = {name: w / s for name, w, s in zip(self.features, self.weights[1:], self.scale)}
-        return {"intercept": self.weights[0] - sum(coef[n] * m for n, m in zip(self.features, self.mean)), **coef}
+        return {"intercept": self.weights[0] - math.fsum(coef[n] * m for n, m in zip(self.features, self.mean)), **coef}
 
     def annotate(self, response: dict) -> list[dict]:
         words = match.load_pred(response)
