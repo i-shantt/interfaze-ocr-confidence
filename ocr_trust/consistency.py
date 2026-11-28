@@ -4,7 +4,8 @@ Interfaze markets itself for deterministic tasks and reports #1 on consistency b
 threshold the question is narrower: if the same page is sent twice, do the words, and the side of the
 threshold each word falls on, stay the same?
 
-Words from two runs are paired when their boxes overlap (IoU >= 0.5, greedy by IoU). Reported per image
+Words from two runs are paired when their boxes overlap (IoU >= 0.5, greedy by IoU); words returned
+without bounds cannot be paired and count as unpaired. Reported per image
 set: identical full text, share of paired words with identical text, words present in only one run,
 confidence differences, and the share of words whose review decision at a threshold flips between runs.
 """
@@ -22,6 +23,8 @@ def pair_words(a: list[match.Word], b: list[match.Word], min_iou: float = 0.5) -
     candidates = []
     for i, wa in enumerate(a):
         for j, wb in enumerate(b):
+            if wa.box is None or wb.box is None:
+                continue
             v = match.iou(wa.box, wb.box)
             if v >= min_iou:
                 candidates.append((v, i, j))

@@ -214,6 +214,7 @@ def summarise(rows: list[dict], adjudication: list[dict] | None = None, defect_s
         "scored_words": len(scored),
         "unmatched_words": status["unmatched"],
         "checkbox_words": status["checkbox"],
+        "no_box_words": status["no_box"],
         "gt_words_missed": sum(r["group_size"] for r in rows if r["status"] == "gt_missed"),
         "lenient": block([bool(r["lenient_correct"]) for r in scored]),
         "strict": block([r["status"] == "correct" for r in scored]),
@@ -290,7 +291,9 @@ def report(summary: dict, out: Path) -> str:
         "# Results", "",
         f"Interfaze-1, OCR task, {summary['documents']} {summary['dataset']}. {summary['scored_words']} predicted words were scored "
         f"against the labels; {summary['unmatched_words']} had no labelled box under them and {summary['checkbox_words']} were checkboxes, "
-        f"both left out. {summary['gt_words_missed']} labelled words had no predicted word over them.", "",
+        f"both left out. {summary['gt_words_missed']} labelled words had no predicted word over them."
+        + (f" {summary['no_box_words']} predicted words came back without bounds and could not be placed or scored."
+           if summary.get("no_box_words") else ""), "",
         "**Lenient** ignores case and punctuation. "
         "**Strict** compares exact text after Unicode normalisation.", "",
         "| | lenient | strict |", "|---|---|---|",

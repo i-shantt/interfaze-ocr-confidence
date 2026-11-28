@@ -22,7 +22,7 @@ OVERLAP_THRESHOLD = 0.5  # intersection / smaller box area
 @dataclass
 class Word:
     text: str
-    box: Box
+    box: Box | None  # None when the response gives the word no bounds (seen on very degraded pages)
     conf: float | None = None
     line: int | None = None
     kind: str | None = None  # synthetic labels only: word, rare_word, amount, quantity, date, id, phone, email, label
@@ -67,7 +67,8 @@ def load_pred(response: dict) -> list[Word]:
         for line in section.get("lines", []):
             for w in line.get("words", []):
                 if w.get("text", "").strip():
-                    words.append(Word(w["text"], _corner_box(w["bounds"]), float(w["confidence"]), line_no))
+                    box = _corner_box(w["bounds"]) if "bounds" in w else None
+                    words.append(Word(w["text"], box, float(w["confidence"]), line_no))
             line_no += 1
     return words
 
@@ -96,7 +97,7 @@ def union_box(boxes: list[Box]) -> Box:
 
 
 def groups(pred: list[Word], gt: list[Word], threshold: float = OVERLAP_THRESHOLD) -> list[Group]:
-    """Connected components of the pred/gt overlap graph. Unmatched words get their own group."""
+    """Connected components of the pred/gt overlap graph. Unmatched and boxless words get their own group."""
     n = len(pred)
     parent = list(range(n + len(gt)))
 
@@ -107,6 +108,8 @@ def groups(pred: list[Word], gt: list[Word], threshold: float = OVERLAP_THRESHOL
         return i
 
     for i, p in enumerate(pred):
+        if p.box is None:
+            continue
         for j, g in enumerate(gt):
             if overlap(p.box, g.box) >= threshold:
                 parent[find(i)] = find(n + j)
@@ -163,7 +166,9 @@ def _group_kind(kinds: list[str | None]) -> str | None:
 
 
 def label_document(pred: list[Word], gt: list[Word]) -> tuple[list[dict], dict]:
-    """Per predicted word: status ('correct' | 'wrong' | 'unmatched'), lenient match, box IoU.
+    """Per predicted word: status ('correct' | 'wrong' | 'unmatched' | 'checkbox' | 'no_box'), lenient match, box IoU.
+
+    A word returned without bounds cannot be placed on the page, so it is 'no_box' and is not scored.
 
     Returns (rows, counts). counts includes ground-truth words no prediction touched ('missed').
     """
@@ -172,6 +177,9 @@ def label_document(pred: list[Word], gt: list[Word]) -> tuple[list[dict], dict]:
     for grp in groups(pred, gt):
         if not grp.pred:
             missed += len(grp.gt)
+            continue
+        if pred[grp.pred[0]].box is None:  # boxless words are never joined, so the group is just this word
+            rows[grp.pred[0]] = {"status": "no_box", "lenient_correct": None, "iou": None, "group_size": 1, "group_box": None}
             continue
         p_idx = _reading_order(pred, grp.pred)
         if not grp.gt:
@@ -203,5 +211,6 @@ def label_document(pred: list[Word], gt: list[Word]) -> tuple[list[dict], dict]:
         out.append(r)
     counts = {"pred_words": len(pred), "gt_words": len(gt), "missed_gt_words": missed,
               "unmatched_pred_words": sum(r["status"] == "unmatched" for r in out),
-              "checkbox_pred_words": sum(r["status"] == "checkbox" for r in out)}
+              "checkbox_pred_words": sum(r["status"] == "checkbox" for r in out),
+              "no_box_pred_words": sum(r["status"] == "no_box" for r in out)}
     return out, counts

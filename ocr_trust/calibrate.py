@@ -1,7 +1,8 @@
 """Turn Interfaze's word confidence into a calibrated probability that the word is right.
 
 Uses only what is already in an OCR response: the word's confidence, its neighbours' and line's
-confidences, the word's shape (digits, letters, look-alike characters, length) and its box height.
+confidences, the word's shape (digits, letters, look-alike characters, length) and its box height
+(relative to the page's median; a word returned without bounds gets the median, 1.0).
 The model is an L2-regularised logistic regression fitted with Newton's method; two feature sets are
 compared so the extra features have to earn their place:
 
@@ -40,7 +41,8 @@ def word_features(words: list[match.Word]) -> list[dict[str, float]]:
     """One feature dict per word, computed from the response alone."""
     if not words:
         return []
-    median_h = statistics.median(w.box[3] - w.box[1] for w in words) or 1.0
+    heights = [w.box[3] - w.box[1] for w in words if w.box is not None]
+    median_h = (statistics.median(heights) if heights else 0.0) or 1.0
     by_line: dict[int, list[float]] = {}
     for w in words:
         by_line.setdefault(w.line, []).append(w.conf)
@@ -59,7 +61,7 @@ def word_features(words: list[match.Word]) -> list[dict[str, float]]:
             "short": float(len(t) <= 2), "log_length": math.log(len(t)),
             "lookalike_share": sum(c in LOOKALIKE for c in t) / len(t),
             "has_punct": float(bool(re.search(r"[^\w\s]", t))),
-            "rel_height": (w.box[3] - w.box[1]) / median_h,
+            "rel_height": (w.box[3] - w.box[1]) / median_h if w.box is not None else 1.0,
         })
     return out
 

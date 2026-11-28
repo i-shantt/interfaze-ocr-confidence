@@ -46,6 +46,12 @@ class Features(unittest.TestCase):
         self.assertTrue(all(set(x) == set(calibrate.FEATURES) for x in f))
         self.assertTrue(all(math.isfinite(v) for x in f for v in x.values()))
 
+    def test_word_without_bounds_gets_median_height(self):
+        r = response([("a", 0, 0.9), ("b", 50, 0.9)])
+        del r["precontext"][0]["result"]["sections"][0]["lines"][0]["words"][1]["bounds"]
+        f = calibrate.word_features(match.load_pred(r))
+        self.assertEqual([x["rel_height"] for x in f], [1.0, 1.0])
+
     def test_annotate(self):
         r = response([("a", 0, 0.5), ("b", 50, 0.99)])
         m = calibrate.Calibrator(["logit_conf"], mean=[0.0], scale=[1.0], weights=[0.0, 1.0])

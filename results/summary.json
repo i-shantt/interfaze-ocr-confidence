@@ -5,6 +5,7 @@
  "scored_words": 8191,
  "unmatched_words": 317,
  "checkbox_words": 40,
+ "no_box_words": 0,
  "gt_words_missed": 42,
  "lenient": {
   "accuracy": 0.9577585154,

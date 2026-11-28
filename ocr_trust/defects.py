@@ -20,7 +20,7 @@ from . import match
 def duplicated_splits(pred: list[match.Word]) -> list[dict]:
     found = []
     for a, b in zip(pred, pred[1:]):
-        if a.line != b.line:
+        if a.line != b.line or a.box is None or b.box is None:
             continue
         ta, tb = match.norm_strict(a.text), match.norm_strict(b.text)
         if len(match.norm_lenient(ta)) < 2 or not tb.startswith(ta):

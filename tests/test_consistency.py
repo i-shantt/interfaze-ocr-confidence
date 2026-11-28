@@ -42,6 +42,13 @@ class Consistency(unittest.TestCase):
         self.assertEqual(len(consistency.compare(a, b)["changed"]), 0)
         self.assertEqual(consistency.compare(a, b)["paired"], 1)
 
+    def test_words_without_bounds_are_unpaired(self):
+        a = response([("a", 0, 0.9), ("b", 45, 0.9)])
+        b = copy.deepcopy(a)
+        del b["precontext"][0]["result"]["sections"][0]["lines"][0]["words"][1]["bounds"]
+        c = consistency.compare(a, b)
+        self.assertEqual((c["paired"], c["words_a"], c["words_b"]), (1, 2, 2))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -63,6 +63,20 @@ class Labelling(unittest.TestCase):
         rows, _ = match.label_document(pred, gt)
         self.assertEqual(rows[0]["status"], "checkbox")
 
+    def test_word_without_bounds_is_not_scored(self):
+        # Seen on very degraded pages: words after some point in a line come back with text and confidence only.
+        resp = {"precontext": [{"name": "ocr", "result": {"sections": [{"lines": [{"words": [
+            {"text": "Total", "confidence": 0.9, "bounds": {k: {"x": x, "y": y} for k, (x, y) in
+                                                            {"top_left": (0, 0), "top_right": (30, 0),
+                                                             "bottom_right": (30, 10), "bottom_left": (0, 10)}.items()}},
+            {"text": "$4.00", "confidence": 0.4}]}]}]}}]}
+        pred = match.load_pred(resp)
+        self.assertEqual([w.box for w in pred], [(0, 0, 30, 10), None])
+        rows, counts = match.label_document(pred, [W("Total", 0, 0, 30, 10), W("$4.00", 40, 0, 70, 10)])
+        self.assertEqual([r["status"] for r in rows], ["correct", "no_box"])
+        self.assertEqual((counts["no_box_pred_words"], counts["missed_gt_words"]), (1, 1))
+        self.assertEqual(defects.duplicated_splits(pred), [])
+
     def test_normalisation(self):
         self.assertEqual(match.norm_strict("“JJ”"), '"JJ"')
         self.assertEqual(match.norm_lenient("_X_"), "x")
