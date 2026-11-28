@@ -100,6 +100,12 @@ def oracle_review_rate(correct: Sequence[bool], target: float) -> float:
     return min(k, wrong) / n
 
 
+def silent_error_rate(conf: Sequence[float], correct: Sequence[bool], threshold: float) -> float:
+    """Share of words accepted at a threshold (conf >= threshold) that are wrong: errors nobody will look at."""
+    accepted = [y for c, y in zip(conf, correct) if c >= threshold]
+    return (len(accepted) - sum(accepted)) / len(accepted) if accepted else float("nan")
+
+
 def spearman(x: Sequence[float], y: Sequence[float]) -> float:
     def ranks(v):
         order = sorted(range(len(v)), key=lambda i: v[i])

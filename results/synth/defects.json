@@ -1,0 +1,14 @@
+{
+ "predicted_words": 4032,
+ "duplicated_splits": 1,
+ "duplicated_split_documents": 1,
+ "duplicated_split_examples": [
+  {
+   "first": "$212,",
+   "second": "$212,424.12",
+   "first_conf": 0.38,
+   "second_conf": 0.57
+  }
+ ],
+ "checkbox_renderings": {}
+}

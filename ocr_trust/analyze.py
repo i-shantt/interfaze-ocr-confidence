@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import fnmatch
 import json
 import math
 from collections import Counter, defaultdict
@@ -170,7 +171,25 @@ def corrected(rows: list[dict], adjudication: list[dict]) -> dict:
 
 # ---------- summary ----------
 
-def summarise(rows: list[dict], adjudication: list[dict] | None = None, defect_scan: dict | None = None) -> dict:
+def set_aside(rows: list[dict], pattern: str) -> tuple[list[dict], dict]:
+    """Split off documents whose name matches a glob pattern, with a short summary of what was left out."""
+    out = [r for r in rows if fnmatch.fnmatch(r["doc"], pattern)]
+    scored = [r for r in out if r["status"] in SCORED]
+    status = Counter(r["status"] for r in out if r["status"] != "gt_missed")
+    return [r for r in rows if not fnmatch.fnmatch(r["doc"], pattern)], {
+        "pattern": pattern, "documents": len({r["doc"] for r in out}), "predicted_words": sum(status.values()),
+        "scored_words": len(scored), "no_box_words": status["no_box"], "unmatched_words": status["unmatched"],
+        "strict_accuracy": metrics.accuracy([r["status"] == "correct" for r in scored]),
+        "mean_confidence": sum(r["conf"] for r in scored) / len(scored) if scored else None,
+        "share_at_or_above_0.9": sum(r["conf"] >= 0.9 for r in scored) / len(scored) if scored else None,
+    }
+
+
+def summarise(rows: list[dict], adjudication: list[dict] | None = None, defect_scan: dict | None = None,
+              exclude: str | None = None) -> dict:
+    excluded = None
+    if exclude:
+        rows, excluded = set_aside(rows, exclude)
     scored = [r for r in rows if r["status"] in SCORED]
     conf = [r["conf"] for r in scored]
 
@@ -221,6 +240,8 @@ def summarise(rows: list[dict], adjudication: list[dict] | None = None, defect_s
         "box_iou_median": ious[len(ious) // 2] if ious else None,
         "box_iou_share_ge_0.5": sum(i >= 0.5 for i in ious) / len(ious) if ious else None,
     }
+    if excluded:
+        summary["excluded"] = excluded
     if adjudication:
         summary["corrected"] = corrected(rows, adjudication)
     if defect_scan:
@@ -248,22 +269,28 @@ def breakdown(scored: list[dict], key) -> dict:
         correct = [r["status"] == "correct" for r in rs]
         accepted = [y for c, y in zip(conf, correct) if c >= SILENT_AT]
         wrong = len(correct) - sum(correct)
+        docs = defaultdict(list)
+        for r, c, y in zip(rs, conf, correct):
+            docs[r["doc"]].append((c, y))
         out[name] = {
             "words": len(rs), "accuracy": metrics.accuracy(correct), "mean_confidence": sum(conf) / len(conf),
             "ece": metrics.ece(conf, correct),
             "auroc_error_detection": metrics.auroc_error_detection(conf, correct),
-            "accepted_share": len(accepted) / len(rs),
-            "silent_error_rate": (len(accepted) - sum(accepted)) / len(accepted) if accepted else None,
+            "accepted": len(accepted), "accepted_share": len(accepted) / len(rs),
+            "silent_errors": len(accepted) - sum(accepted),
+            "silent_error_rate": metrics.silent_error_rate(conf, correct, SILENT_AT),
+            "silent_error_rate_ci95": metrics.bootstrap_ci(docs, lambda c, y: metrics.silent_error_rate(c, y, SILENT_AT)),
             "silent_share_of_errors": (len(accepted) - sum(accepted)) / wrong if wrong else None,
         }
     return out
 
 
 def stable(obj, digits: int = 10):
-    """Round floats for publishing. Python 3.12 made sum() of floats compensated, so 3.10 and 3.12+ differ in
-    the last digits of the same sums; rounding keeps committed results identical across versions."""
+    """Prepare numbers for publishing as JSON. Floats are rounded: Python 3.12 made sum() of floats
+    compensated, so 3.10 and 3.12+ differ in the last digits of the same sums. NaN (a metric undefined for a
+    group, e.g. AUROC with no errors) and infinity become null, since JSON has no such values."""
     if isinstance(obj, float):
-        return round(obj, digits)
+        return round(obj, digits) if math.isfinite(obj) else None
     if isinstance(obj, dict):
         return {k: stable(v, digits) for k, v in obj.items()}
     if isinstance(obj, (list, tuple)):
@@ -281,6 +308,16 @@ def _n(x, digits=3):
     return "–" if x is None or (isinstance(x, float) and math.isnan(x)) else f"{x:.{digits}f}"
 
 
+def _excluded_note(summary: dict) -> list[str]:
+    x = summary.get("excluded")
+    if not x:
+        return []
+    return [f"Left out of every number below: {x['documents']} documents matching `{x['pattern']}`. On them, "
+            f"{x['scored_words']} words could be scored ({_p(x['strict_accuracy'])} strictly correct, mean confidence "
+            f"{_p(x['mean_confidence'])}, {_p(x['share_at_or_above_0.9'])} at or above 0.9) and {x['no_box_words']} of "
+            f"{x['predicted_words']} predicted words came back without bounds.", ""]
+
+
 def report(summary: dict, out: Path) -> str:
     L, S = summary["lenient"], summary["strict"]
 
@@ -293,7 +330,7 @@ def report(summary: dict, out: Path) -> str:
         f"against the labels; {summary['unmatched_words']} had no labelled box under them and {summary['checkbox_words']} were checkboxes, "
         f"both left out. {summary['gt_words_missed']} labelled words had no predicted word over them."
         + (f" {summary['no_box_words']} predicted words came back without bounds and could not be placed or scored."
-           if summary.get("no_box_words") else ""), "",
+           if summary.get("no_box_words") else ""), "", *_excluded_note(summary),
         "**Lenient** ignores case and punctuation. "
         "**Strict** compares exact text after Unicode normalisation.", "",
         "| | lenient | strict |", "|---|---|---|",
@@ -354,12 +391,16 @@ def report(summary: dict, out: Path) -> str:
         if k in summary:
             lines += ["", f"## {title} (strict, exact labels)", "",
                       f"Silent errors: wrong words with confidence ≥ {SILENT_AT}, which a review threshold at {SILENT_AT} would accept.", "",
-                      "| | words | accuracy | mean confidence | ECE | AUROC | accepted at ≥ 0.9 | silent error rate among accepted | share of errors that are silent |",
-                      "|---|---|---|---|---|---|---|---|---|"]
+                      "| | words | accuracy | mean confidence | ECE | AUROC | accepted at ≥ 0.9 | silent errors | "
+                      "silent error rate among accepted (95% range) | share of errors that are silent |",
+                      "|---|---|---|---|---|---|---|---|---|---|"]
             for name, b in summary[k].items():
+                lo, hi = b["silent_error_rate_ci95"]
+                rate = "–" if b["silent_error_rate"] is None else f"{_p(b['silent_error_rate'], 2)} ({_p(lo, 2)}–{_p(hi, 2)})"
                 lines.append(f"| {name} | {b['words']} | {_p(b['accuracy'])} | {_p(b['mean_confidence'])} | {_n(b['ece'])} | "
-                             f"{_n(b['auroc_error_detection'])} | {_p(b['accepted_share'])} | {_p(b['silent_error_rate'], 2)} | "
-                             f"{_p(b['silent_share_of_errors'])} |")
+                             f"{_n(b['auroc_error_detection'])} | {b['accepted']} ({_p(b['accepted_share'])}) | {b['silent_errors']} | "
+                             f"{rate} | {_p(b['silent_share_of_errors'])} |")
+            lines += ["", "Ranges resample whole pages (1,000 resamples)."]
     if "defects" in summary:
         d = summary["defects"]
         ex = d["duplicated_split_examples"]
@@ -428,6 +469,8 @@ def main(argv=None) -> None:
     ap.add_argument("--from-csv", action="store_true", help="rebuild from OUT/word_scores.csv (+ defects.json)")
     ap.add_argument("--out", type=Path, required=True, help="results folder, e.g. results/funsd")
     ap.add_argument("--examples", type=Path, help="write disagreements (contains OCR text) here for hand checking; keep private")
+    ap.add_argument("--exclude", metavar="GLOB", help="leave documents matching this pattern out of the scores and "
+                                                      "summarise them separately, e.g. 'L3_*'")
     a = ap.parse_args(argv)
     a.out.mkdir(parents=True, exist_ok=True)
     if a.from_csv:
@@ -448,7 +491,7 @@ def main(argv=None) -> None:
     if adj_path.exists():
         with adj_path.open() as f:
             adjudication = list(csv.DictReader(f))
-    summary = {"dataset": a.name, **summarise(rows, adjudication, defect_scan)}
+    summary = {"dataset": a.name, **summarise(rows, adjudication, defect_scan, exclude=a.exclude)}
     summary = stable(summary)
     (a.out / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))
     print(report(summary, a.out))

@@ -126,30 +126,44 @@ class Defects(unittest.TestCase):
 
 
 class PublishedNumbers(unittest.TestCase):
-    """The committed CSVs reproduce the committed summary without the API or the raw responses."""
+    """The committed CSVs reproduce every committed number without the API or the raw responses."""
 
-    def test_rebuild_from_csv_matches_summary(self):
-        results = ROOT / "results" / "funsd"
-        rows = analyze.read_csv(results / "word_scores.csv")
-        with (results / "adjudication.csv").open() as f:
-            adj = list(csv.DictReader(f))
-        defect_scan = json.loads((results / "defects.json").read_text())
-        rebuilt = json.loads(json.dumps(analyze.summarise(rows, adj, defect_scan)))
+    def assertSameTree(self, rebuilt, committed, path=()):
+        """Equal structure and values; floats within the 1e-9 that rounding to 10 places allows."""
+        if isinstance(committed, dict):
+            self.assertEqual(sorted(rebuilt), sorted(committed), path)
+            for k in committed:
+                self.assertSameTree(rebuilt[k], committed[k], path + (k,))
+        elif isinstance(committed, list):
+            self.assertEqual(len(rebuilt), len(committed), path)
+            for k, (a, b) in enumerate(zip(rebuilt, committed)):
+                self.assertSameTree(a, b, path + (k,))
+        elif isinstance(committed, float) and isinstance(rebuilt, (int, float)):
+            self.assertTrue(math.isclose(rebuilt, committed, rel_tol=1e-9, abs_tol=1e-9), f"{path}: {rebuilt} != {committed}")
+        else:
+            self.assertEqual(rebuilt, committed, path)
+
+    def rebuild_summary(self, folder: str) -> tuple[dict, dict]:
+        results = ROOT / "results" / folder
         committed = json.loads((results / "summary.json").read_text())
-        for path in (("lenient", "accuracy"), ("lenient", "ece"), ("lenient", "auroc_error_detection"),
-                     ("strict", "accuracy"), ("corrected", "high", "est_accuracy"), ("corrected", "low", "est_accuracy"),
-                     ("corrected", "low_combined", "est_accuracy"),
-                     ("scored_words",), ("defects", "duplicated_splits")):
-            a, b = rebuilt, committed
-            for k in path:
-                a, b = a[k], b[k]
-            self.assertTrue(math.isclose(a, b, rel_tol=1e-9, abs_tol=1e-9), f"{path}: {a} != {b}")  # published floats are rounded to 10 places
+        adj_path = results / "adjudication.csv"
+        adj = list(csv.DictReader(adj_path.open())) if adj_path.exists() else None
+        defect_scan = json.loads((results / "defects.json").read_text())
+        exclude = committed.get("excluded", {}).get("pattern")
+        rebuilt = analyze.summarise(analyze.read_csv(results / "word_scores.csv"), adj, defect_scan, exclude=exclude)
+        return json.loads(json.dumps(analyze.stable({"dataset": committed["dataset"], **rebuilt}))), committed
 
-    def test_word_scores_contain_no_ocr_text(self):
-        with (ROOT / "results" / "funsd" / "word_scores.csv").open() as f:
-            header = next(csv.reader(f))
-        self.assertEqual(header, analyze.CSV_FIELDS)
-        self.assertFalse({"text", "pred", "gt", "group_pred_text"} & set(header))
+    def test_funsd_summary_rebuilds_from_csv(self):
+        self.assertSameTree(*self.rebuild_summary("funsd"))
+
+    def test_synthetic_summary_rebuilds_from_csv(self):
+        self.assertSameTree(*self.rebuild_summary("synth"))
+
+    def test_committed_tables_contain_no_ocr_text(self):
+        for folder in ("funsd", "synth"):
+            with (ROOT / "results" / folder / "word_scores.csv").open() as f:
+                self.assertEqual(next(csv.reader(f)), analyze.CSV_FIELDS)
+        self.assertFalse({"text", "pred", "gt", "group_pred_text"} & set(analyze.CSV_FIELDS))
 
 
 if __name__ == "__main__":
