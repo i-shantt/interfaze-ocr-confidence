@@ -3,7 +3,7 @@
     python -m ocr_trust.sheets --examples sheets/disagreements.json --images data/dataset/testing_data/images --out sheets
 
 Each tile shows the crop with the OCR text and the FUNSD label under it. Sheets contain dataset
-crops and OCR text, so they are for local review only. Record verdicts in results/adjudication.csv
+crops and OCR text, so they are for local review only. Record verdicts in results/funsd/adjudication.csv
 (columns: sample_id, stratum, doc, box, conf, verdict, note). Verdicts for disagreements: ocr_wrong,
 label_wrong, ambiguous, matching_artifact. For unlabelled words (--unmatched): ocr_right, ocr_wrong,
 spurious (no text there), ambiguous.

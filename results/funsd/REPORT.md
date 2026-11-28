@@ -31,7 +31,7 @@ Brackets: 95% intervals from resampling whole documents (1,000 resamples).
 
 ## After checking disagreements by hand
 
-130 randomly sampled items were checked against the image crop (`results/adjudication.csv`); 8 of them (checkboxes, `_X_`) are no longer disagreements under the current matching rules and are not counted.
+130 randomly sampled items were checked against the image crop (`adjudication.csv`); 8 of them (checkboxes, `_X_`) are no longer disagreements under the current matching rules and are not counted.
 
 | band | words | words wrong vs. labels | groups checked (forms) | OCR wrong | label wrong | ambiguous | artifact | estimated real accuracy (95% range) |
 |---|---|---|---|---|---|---|---|---|

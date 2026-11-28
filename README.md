@@ -4,7 +4,7 @@ Interfaze's OCR returns a confidence score for every word. Its homepage suggests
 
 **Setup:** `interfaze-1` with the `<task>ocr</task>` system prompt, keyless API, one call per image, run on 2026-11-27. Scores are the per-word `confidence` values in `precontext`, the uncorrected raw OCR, not the model's corrected structured output. Data: the 50 test forms of [FUNSD](https://guillaumejaume.github.io/FUNSD/), noisy scanned business forms from the 1980s and 90s. 8,191 predicted words were scored against the labels.
 
-![reliability](results/reliability.png)
+![reliability](results/funsd/reliability.png)
 
 ## Findings
 
@@ -40,9 +40,9 @@ Interfaze's OCR returns a confidence score for every word. Its homepage suggests
 6. **Strict text comparison against FUNSD mostly measures label conventions.** All 16 sampled disagreements that differ only in case or punctuation were label conventions or label errors; FUNSD often drops trailing punctuation. Strict accuracy is 91.8% and lenient is 95.8%. A strict FUNSD score would understate any good OCR model.
 
 More detail:
-- Full tables: [`results/REPORT.md`](results/REPORT.md).
-- Per-word scores: [`results/word_scores.csv`](results/word_scores.csv).
-- Every hand-check verdict, with form and box so anyone can dispute it: [`results/adjudication.csv`](results/adjudication.csv).
+- Full tables: [`results/funsd/REPORT.md`](results/funsd/REPORT.md).
+- Per-word scores: [`results/funsd/word_scores.csv`](results/funsd/word_scores.csv).
+- Every hand-check verdict, with form and box so anyone can dispute it: [`results/funsd/adjudication.csv`](results/funsd/adjudication.csv).
 
 ## What I'd change
 
@@ -60,7 +60,7 @@ Two small developer-experience points from running this:
 Needs Python 3.10+. No dependencies; matplotlib is optional and only draws the figure.
 
 ```bash
-make check      # tests, plus rebuilding every published number from results/*.csv (no API calls)
+make check      # tests, plus rebuilding every published number from results/**/*.csv (no API calls)
 ```
 
 To reproduce from scratch, run the steps below. `make collect` makes 50 API calls, which fits the keyless daily limit; set `INTERFAZE_API_KEY` to use a key instead.
@@ -68,7 +68,7 @@ To reproduce from scratch, run the steps below. `make collect` makes 50 API call
 ```bash
 make data       # downloads FUNSD into data/
 make collect    # calls Interfaze once per test image, caches raw responses in raw/
-make analyze    # scores, writes results/
+make analyze    # scores, writes results/funsd/
 make sheets     # draws a random sample of disagreements as labelled crops in sheets/, for hand checking
 ```
 
@@ -86,7 +86,7 @@ Interfaze and FUNSD split text differently: Interfaze may return `Fax:614-466-50
 
 - **One dataset**, of old scanned English forms. Results on clean PDFs, receipts, handwriting-heavy pages or other languages could differ.
 - **One run per image.** Interfaze also claims consistency; repeat-run agreement is not measured yet because the keyless limit is 50 requests a day. `python -m ocr_trust.client ... --run 2` collects a second run.
-- **One person (me) did the hand check**: 130 crops, of which 122 still count under the current matching rules. The verdicts are in `results/adjudication.csv`.
+- **One person (me) did the hand check**: 130 crops, of which 122 still count under the current matching rules. The verdicts are in `results/funsd/adjudication.csv`.
 - **The hand-checked samples are clustered.** The 37 high-band items come from 23 forms, and 4 of the 8 high-band OCR errors are on one fax log. The ranges resample whole forms to allow for this.
 - **The estimates are ratio estimates** from samples of 30–39 items, so the ranges are wide, especially for the unlabelled words. Words between 0.90 and 0.99 were not hand-checked.
 - **Lenient matching counts `1.5` and `15` as equal.** That can hide real errors in numbers, and some of the low-band disagreements it ignores are real.

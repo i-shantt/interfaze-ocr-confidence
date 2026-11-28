@@ -1,11 +1,11 @@
 """Turn cached Interfaze responses + labels (FUNSD or ocr_trust.synth) into word scores, summary numbers and a report.
 
-    python -m ocr_trust.analyze --raw RAW_DIR --annotations FUNSD/testing_data/annotations --out results
+    python -m ocr_trust.analyze --raw RAW_DIR --annotations FUNSD/testing_data/annotations --out results/funsd
 
-Writes results/word_scores.csv (one row per predicted word: confidence and whether it matched the
-label; no OCR text), results/summary.json, results/REPORT.md and, with matplotlib, results/reliability.png.
-If results/adjudication.csv exists (hand-checked disagreements), the report adds label-noise-corrected
-estimates. `--from-csv` rebuilds everything from the committed CSVs, without the API or the raw responses.
+Writes OUT/word_scores.csv (one row per predicted word: confidence and whether it matched the label;
+no OCR text), OUT/summary.json, OUT/REPORT.md and, with matplotlib, OUT/reliability.png. If
+OUT/adjudication.csv exists (hand-checked disagreements), the report adds label-noise-corrected estimates.
+`--from-csv` rebuilds everything from the committed CSVs, without the API or the raw responses.
 """
 from __future__ import annotations
 
@@ -315,7 +315,7 @@ def report(summary: dict, out: Path) -> str:
     if "corrected" in summary:
         c = summary["corrected"]
         lines += ["", "## After checking disagreements by hand", "",
-                  f"{c['checked_total']} randomly sampled items were checked against the image crop (`results/adjudication.csv`); "
+                  f"{c['checked_total']} randomly sampled items were checked against the image crop (`adjudication.csv`); "
                   f"{c['dropped_no_longer_disagreements']} of them (checkboxes, `_X_`) are no longer disagreements under the current matching "
                   "rules and are not counted.", "",
                   "| band | words | words wrong vs. labels | groups checked (forms) | OCR wrong | label wrong | ambiguous | artifact | estimated real accuracy (95% range) |",
@@ -425,8 +425,8 @@ def main(argv=None) -> None:
     ap.add_argument("--raw", type=Path, help="folder of cached Interfaze responses")
     ap.add_argument("--annotations", type=Path, help="labels folder: FUNSD annotations or synth/labels")
     ap.add_argument("--name", default="FUNSD test forms", help="dataset name used in the report")
-    ap.add_argument("--from-csv", action="store_true", help="rebuild from results/word_scores.csv (+ defects.json)")
-    ap.add_argument("--out", type=Path, default=Path("results"))
+    ap.add_argument("--from-csv", action="store_true", help="rebuild from OUT/word_scores.csv (+ defects.json)")
+    ap.add_argument("--out", type=Path, required=True, help="results folder, e.g. results/funsd")
     ap.add_argument("--examples", type=Path, help="write disagreements (contains OCR text) here for hand checking; keep private")
     a = ap.parse_args(argv)
     a.out.mkdir(parents=True, exist_ok=True)

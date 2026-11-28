@@ -129,7 +129,7 @@ class PublishedNumbers(unittest.TestCase):
     """The committed CSVs reproduce the committed summary without the API or the raw responses."""
 
     def test_rebuild_from_csv_matches_summary(self):
-        results = ROOT / "results"
+        results = ROOT / "results" / "funsd"
         rows = analyze.read_csv(results / "word_scores.csv")
         with (results / "adjudication.csv").open() as f:
             adj = list(csv.DictReader(f))
@@ -146,7 +146,7 @@ class PublishedNumbers(unittest.TestCase):
             self.assertTrue(math.isclose(a, b, rel_tol=1e-9, abs_tol=1e-9), f"{path}: {a} != {b}")  # published floats are rounded to 10 places
 
     def test_word_scores_contain_no_ocr_text(self):
-        with (ROOT / "results" / "word_scores.csv").open() as f:
+        with (ROOT / "results" / "funsd" / "word_scores.csv").open() as f:
             header = next(csv.reader(f))
         self.assertEqual(header, analyze.CSV_FIELDS)
         self.assertFalse({"text", "pred", "gt", "group_pred_text"} & set(header))

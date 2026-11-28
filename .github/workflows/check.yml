@@ -14,4 +14,4 @@ jobs:
       - name: Tests and rebuild of every published number (no API calls, no dependencies)
         run: make check
       - name: Published results are unchanged by the rebuild
-        run: git diff --exit-code -- results/*.json results/*.md results/*.csv
+        run: git diff --exit-code -- 'results/**/*.json' 'results/**/*.md' 'results/**/*.csv'

@@ -9,7 +9,7 @@ test:
 	$(PY) -m unittest discover -s tests -t .
 
 report:
-	$(PY) -m ocr_trust.analyze --from-csv --out results
+	$(PY) -m ocr_trust.analyze --from-csv --out results/funsd
 
 data:
 	mkdir -p data
@@ -21,7 +21,7 @@ collect:
 
 analyze:
 	mkdir -p sheets
-	$(PY) -m ocr_trust.analyze --raw raw --annotations data/dataset/testing_data/annotations --out results --examples sheets/disagreements.json
+	$(PY) -m ocr_trust.analyze --raw raw --annotations data/dataset/testing_data/annotations --out results/funsd --examples sheets/disagreements.json
 
 sheets:
 	$(PY) -m ocr_trust.sheets --examples sheets/disagreements.json --images data/dataset/testing_data/images --out sheets
