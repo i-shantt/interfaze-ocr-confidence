@@ -200,7 +200,7 @@ def label_document(pred: list[Word], gt: list[Word]) -> tuple[list[dict], dict]:
         for i in p_idx:
             rows[i] = {"status": "correct" if strict else "wrong", "lenient_correct": lenient,
                        "iou": round(box_iou, 4), "group_size": len(p_idx) + len(g_idx),
-                       "group_pred_text": p_text, "group_gt_text": g_text,
+                       "group_pred_text": p_text, "group_gt_text": g_text, "gt_index": g_idx,
                        "group_box": union_box([pred[i].box for i in p_idx] + [gt[j].box for j in g_idx]),
                        "gt_kind": _group_kind([gt[j].kind for j in g_idx])}
     out = []

@@ -1,6 +1,6 @@
 """Synthetic form pages with exact word labels, rendered at controlled levels of degradation.
 
-FUNSD's labels contain errors (see results/adjudication.csv), so any calibration measured on it has to be
+FUNSD's labels contain errors (see results/funsd/adjudication.csv), so any calibration measured on it has to be
 corrected by hand. Rendered pages remove that problem: every word's text and box is known exactly. Each
 token is also tagged with what kind of value it is, so errors can be broken down by the fields that matter
 in document extraction (IDs, amounts, dates) rather than by prose words.
@@ -104,7 +104,7 @@ def load_dictionary(path: Path = Path("/usr/share/dict/words")) -> list[str]:
     return sorted({w.lower() for w in words if 4 <= len(w) <= 11 and w.isalpha() and w.isascii()})
 
 
-def _font(name: str, size: int, bold: bool = False):
+def font(name: str, size: int, bold: bool = False):
     from PIL import ImageFont
     return ImageFont.truetype(str(FONT_DIR / f"{name}{' Bold' if bold else ''}.ttf"), size)
 
@@ -137,16 +137,16 @@ def render(lines) -> tuple["Image.Image", list[dict]]:
     draw = ImageDraw.Draw(img)
     y, words = MARGIN, []
     for tokens, font_name, size, bold in lines:
-        font = _font(font_name, size, bold)
+        face = font(font_name, size, bold)
         x = MARGIN
-        space = draw.textlength(" ", font=font)
+        space = draw.textlength(" ", font=face)
         for t in tokens:
-            width = draw.textlength(t.text, font=font)
+            width = draw.textlength(t.text, font=face)
             if x + width > PAGE_W - MARGIN:  # wrap
                 x, y = MARGIN, y + int(size * 1.6)
-            draw.text((x, y), t.text, font=font, fill=0)
+            draw.text((x, y), t.text, font=face, fill=0)
             words.append({"text": t.text, "kind": t.kind, "font": font_name, "size": size, "bold": bold,
-                          "box": list(draw.textbbox((x, y), t.text, font=font))})
+                          "box": list(draw.textbbox((x, y), t.text, font=face))})
             x += width + space * 2
         y += int(size * (2.0 if bold else 1.7))
         if y > PAGE_H - MARGIN - size:
@@ -161,7 +161,9 @@ def rotate_point(x: float, y: float, cx: float, cy: float, degrees: float) -> tu
     return cx + dx * math.cos(t) + dy * math.sin(t), cy - dx * math.sin(t) + dy * math.cos(t)
 
 
-def degrade(img, words: list[dict], level: int, rng: random.Random):
+def degrade(img, words: list[dict], level: int, rng: random.Random, clean: bool = False):
+    """Apply a level's degradations. clean=True stops after the deterministic steps (rotate, blur, scale, fade),
+    giving the noise-free page the noisy one was made from; the rotation angle is drawn first, so it is the same."""
     from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
     p = LEVELS[level]
     if p["rotate"]:
@@ -180,6 +182,8 @@ def degrade(img, words: list[dict], level: int, rng: random.Random):
             w["box"] = [v * p["scale"] for v in w["box"]]
     if p["fade"] != 1.0:
         img = ImageEnhance.Contrast(img).enhance(p["fade"])
+    if clean:
+        p = {**p, "noise": 0, "speckle": 0, "jpeg": None}
     if p["noise"]:
         # Seeded Gaussian noise (Image.effect_noise is not seeded, so pages would not regenerate identically).
         sigma = p["noise"]
@@ -199,10 +203,11 @@ def degrade(img, words: list[dict], level: int, rng: random.Random):
     return img
 
 
-def make_page(page_id: str, level: int, seed: int, dictionary: list[str]):
+def make_page(page_id: str, level: int, seed: int, dictionary: list[str], clean: bool = False):
+    """Render and degrade one page; clean=True skips the random noise (see degrade)."""
     rng = random.Random(seed)
     img, words = render(compose(rng, TokenSource(rng, dictionary)))
-    img = degrade(img, words, level, rng)
+    img = degrade(img, words, level, rng, clean=clean)
     label = {"page": page_id, "level": level, "seed": seed, "width": img.width, "height": img.height, "words": words}
     return img, label
 

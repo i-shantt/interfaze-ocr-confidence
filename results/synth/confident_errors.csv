@@ -1,0 +1,32 @@
+doc,level,font,kind,conf,printed,returned,edits,lookalike,d_prime,ideal_observer_error,repeated
+L1_p00,1,Trebuchet MS,id,0.99,H0WY6ZSS,HOWY6ZSS,0>O,True,114.09,0,True
+L1_p02,1,Verdana,id,0.99,INV-RlSEO,INV-RISEO,l>I,True,69.12,4.9e-262,True
+L1_p03,1,Georgia,id,0.99,611M0,611Mo,0>o,True,51.58,5.6e-147,True
+L1_p04,1,Georgia,id,0.99,ZNIXW0,ZNIXWo,0>o,True,40.44,3.3e-91,True
+L2_p04,2,Verdana,word,0.99,in,In,i>I,True,12.68,1.1e-10,True
+L0_p03,0,Times New Roman,id,0.96,REF-R1YIZ0RDW,REF-R1YIZORDW,0>O,True,inf,0,True
+L1_p02,1,Verdana,id,0.96,YZ8MOV0Y,YZ8MOVOY,0>O,True,142.15,0,True
+L2_p01,2,Verdana,amount,0.96,$84.07,"$84,07",".>,",True,10.2,1.7e-07,True
+L0_p02,0,Trebuchet MS,id,0.95,850I2,85012,I>1,True,inf,0,True
+L0_p03,0,Times New Roman,id,0.95,SKU-GOXl0R88Z,SKU-GOX10R88Z,l>1,True,inf,0,True
+L1_p00,1,Trebuchet MS,id,0.95,TX-0O0OC92,TX-0000C92,O>0 O>0,True,148.82,0,True
+L1_p03,1,Georgia,id,0.95,0KIM6NQOI,oKIM6NQOI,0>o,True,54.05,3.9e-161,True
+L2_p04,2,Verdana,id,0.95,L63BI,L6381,B>8 I>1,True,16.73,3e-17,True
+L2_p04,2,Verdana,rare_word,0.95,earthkin,eorthkin,a>o,False,15.51,4.5e-15,True
+L1_p00,1,Trebuchet MS,id,0.94,INV-FGC9I6Y2,INV-FGC916Y2,I>1,True,52.23,1.2e-150,True
+L1_p00,1,Trebuchet MS,id,0.94,VBOT0,VBOTO,0>O,True,114.72,0,True
+L1_p01,1,Trebuchet MS,id,0.94,UE5AS2TZ,UESAS2TZ,5>S,True,40.86,4.4e-93,True
+L1_p01,1,Trebuchet MS,id,0.94,TX-7O7241,TX-707241,O>0,True,62.56,4.4e-215,True
+L1_p04,1,Georgia,id,0.94,ACCT-9S0XK92,ACCT-9SoXK92,0>o,True,42.56,9e-101,True
+L1_p01,1,Trebuchet MS,id,0.93,TX-S98HW,TX-598HW,S>5,True,41.47,8.7e-96,True
+L2_p01,2,Verdana,word,0.93,labor,tabor,l>t,False,12.64,1.3e-10,True
+L2_p04,2,Verdana,rare_word,0.93,unstillness,unstiliness,l>i,True,5.69,0.0022,True
+L2_p04,2,Verdana,word,0.93,insurance,Insurance,i>I,True,12.63,1.3e-10,True
+L2_p01,2,Verdana,rare_word,0.92,cypraeid,cypraeld,i>l,True,5.93,0.0015,True
+L2_p02,2,Tahoma,rare_word,0.92,acanthoid,acanthold,i>l,True,5.35,0.0038,True
+L2_p03,2,Arial,word,0.92,item,Item,i>I,True,11.43,5.6e-09,True
+L2_p04,2,Verdana,id,0.92,PO-UBX1I8,PO-UBX118,I>1,True,8.03,3e-05,True
+L1_p03,1,Georgia,id,0.91,1VC5LlE,1VC5LIE,l>I,True,40.53,1.3e-91,True
+L2_p00,2,Georgia,id,0.9,ZZClANWZG,ZZCIANWZG,l>I,True,8.46,1.2e-05,True
+L2_p00,2,Georgia,rare_word,0.9,cloacal,closcal,a>s,False,9.26,1.8e-06,True
+L2_p04,2,Verdana,id,0.9,ACCT-ZQlXX,ACCT-ZQIXX,l>I,True,10.18,1.8e-07,True
