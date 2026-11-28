@@ -8,6 +8,9 @@
 {
 "text": "CLAIM",
 "kind": "label",
+"font": "Times New Roman",
+"size": 31,
+"bold": true,
 "box": [
 90,
 97,
@@ -18,6 +21,9 @@
 {
 "text": "REF-R1YIZ0RDW",
 "kind": "id",
+"font": "Times New Roman",
+"size": 31,
+"bold": true,
 "box": [
 212.0,
 97,
@@ -28,6 +34,9 @@
 {
 "text": "Each:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 156,
@@ -38,6 +47,9 @@
 {
 "text": "uptrunk20@sobber.com",
 "kind": "email",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 143.0,
 156,
@@ -48,6 +60,9 @@
 {
 "text": "Office:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 341.0,
 156,
@@ -58,6 +73,9 @@
 {
 "text": "INV-3IZ9Y",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 403.0,
 157,
@@ -68,6 +86,9 @@
 {
 "text": "Amount:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 189,
@@ -78,6 +99,9 @@
 {
 "text": "RZ7L6OM",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 169.0,
 188,
@@ -88,6 +112,9 @@
 {
 "text": "Company:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 267.0,
 189,
@@ -98,6 +125,9 @@
 {
 "text": "(575)299-0587",
 "kind": "phone",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 358.0,
 188,
@@ -108,6 +138,9 @@
 {
 "text": "Company:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 221,
@@ -118,6 +151,9 @@
 {
 "text": "$171,289.90",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 181.0,
 220,
@@ -128,6 +164,9 @@
 {
 "text": "Insurance:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 291.0,
 221,
@@ -138,6 +177,9 @@
 {
 "text": "2011-09-27",
 "kind": "date",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 379.0,
 220,
@@ -148,6 +190,9 @@
 {
 "text": "Statement:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 253,
@@ -158,6 +203,9 @@
 {
 "text": "(560)746-9585",
 "kind": "phone",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 180.0,
 252,
@@ -168,6 +216,9 @@
 {
 "text": "Other:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 308.0,
 252,
@@ -178,6 +229,9 @@
 {
 "text": "transmut30@mildewy.com",
 "kind": "email",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 366.0,
 252,
@@ -188,6 +242,9 @@
 {
 "text": "Year:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 285,
@@ -198,6 +255,9 @@
 {
 "text": "EZ35Z",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 141.0,
 285,
@@ -208,6 +268,9 @@
 {
 "text": "Statement:",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 207.0,
 285,
@@ -218,6 +281,9 @@
 {
 "text": "23.02.2021",
 "kind": "date",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 297.0,
 285,
@@ -228,6 +294,9 @@
 {
 "text": "Item",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": true,
 "box": [
 90,
 317,
@@ -238,6 +307,9 @@
 {
 "text": "Description",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": true,
 "box": [
 137.0,
 317,
@@ -248,6 +320,9 @@
 {
 "text": "Qty",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": true,
 "box": [
 240.0,
 317,
@@ -258,6 +333,9 @@
 {
 "text": "Amount",
 "kind": "label",
+"font": "Times New Roman",
+"size": 19,
+"bold": true,
 "box": [
 281.0,
 317,
@@ -268,6 +346,9 @@
 {
 "text": "PO-IN2OFON",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 355,
@@ -278,6 +359,9 @@
 {
 "text": "by",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 213.0,
 354,
@@ -288,6 +372,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 244.0,
 354,
@@ -298,6 +385,9 @@
 {
 "text": "camellia",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 310.0,
 354,
@@ -308,6 +398,9 @@
 {
 "text": "315",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 382.0,
 355,
@@ -318,6 +411,9 @@
 {
 "text": "$150,730.02",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 422.0,
 354,
@@ -328,6 +424,9 @@
 {
 "text": "ACCT-GNF0D",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 387,
@@ -338,6 +437,9 @@
 {
 "text": "archpoet",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 221.0,
 386,
@@ -348,6 +450,9 @@
 {
 "text": "call",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 296.0,
 386,
@@ -358,6 +463,9 @@
 {
 "text": "service",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 332.0,
 386,
@@ -368,6 +476,9 @@
 {
 "text": "445",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 394.0,
 387,
@@ -378,6 +489,9 @@
 {
 "text": "$3,665.59",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 434.0,
 386,
@@ -388,6 +502,9 @@
 {
 "text": "SKU-TEO176CGO",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 418,
@@ -398,6 +515,9 @@
 {
 "text": "return",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 254.0,
 419,
@@ -408,6 +528,9 @@
 {
 "text": "tax",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 309.0,
 419,
@@ -418,6 +541,9 @@
 {
 "text": "chauth",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 342.0,
 418,
@@ -428,6 +554,9 @@
 {
 "text": "281",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 403.0,
 419,
@@ -438,6 +567,9 @@
 {
 "text": "$7,904.34",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 443.0,
 418,
@@ -448,6 +580,9 @@
 {
 "text": "TX-QJ4JZ6E",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 451,
@@ -458,6 +593,9 @@
 {
 "text": "supply",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 204.0,
 450,
@@ -468,6 +606,9 @@
 {
 "text": "belling",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 265.0,
 450,
@@ -478,6 +619,9 @@
 {
 "text": "32",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 329.0,
 451,
@@ -488,6 +632,9 @@
 {
 "text": "$98,599.56",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 359.0,
 450,
@@ -498,6 +645,9 @@
 {
 "text": "SKU-DGLSOX48B",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 483,
@@ -508,6 +658,9 @@
 {
 "text": "tax",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 257.0,
 483,
@@ -518,6 +671,9 @@
 {
 "text": "note",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 290.0,
 483,
@@ -528,6 +684,9 @@
 {
 "text": "number",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 333.0,
 482,
@@ -538,6 +697,9 @@
 {
 "text": "335",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 402.0,
 483,
@@ -548,6 +710,9 @@
 {
 "text": "$2,462.84",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 442.0,
 482,
@@ -558,6 +723,9 @@
 {
 "text": "SKU-Z5I82AXP",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 515,
@@ -568,6 +736,9 @@
 {
 "text": "labor",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 232.0,
 514,
@@ -578,6 +749,9 @@
 {
 "text": "geneticism",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 281.0,
 514,
@@ -588,6 +762,9 @@
 {
 "text": "62",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 372.0,
 515,
@@ -598,6 +775,9 @@
 {
 "text": "$85,633.81",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 402.0,
 514,
@@ -608,6 +788,9 @@
 {
 "text": "SKU-0JYBN",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 547,
@@ -618,6 +801,9 @@
 {
 "text": "misogallic",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 203.0,
 546,
@@ -628,6 +814,9 @@
 {
 "text": "verily",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 291.0,
 546,
@@ -638,6 +827,9 @@
 {
 "text": "436",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 345.0,
 547,
@@ -648,6 +840,9 @@
 {
 "text": "$3,528.56",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 385.0,
 546,
@@ -658,6 +853,9 @@
 {
 "text": "SKU-OW6B18Q93",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 579,
@@ -668,6 +866,9 @@
 {
 "text": "other",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 254.0,
 578,
@@ -678,6 +879,9 @@
 {
 "text": "account",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 303.0,
 579,
@@ -688,6 +892,9 @@
 {
 "text": "to",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 372.0,
 579,
@@ -698,6 +905,9 @@
 {
 "text": "456",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 397.0,
 579,
@@ -708,6 +918,9 @@
 {
 "text": "$773.80",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 437.0,
 578,
@@ -718,6 +931,9 @@
 {
 "text": "SKU-GOXl0R88Z",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 610,
@@ -728,6 +944,9 @@
 {
 "text": "auriculated",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 247.0,
 610,
@@ -738,6 +957,9 @@
 {
 "text": "your",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 340.0,
 614,
@@ -748,6 +970,9 @@
 {
 "text": "11",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 386.0,
 611,
@@ -758,6 +983,9 @@
 {
 "text": "$235,370.19",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 416.0,
 610,
@@ -768,6 +996,9 @@
 {
 "text": "lJBG8V8Z",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 642,
@@ -778,6 +1009,9 @@
 {
 "text": "from",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 185.0,
 642,
@@ -788,6 +1022,9 @@
 {
 "text": "stormberg",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 232.0,
 642,
@@ -798,6 +1035,9 @@
 {
 "text": "472",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 319.0,
 642,
@@ -808,6 +1048,9 @@
 {
 "text": "$1,371.88",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 359.0,
 642,
@@ -818,6 +1061,9 @@
 {
 "text": "INV-RH0lB",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 674,
@@ -828,6 +1074,9 @@
 {
 "text": "general",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 195.0,
 674,
@@ -838,6 +1087,9 @@
 {
 "text": "to",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 260.0,
 675,
@@ -848,6 +1100,9 @@
 {
 "text": "pleochroic",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 284.0,
 674,
@@ -858,6 +1113,9 @@
 {
 "text": "36",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 375.0,
 675,
@@ -868,6 +1126,9 @@
 {
 "text": "$181,052.62",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 405.0,
 674,
@@ -878,6 +1139,9 @@
 {
 "text": "KDGIO8B",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 707,
@@ -888,6 +1152,9 @@
 {
 "text": "item",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 185.0,
 706,
@@ -898,6 +1165,9 @@
 {
 "text": "office",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 228.0,
 706,
@@ -908,6 +1178,9 @@
 {
 "text": "tricklike",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 281.0,
 706,
@@ -918,6 +1191,9 @@
 {
 "text": "195",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 353.0,
 707,
@@ -928,6 +1204,9 @@
 {
 "text": "$5,710.10",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 393.0,
 706,
@@ -938,6 +1217,9 @@
 {
 "text": "REF-95HN5NQO",
 "kind": "id",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 739,
@@ -948,6 +1230,9 @@
 {
 "text": "atomiferous",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 242.0,
 738,
@@ -958,6 +1243,9 @@
 {
 "text": "postmental",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 341.0,
 738,
@@ -968,6 +1256,9 @@
 {
 "text": "total",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 435.0,
 738,
@@ -978,6 +1269,9 @@
 {
 "text": "139",
 "kind": "quantity",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 478.0,
 739,
@@ -988,6 +1282,9 @@
 {
 "text": "$808.58",
 "kind": "amount",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 518.0,
 738,
@@ -998,6 +1295,9 @@
 {
 "text": "maru",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 774,
@@ -1008,6 +1308,9 @@
 {
 "text": "signature",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 139.0,
 770,
@@ -1018,6 +1321,9 @@
 {
 "text": "hydromyoma",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 218.0,
 770,
@@ -1028,6 +1334,9 @@
 {
 "text": "your",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 332.0,
 774,
@@ -1038,6 +1347,9 @@
 {
 "text": "week",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 378.0,
 770,
@@ -1048,6 +1360,9 @@
 {
 "text": "spiflicated",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 428.0,
 770,
@@ -1058,6 +1373,9 @@
 {
 "text": "zuleika",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 515.0,
 770,
@@ -1068,6 +1386,9 @@
 {
 "text": "tawkee",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 802,
@@ -1078,6 +1399,9 @@
 {
 "text": "supply",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 153.0,
 802,
@@ -1088,6 +1412,9 @@
 {
 "text": "resubjugate",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 215.0,
 802,
@@ -1098,6 +1425,9 @@
 {
 "text": "office",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 312.0,
 802,
@@ -1108,6 +1438,9 @@
 {
 "text": "change",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 365.0,
 802,
@@ -1118,6 +1451,9 @@
 {
 "text": "week",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 429.0,
 802,
@@ -1128,6 +1464,9 @@
 {
 "text": "amount",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 835,
@@ -1138,6 +1477,9 @@
 {
 "text": "client",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 158.0,
 834,
@@ -1148,6 +1490,9 @@
 {
 "text": "claim",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 209.0,
 834,
@@ -1158,6 +1503,9 @@
 {
 "text": "issanguila",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 260.0,
 834,
@@ -1168,6 +1516,9 @@
 {
 "text": "change",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 345.0,
 834,
@@ -1178,6 +1529,9 @@
 {
 "text": "state",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 409.0,
 835,
@@ -1188,6 +1542,9 @@
 {
 "text": "estimate",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 452.0,
 834,
@@ -1198,6 +1555,9 @@
 {
 "text": "check",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 523.0,
 834,
@@ -1208,6 +1568,9 @@
 {
 "text": "bensh",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 576.0,
 834,
@@ -1218,6 +1581,9 @@
 {
 "text": "endochorion",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 866,
@@ -1228,6 +1594,9 @@
 {
 "text": "halberdsman",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 197.0,
 866,
@@ -1238,6 +1607,9 @@
 {
 "text": "vitalic",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 304.0,
 866,
@@ -1248,6 +1620,9 @@
 {
 "text": "the",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 360.0,
 866,
@@ -1258,6 +1633,9 @@
 {
 "text": "palatelike",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 392.0,
 866,
@@ -1268,6 +1646,9 @@
 {
 "text": "tax",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 475.0,
 867,
@@ -1278,6 +1659,9 @@
 {
 "text": "net",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 508.0,
 867,
@@ -1288,6 +1672,9 @@
 {
 "text": "cash",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 541.0,
 866,
@@ -1298,6 +1685,9 @@
 {
 "text": "other",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 898,
@@ -1308,6 +1698,9 @@
 {
 "text": "disfigure",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 139.0,
 898,
@@ -1318,6 +1711,9 @@
 {
 "text": "state",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 216.0,
 899,
@@ -1328,6 +1724,9 @@
 {
 "text": "skilts",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 259.0,
 898,
@@ -1338,6 +1737,9 @@
 {
 "text": "didascalic",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 308.0,
 898,
@@ -1348,6 +1750,9 @@
 {
 "text": "demivotary",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 392.0,
 898,
@@ -1358,6 +1763,9 @@
 {
 "text": "reference",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 489.0,
 898,
@@ -1368,6 +1776,9 @@
 {
 "text": "skipjack",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 567.0,
 898,
@@ -1378,6 +1789,9 @@
 {
 "text": "trichophore",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 640.0,
 898,
@@ -1388,6 +1802,9 @@
 {
 "text": "department",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 930,
@@ -1398,6 +1815,9 @@
 {
 "text": "report",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 185.0,
 931,
@@ -1408,6 +1828,9 @@
 {
 "text": "each",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 240.0,
 930,
@@ -1418,6 +1841,9 @@
 {
 "text": "steno",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 284.0,
 931,
@@ -1428,6 +1854,9 @@
 {
 "text": "knackebrod",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 334.0,
 930,
@@ -1438,6 +1867,9 @@
 {
 "text": "phlebotome",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 433.0,
 930,
@@ -1448,6 +1880,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 535.0,
 930,
@@ -1458,6 +1893,9 @@
 {
 "text": "leuchemia",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 962,
@@ -1468,6 +1906,9 @@
 {
 "text": "price",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 176.0,
 962,
@@ -1478,6 +1919,9 @@
 {
 "text": "feedway",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 224.0,
 962,
@@ -1488,6 +1932,9 @@
 {
 "text": "note",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 298.0,
 963,
@@ -1498,6 +1945,9 @@
 {
 "text": "price",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 340.0,
 962,
@@ -1508,6 +1958,9 @@
 {
 "text": "daubingly",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 388.0,
 962,
@@ -1518,6 +1971,9 @@
 {
 "text": "price",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 475.0,
 962,
@@ -1528,6 +1984,9 @@
 {
 "text": "fixatif",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 523.0,
 962,
@@ -1538,6 +1997,9 @@
 {
 "text": "vendor",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 994,
@@ -1548,6 +2010,9 @@
 {
 "text": "price",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 153.0,
 994,
@@ -1558,6 +2023,9 @@
 {
 "text": "boildown",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 200.0,
 994,
@@ -1568,6 +2036,9 @@
 {
 "text": "parthian",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 284.0,
 994,
@@ -1578,6 +2049,9 @@
 {
 "text": "autogauge",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 357.0,
 995,
@@ -1588,6 +2062,9 @@
 {
 "text": "each",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 446.0,
 994,
@@ -1598,6 +2075,9 @@
 {
 "text": "waesuck",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 490.0,
 994,
@@ -1608,6 +2088,9 @@
 {
 "text": "blarney",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 564.0,
 994,
@@ -1618,6 +2101,9 @@
 {
 "text": "hired",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 632.0,
 994,
@@ -1628,6 +2114,9 @@
 {
 "text": "horsepower",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 1026,
@@ -1638,6 +2127,9 @@
 {
 "text": "to",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 189.0,
 1027,
@@ -1648,6 +2140,9 @@
 {
 "text": "argean",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 214.0,
 1030,
@@ -1658,6 +2153,9 @@
 {
 "text": "hocket",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 274.0,
 1026,
@@ -1668,6 +2166,9 @@
 {
 "text": "balance",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 334.0,
 1026,
@@ -1678,6 +2179,9 @@
 {
 "text": "part",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 401.0,
 1027,
@@ -1688,6 +2192,9 @@
 {
 "text": "cash",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 441.0,
 1026,
@@ -1698,6 +2205,9 @@
 {
 "text": "in",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 1058,
@@ -1708,6 +2218,9 @@
 {
 "text": "period",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 114.0,
 1058,
@@ -1718,6 +2231,9 @@
 {
 "text": "work",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 174.0,
 1058,
@@ -1728,6 +2244,9 @@
 {
 "text": "amount",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 224.0,
 1059,
@@ -1738,6 +2257,9 @@
 {
 "text": "payment",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 291.0,
 1059,
@@ -1748,6 +2270,9 @@
 {
 "text": "call",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 368.0,
 1058,
@@ -1758,6 +2283,9 @@
 {
 "text": "sapient",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 1090,
@@ -1768,6 +2296,9 @@
 {
 "text": "ship",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 153.0,
 1090,
@@ -1778,6 +2309,9 @@
 {
 "text": "goods",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 195.0,
 1090,
@@ -1788,6 +2322,9 @@
 {
 "text": "payment",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 251.0,
 1091,
@@ -1798,6 +2335,9 @@
 {
 "text": "sales",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 328.0,
 1090,
@@ -1808,6 +2348,9 @@
 {
 "text": "cautionry",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 373.0,
 1090,
@@ -1818,6 +2361,9 @@
 {
 "text": "number",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 455.0,
 1090,
@@ -1828,6 +2374,9 @@
 {
 "text": "kittendom",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 1122,
@@ -1838,6 +2387,9 @@
 {
 "text": "wheezy",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 178.0,
 1122,
@@ -1848,6 +2400,9 @@
 {
 "text": "ichorrhea",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 246.0,
 1122,
@@ -1858,6 +2413,9 @@
 {
 "text": "name",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 327.0,
 1126,
@@ -1868,6 +2426,9 @@
 {
 "text": "stanza",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 378.0,
 1123,
@@ -1878,6 +2439,9 @@
 {
 "text": "with",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 434.0,
 1122,
@@ -1888,6 +2452,9 @@
 {
 "text": "new",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 478.0,
 1126,
@@ -1898,6 +2465,9 @@
 {
 "text": "in",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 520.0,
 1122,
@@ -1908,6 +2478,9 @@
 {
 "text": "untrouble",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 1154,
@@ -1918,6 +2491,9 @@
 {
 "text": "number",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 174.0,
 1154,
@@ -1928,6 +2504,9 @@
 {
 "text": "whitehawse",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 243.0,
 1154,
@@ -1938,6 +2517,9 @@
 {
 "text": "city",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 342.0,
 1154,
@@ -1948,6 +2530,9 @@
 {
 "text": "dactylose",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 380.0,
 1154,
@@ -1958,6 +2543,9 @@
 {
 "text": "violoncello",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 461.0,
 1154,
@@ -1968,6 +2556,9 @@
 {
 "text": "umptekite",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 557.0,
 1154,
@@ -1978,6 +2569,9 @@
 {
 "text": "unit",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 90,
 1186,
@@ -1988,6 +2582,9 @@
 {
 "text": "price",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 129.0,
 1186,
@@ -1998,6 +2595,9 @@
 {
 "text": "date",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 177.0,
 1186,
@@ -2008,6 +2608,9 @@
 {
 "text": "chromophane",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 218.0,
 1186,
@@ -2018,6 +2621,9 @@
 {
 "text": "sustanedly",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 333.0,
 1186,
@@ -2028,6 +2634,9 @@
 {
 "text": "on",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 423.0,
 1190,
@@ -2038,6 +2647,9 @@
 {
 "text": "general",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 453.0,
 1186,
@@ -2048,6 +2660,9 @@
 {
 "text": "billing",
 "kind": "word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 517.0,
 1186,
@@ -2058,6 +2673,9 @@
 {
 "text": "astriction",
 "kind": "rare_word",
+"font": "Times New Roman",
+"size": 19,
+"bold": false,
 "box": [
 578.0,
 1186,

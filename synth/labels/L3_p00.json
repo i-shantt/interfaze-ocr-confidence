@@ -8,6 +8,9 @@
 {
 "text": "CLAIM",
 "kind": "label",
+"font": "Tahoma",
+"size": 31,
+"bold": true,
 "box": [
 36.3,
 47.2,
@@ -18,6 +21,9 @@
 {
 "text": "TX-E62G2",
 "kind": "id",
+"font": "Tahoma",
+"size": 31,
+"bold": true,
 "box": [
 90.7,
 46.2,
@@ -28,6 +34,9 @@
 {
 "text": "Report:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 36.6,
 74.0,
@@ -38,6 +47,9 @@
 {
 "text": "(521)816-6953",
 "kind": "phone",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 70.4,
 72.7,
@@ -48,6 +60,9 @@
 {
 "text": "Paid:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 130.2,
 72.4,
@@ -58,6 +73,9 @@
 {
 "text": "isostati98@superficia.com",
 "kind": "email",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 154.5,
 71.1,
@@ -68,6 +86,9 @@
 {
 "text": "Note:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 36.8,
 88.5,
@@ -78,6 +99,9 @@
 {
 "text": "$2,276.79",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 62.9,
 87.5,
@@ -88,6 +112,9 @@
 {
 "text": "Office:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 105.2,
 87.1,
@@ -98,6 +125,9 @@
 {
 "text": "1999-12-25",
 "kind": "date",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 135.4,
 86.9,
@@ -108,6 +138,9 @@
 {
 "text": "Labor:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 37.0,
 102.4,
@@ -118,6 +151,9 @@
 {
 "text": "croute18@boundingly.com",
 "kind": "email",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 66.7,
 101.0,
@@ -128,6 +164,9 @@
 {
 "text": "Signature:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 172.9,
 100.8,
@@ -138,6 +177,9 @@
 {
 "text": "TX-P852YYI1",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 217.4,
 100.1,
@@ -148,6 +190,9 @@
 {
 "text": "Policy:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 37.2,
 116.8,
@@ -158,6 +203,9 @@
 {
 "text": "27.04.2026",
 "kind": "date",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 66.4,
 116.6,
@@ -168,6 +216,9 @@
 {
 "text": "In:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 113.2,
 116.4,
@@ -178,6 +229,9 @@
 {
 "text": "$97.01",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 129.9,
 115.5,
@@ -188,6 +242,9 @@
 {
 "text": "Cost:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 37.4,
 131.7,
@@ -198,6 +255,9 @@
 {
 "text": "CLM-U6HXW5C2",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 61.7,
 130.8,
@@ -208,6 +268,9 @@
 {
 "text": "For:",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 128.3,
 130.5,
@@ -218,6 +281,9 @@
 {
 "text": "19.01.2020",
 "kind": "date",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 149.0,
 129.9,
@@ -228,6 +294,9 @@
 {
 "text": "Item",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": true,
 "box": [
 37.6,
 146.0,
@@ -238,6 +307,9 @@
 {
 "text": "Description",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": true,
 "box": [
 63.7,
 145.3,
@@ -248,6 +320,9 @@
 {
 "text": "Qty",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": true,
 "box": [
 118.1,
 145.1,
@@ -258,6 +333,9 @@
 {
 "text": "Amount",
 "kind": "label",
+"font": "Tahoma",
+"size": 19,
+"bold": true,
 "box": [
 138.4,
 144.6,
@@ -268,6 +346,9 @@
 {
 "text": "O1X0BFY",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 37.8,
 163.0,
@@ -278,6 +359,9 @@
 {
 "text": "tyrsenoi",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 77.4,
 162.5,
@@ -288,6 +372,9 @@
 {
 "text": "counselor",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 112.0,
 161.5,
@@ -298,6 +385,9 @@
 {
 "text": "184",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 153.4,
 161.7,
@@ -308,6 +398,9 @@
 {
 "text": "$15.48",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 172.3,
 160.9,
@@ -318,6 +411,9 @@
 {
 "text": "TX-428VWVP",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 37.5,
 177.2,
@@ -328,6 +424,9 @@
 {
 "text": "part",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 92.0,
 177.4,
@@ -338,6 +437,9 @@
 {
 "text": "net",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 112.7,
 177.1,
@@ -348,6 +450,9 @@
 {
 "text": "216",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 130.2,
 176.4,
@@ -358,6 +463,9 @@
 {
 "text": "$104,318.99",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 149.1,
 175.3,
@@ -368,6 +476,9 @@
 {
 "text": "REF-B50MBSY0",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 38.2,
 191.5,
@@ -378,6 +489,9 @@
 {
 "text": "phrynoid",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 101.6,
 190.5,
@@ -388,6 +502,9 @@
 {
 "text": "dilemmatic",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 140.3,
 189.9,
@@ -398,6 +515,9 @@
 {
 "text": "299",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 186.2,
 190.1,
@@ -408,6 +528,9 @@
 {
 "text": "$47.20",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 205.1,
 189.3,
@@ -418,6 +541,9 @@
 {
 "text": "INV-6A5H1GD6Z",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 38.3,
 205.8,
@@ -428,6 +554,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 106.3,
 204.9,
@@ -438,6 +567,9 @@
 {
 "text": "euhemerism",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 140.9,
 204.2,
@@ -448,6 +580,9 @@
 {
 "text": "signature",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 192.7,
 204.2,
@@ -458,6 +593,9 @@
 {
 "text": "52",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 233.2,
 204.0,
@@ -468,6 +606,9 @@
 {
 "text": "$42.95",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 247.6,
 203.1,
@@ -478,6 +619,9 @@
 {
 "text": "8H9VGZCM",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 38.5,
 220.5,
@@ -488,6 +632,9 @@
 {
 "text": "melissyl",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 86.2,
 219.6,
@@ -498,6 +645,9 @@
 {
 "text": "number",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 120.0,
 219.1,
@@ -508,6 +658,9 @@
 {
 "text": "71",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 155.1,
 219.4,
@@ -518,6 +671,9 @@
 {
 "text": "$3,420.67",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 169.5,
 218.4,
@@ -528,6 +684,9 @@
 {
 "text": "8VEJIGM3",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 38.7,
 234.9,
@@ -538,6 +697,9 @@
 {
 "text": "ilial",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 82.4,
 234.2,
@@ -548,6 +710,9 @@
 {
 "text": "vendor",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 99.5,
 233.8,
@@ -558,6 +723,9 @@
 {
 "text": "367",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 131.0,
 234.0,
@@ -568,6 +736,9 @@
 {
 "text": "$19,171.41",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 149.9,
 233.0,
@@ -578,6 +749,9 @@
 {
 "text": "CLM-0INVH",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 38.9,
 249.2,
@@ -588,6 +762,9 @@
 {
 "text": "tracker",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 87.5,
 248.4,
@@ -598,6 +775,9 @@
 {
 "text": "last",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 119.0,
 248.1,
@@ -608,6 +788,9 @@
 {
 "text": "scutatiform",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 137.0,
 247.5,
@@ -618,6 +801,9 @@
 {
 "text": "332",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 184.2,
 247.7,
@@ -628,6 +814,9 @@
 {
 "text": "$153,793.65",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 203.1,
 246.6,
@@ -638,6 +827,9 @@
 {
 "text": "PO-H6EDUO",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 39.1,
 263.6,
@@ -648,6 +840,9 @@
 {
 "text": "report",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 90.4,
 263.7,
@@ -658,6 +853,9 @@
 {
 "text": "sales",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 118.7,
 262.5,
@@ -668,6 +866,9 @@
 {
 "text": "each",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 142.1,
 262.2,
@@ -678,6 +879,9 @@
 {
 "text": "477",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 165.5,
 262.4,
@@ -688,6 +892,9 @@
 {
 "text": "$740.64",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 184.4,
 261.5,
@@ -698,6 +905,9 @@
 {
 "text": "OZSB8",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 39.3,
 278.3,
@@ -708,6 +918,9 @@
 {
 "text": "credit",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 69.9,
 277.5,
@@ -718,6 +931,9 @@
 {
 "text": "pyrogenic",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 96.4,
 277.4,
@@ -728,6 +944,9 @@
 {
 "text": "cost",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 138.7,
 277.6,
@@ -738,6 +957,9 @@
 {
 "text": "423",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 159.0,
 276.9,
@@ -748,6 +970,9 @@
 {
 "text": "$4.89",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 177.9,
 276.1,
@@ -758,6 +983,9 @@
 {
 "text": "TTKU1lGC",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 39.0,
 292.1,
@@ -768,6 +996,9 @@
 {
 "text": "insurance",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 82.2,
 292.0,
@@ -778,6 +1009,9 @@
 {
 "text": "subdural",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 124.0,
 291.0,
@@ -788,6 +1022,9 @@
 {
 "text": "24",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 162.3,
 291.3,
@@ -798,6 +1035,9 @@
 {
 "text": "$9.52",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 176.7,
 290.5,
@@ -808,6 +1048,9 @@
 {
 "text": "QYHTD",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 39.7,
 307.0,
@@ -818,6 +1061,9 @@
 {
 "text": "googol",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 72.5,
 306.2,
@@ -828,6 +1074,9 @@
 {
 "text": "artful",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 103.1,
 305.9,
@@ -838,6 +1087,9 @@
 {
 "text": "address",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 128.3,
 305.4,
@@ -848,6 +1100,9 @@
 {
 "text": "284",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 162.9,
 305.6,
@@ -858,6 +1113,9 @@
 {
 "text": "$14,926.06",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 181.8,
 304.6,
@@ -868,6 +1126,9 @@
 {
 "text": "ORD-6IW9IO4ME",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 39.8,
 321.0,
@@ -878,6 +1139,9 @@
 {
 "text": "address",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 110.5,
 320.0,
@@ -888,6 +1152,9 @@
 {
 "text": "wonning",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 145.1,
 320.0,
@@ -898,6 +1165,9 @@
 {
 "text": "period",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 182.9,
 319.2,
@@ -908,6 +1178,9 @@
 {
 "text": "206",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 212.2,
 319.4,
@@ -918,6 +1191,9 @@
 {
 "text": "$19,496.46",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 231.1,
 318.3,
@@ -928,6 +1204,9 @@
 {
 "text": "4VTlNl",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 40.0,
 335.4,
@@ -938,6 +1217,9 @@
 {
 "text": "date",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 69.3,
 335.2,
@@ -948,6 +1230,9 @@
 {
 "text": "chontal",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 91.3,
 334.7,
@@ -958,6 +1243,9 @@
 {
 "text": "193",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 124.2,
 334.9,
@@ -968,6 +1256,9 @@
 {
 "text": "$215,863.35",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 143.1,
 333.8,
@@ -978,6 +1269,9 @@
 {
 "text": "6IZ2D5",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 40.2,
 350.2,
@@ -988,6 +1282,9 @@
 {
 "text": "odontormae",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 73.1,
 349.1,
@@ -998,6 +1295,9 @@
 {
 "text": "riddler",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 123.9,
 348.7,
@@ -1008,6 +1308,9 @@
 {
 "text": "30",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 153.6,
 349.0,
@@ -1018,6 +1321,9 @@
 {
 "text": "$98,507.59",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 168.0,
 348.0,
@@ -1028,6 +1334,9 @@
 {
 "text": "CLM-WH1Kl9",
 "kind": "id",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 40.4,
 363.9,
@@ -1038,6 +1347,9 @@
 {
 "text": "auxochromic",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 93.9,
 363.2,
@@ -1048,6 +1360,9 @@
 {
 "text": "brake",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 147.0,
 362.9,
@@ -1058,6 +1373,9 @@
 {
 "text": "year",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 173.6,
 364.9,
@@ -1068,6 +1386,9 @@
 {
 "text": "231",
 "kind": "quantity",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 195.2,
 362.8,
@@ -1078,6 +1399,9 @@
 {
 "text": "$90.86",
 "kind": "amount",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 214.1,
 362.0,
@@ -1088,6 +1412,9 @@
 {
 "text": "change",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 40.6,
 378.6,
@@ -1098,6 +1425,9 @@
 {
 "text": "diastema",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 73.9,
 378.1,
@@ -1108,6 +1438,9 @@
 {
 "text": "crawdad",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 113.0,
 377.6,
@@ -1118,6 +1451,9 @@
 {
 "text": "thingamabob",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 150.8,
 376.9,
@@ -1128,6 +1464,9 @@
 {
 "text": "supply",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 206.2,
 376.5,
@@ -1138,6 +1477,9 @@
 {
 "text": "code",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 235.9,
 376.2,
@@ -1148,6 +1490,9 @@
 {
 "text": "landwash",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 259.3,
 375.6,
@@ -1158,6 +1503,9 @@
 {
 "text": "perit",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 300.2,
 375.8,
@@ -1168,6 +1516,9 @@
 {
 "text": "full",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 322.7,
 375.1,
@@ -1178,6 +1529,9 @@
 {
 "text": "last",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 40.8,
 393.2,
@@ -1188,6 +1542,9 @@
 {
 "text": "hedonology",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 58.8,
 392.5,
@@ -1198,6 +1555,9 @@
 {
 "text": "supermishap",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 107.8,
 391.9,
@@ -1208,6 +1568,9 @@
 {
 "text": "statement",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 161.4,
 392.2,
@@ -1218,6 +1581,9 @@
 {
 "text": "prebachelor",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 204.1,
 390.6,
@@ -1228,6 +1594,9 @@
 {
 "text": "parture",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 254.5,
 391.1,
@@ -1238,6 +1607,9 @@
 {
 "text": "account",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 287.8,
 390.6,
@@ -1248,6 +1620,9 @@
 {
 "text": "unit",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 322.9,
 389.9,
@@ -1258,6 +1633,9 @@
 {
 "text": "from",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 41.0,
 407.5,
@@ -1268,6 +1646,9 @@
 {
 "text": "statement",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 63.9,
 407.9,
@@ -1278,6 +1659,9 @@
 {
 "text": "details",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 106.6,
 406.6,
@@ -1288,6 +1672,9 @@
 {
 "text": "gufa",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 135.9,
 406.3,
@@ -1298,6 +1685,9 @@
 {
 "text": "jocose",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 157.9,
 406.4,
@@ -1308,6 +1698,9 @@
 {
 "text": "by",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 187.2,
 405.7,
@@ -1318,6 +1711,9 @@
 {
 "text": "billing",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 201.6,
 405.4,
@@ -1328,6 +1724,9 @@
 {
 "text": "description",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 229.0,
 404.8,
@@ -1338,6 +1737,9 @@
 {
 "text": "unit",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 41.1,
 422.4,
@@ -1348,6 +1750,9 @@
 {
 "text": "period",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 60.9,
 421.6,
@@ -1358,6 +1763,9 @@
 {
 "text": "snaffle",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 90.2,
 421.2,
@@ -1368,6 +1776,9 @@
 {
 "text": "total",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 120.3,
 420.9,
@@ -1378,6 +1789,9 @@
 {
 "text": "general",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 141.9,
 420.5,
@@ -1388,6 +1802,9 @@
 {
 "text": "last",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 175.7,
 420.2,
@@ -1398,6 +1815,9 @@
 {
 "text": "day",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 193.7,
 420.0,
@@ -1408,6 +1828,9 @@
 {
 "text": "the",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 212.6,
 419.8,
@@ -1418,6 +1841,9 @@
 {
 "text": "total",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 41.3,
 436.3,
@@ -1428,6 +1854,9 @@
 {
 "text": "other",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 62.9,
 436.0,
@@ -1438,6 +1867,9 @@
 {
 "text": "pinguescent",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 88.1,
 435.8,
@@ -1448,6 +1880,9 @@
 {
 "text": "price",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 139.4,
 435.5,
@@ -1458,6 +1893,9 @@
 {
 "text": "mien",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 163.3,
 435.2,
@@ -1468,6 +1906,9 @@
 {
 "text": "sales",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 187.1,
 434.4,
@@ -1478,6 +1919,9 @@
 {
 "text": "last",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 41.5,
 450.8,
@@ -1488,6 +1932,9 @@
 {
 "text": "for",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 59.5,
 450.6,
@@ -1498,6 +1945,9 @@
 {
 "text": "unawardable",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 75.3,
 449.9,
@@ -1508,6 +1958,9 @@
 {
 "text": "for",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 129.7,
 449.7,
@@ -1518,6 +1971,9 @@
 {
 "text": "full",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 145.5,
 449.4,
@@ -1528,6 +1984,9 @@
 {
 "text": "to",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 162.1,
 450.2,
@@ -1538,6 +1997,9 @@
 {
 "text": "terms",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 174.7,
 449.8,
@@ -1548,6 +2010,9 @@
 {
 "text": "amount",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 201.3,
 449.4,
@@ -1558,6 +2023,9 @@
 {
 "text": "pyridine",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 41.7,
 464.9,
@@ -1568,6 +2036,9 @@
 {
 "text": "myoclonus",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 77.2,
 464.4,
@@ -1578,6 +2049,9 @@
 {
 "text": "per",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 122.3,
 466.4,
@@ -1588,6 +2062,9 @@
 {
 "text": "city",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 140.2,
 464.3,
@@ -1598,6 +2075,9 @@
 {
 "text": "gliosis",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 158.2,
 463.5,
@@ -1608,6 +2088,9 @@
 {
 "text": "parrock",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 185.7,
 463.1,
@@ -1618,6 +2101,9 @@
 {
 "text": "net",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 41.9,
 480.5,
@@ -1628,6 +2114,9 @@
 {
 "text": "policy",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 59.4,
 479.2,
@@ -1638,6 +2127,9 @@
 {
 "text": "signature",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 86.0,
 479.2,
@@ -1648,6 +2140,9 @@
 {
 "text": "city",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 126.5,
 478.9,
@@ -1658,6 +2153,9 @@
 {
 "text": "by",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 144.5,
 478.3,
@@ -1668,6 +2166,9 @@
 {
 "text": "limulidae",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 158.9,
 477.8,
@@ -1678,6 +2179,9 @@
 {
 "text": "faineant",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 197.6,
 477.3,
@@ -1688,6 +2192,9 @@
 {
 "text": "net",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 233.6,
 478.0,
@@ -1698,6 +2205,9 @@
 {
 "text": "pried",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 42.1,
 493.9,
@@ -1708,6 +2218,9 @@
 {
 "text": "estimate",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 66.8,
 493.9,
@@ -1718,6 +2231,9 @@
 {
 "text": "full",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 103.7,
 493.2,
@@ -1728,6 +2244,9 @@
 {
 "text": "report",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 120.4,
 493.7,
@@ -1738,6 +2257,9 @@
 {
 "text": "folie",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 148.7,
 492.6,
@@ -1748,6 +2270,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 169.4,
 492.1,
@@ -1758,6 +2283,9 @@
 {
 "text": "change",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 42.3,
 508.2,
@@ -1768,6 +2296,9 @@
 {
 "text": "from",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 75.6,
 507.9,
@@ -1778,6 +2309,9 @@
 {
 "text": "intraneural",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 98.5,
 507.3,
@@ -1788,6 +2322,9 @@
 {
 "text": "per",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 144.9,
 509.3,
@@ -1798,6 +2335,9 @@
 {
 "text": "state",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 162.9,
 507.6,
@@ -1808,6 +2348,9 @@
 {
 "text": "cash",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 186.2,
 506.4,
@@ -1818,6 +2361,9 @@
 {
 "text": "augurial",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 208.7,
 506.0,
@@ -1828,6 +2374,9 @@
 {
 "text": "details",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 244.7,
 505.6,
@@ -1838,6 +2387,9 @@
 {
 "text": "date",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 42.4,
 522.7,
@@ -1848,6 +2400,9 @@
 {
 "text": "general",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 64.5,
 522.3,
@@ -1858,6 +2413,9 @@
 {
 "text": "counteract",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 98.3,
 522.6,
@@ -1868,6 +2426,9 @@
 {
 "text": "name",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 143.7,
 523.6,
@@ -1878,6 +2439,9 @@
 {
 "text": "porcellanid",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 170.2,
 520.7,
@@ -1888,6 +2452,9 @@
 {
 "text": "number",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 216.6,
 520.3,
@@ -1898,6 +2465,9 @@
 {
 "text": "interrupted",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 251.7,
 519.7,
@@ -1908,6 +2478,9 @@
 {
 "text": "code",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 42.6,
 537.1,
@@ -1918,6 +2491,9 @@
 {
 "text": "due",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 66.0,
 536.8,
@@ -1928,6 +2504,9 @@
 {
 "text": "cabriole",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 85.8,
 536.4,
@@ -1938,6 +2517,9 @@
 {
 "text": "lettish",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 120.5,
 536.0,
@@ -1948,6 +2530,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 147.9,
 535.6,
@@ -1958,6 +2543,9 @@
 {
 "text": "vendor",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 182.6,
 535.2,
@@ -1968,6 +2556,9 @@
 {
 "text": "overcoy",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 214.1,
 537.0,
@@ -1978,6 +2569,9 @@
 {
 "text": "check",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 42.8,
 551.4,
@@ -1988,6 +2582,9 @@
 {
 "text": "hydrogel",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 69.8,
 551.0,
@@ -1998,6 +2595,9 @@
 {
 "text": "irenicist",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 108.1,
 551.0,
@@ -2008,6 +2608,9 @@
 {
 "text": "delivery",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 141.8,
 550.1,
@@ -2018,6 +2621,9 @@
 {
 "text": "account",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 176.0,
 550.5,
@@ -2028,6 +2634,9 @@
 {
 "text": "code",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 211.1,
 549.3,
@@ -2038,6 +2647,9 @@
 {
 "text": "city",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 234.5,
 549.5,
@@ -2048,6 +2660,9 @@
 {
 "text": "zihar",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 252.5,
 548.8,
@@ -2058,6 +2673,9 @@
 {
 "text": "total",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 43.0,
 565.9,
@@ -2068,6 +2686,9 @@
 {
 "text": "labor",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 64.6,
 565.6,
@@ -2078,6 +2699,9 @@
 {
 "text": "shipping",
 "kind": "word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 88.9,
 565.1,
@@ -2088,6 +2712,9 @@
 {
 "text": "stupidhead",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 126.3,
 564.5,
@@ -2098,6 +2725,9 @@
 {
 "text": "granitite",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 173.5,
 564.5,
@@ -2108,6 +2738,9 @@
 {
 "text": "rename",
 "kind": "rare_word",
+"font": "Tahoma",
+"size": 19,
+"bold": false,
 "box": [
 210.0,
 565.8,

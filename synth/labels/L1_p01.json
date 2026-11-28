@@ -8,6 +8,9 @@
 {
 "text": "INVOICE",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 29,
+"bold": true,
 "box": [
 67.5,
 72.8,
@@ -18,6 +21,9 @@
 {
 "text": "CLM-WLZN7",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 29,
+"bold": true,
 "box": [
 162.0,
 72.8,
@@ -28,6 +34,9 @@
 {
 "text": "Amount:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 114.0,
@@ -38,6 +47,9 @@
 {
 "text": "ACCT-65208GT7",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 123.0,
 114.0,
@@ -48,6 +60,9 @@
 {
 "text": "Check:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 222.0,
 113.2,
@@ -58,6 +73,9 @@
 {
 "text": "(852)616-2123",
 "kind": "phone",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 267.7,
 113.2,
@@ -68,6 +86,9 @@
 {
 "text": "Check:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 134.2,
@@ -78,6 +99,9 @@
 {
 "text": "$85.54",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 113.2,
 134.2,
@@ -88,6 +112,9 @@
 {
 "text": "Ship:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 159.0,
 134.2,
@@ -98,6 +125,9 @@
 {
 "text": "2020-07-03",
 "kind": "date",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 194.2,
 135.0,
@@ -108,6 +138,9 @@
 {
 "text": "Net:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 156.0,
@@ -118,6 +151,9 @@
 {
 "text": "(371)609-0581",
 "kind": "phone",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 99.8,
 155.2,
@@ -128,6 +164,9 @@
 {
 "text": "Cost:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 188.2,
 156.0,
@@ -138,6 +177,9 @@
 {
 "text": "castella78@forebush.com",
 "kind": "email",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 225.0,
 155.2,
@@ -148,6 +190,9 @@
 {
 "text": "Account:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 177.0,
@@ -158,6 +203,9 @@
 {
 "text": "2012-10-27",
 "kind": "date",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 124.5,
 177.0,
@@ -168,6 +216,9 @@
 {
 "text": "Department:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 195.0,
 177.0,
@@ -178,6 +229,9 @@
 {
 "text": "$7,769.84",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 274.5,
 176.2,
@@ -188,6 +242,9 @@
 {
 "text": "Details:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 197.2,
@@ -198,6 +255,9 @@
 {
 "text": "REF-1lKO685JU",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 118.5,
 197.2,
@@ -208,6 +268,9 @@
 {
 "text": "Change:",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 212.2,
 197.2,
@@ -218,6 +281,9 @@
 {
 "text": "1999-09-19",
 "kind": "date",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 265.5,
 198.0,
@@ -228,6 +294,9 @@
 {
 "text": "Item",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": true,
 "box": [
 67.5,
 219.0,
@@ -238,6 +307,9 @@
 {
 "text": "Description",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": true,
 "box": [
 102.8,
 218.2,
@@ -248,6 +320,9 @@
 {
 "text": "Qty",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": true,
 "box": [
 178.5,
 219.0,
@@ -258,6 +333,9 @@
 {
 "text": "Amount",
 "kind": "label",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": true,
 "box": [
 207.0,
 219.0,
@@ -268,6 +346,9 @@
 {
 "text": "87R2DD",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 244.5,
@@ -278,6 +359,9 @@
 {
 "text": "pylar",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 117.8,
 243.8,
@@ -288,6 +372,9 @@
 {
 "text": "code",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 153.8,
 243.8,
@@ -298,6 +385,9 @@
 {
 "text": "16",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 187.5,
 244.5,
@@ -308,6 +398,9 @@
 {
 "text": "$58,333.43",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 208.5,
 243.8,
@@ -318,6 +411,9 @@
 {
 "text": "ISMGTVI",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 265.5,
@@ -328,6 +424,9 @@
 {
 "text": "the",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 121.5,
 264.8,
@@ -338,6 +437,9 @@
 {
 "text": "item",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 147.8,
 265.5,
@@ -348,6 +450,9 @@
 {
 "text": "please",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 181.5,
 264.8,
@@ -358,6 +463,9 @@
 {
 "text": "466",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 225.0,
 265.5,
@@ -368,6 +476,9 @@
 {
 "text": "$31.26",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 252.8,
 264.8,
@@ -378,6 +489,9 @@
 {
 "text": "PO-3IGTQM",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 286.5,
@@ -388,6 +502,9 @@
 {
 "text": "leaguelong",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 138.8,
 285.8,
@@ -398,6 +515,9 @@
 {
 "text": "claim",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 207.8,
 285.8,
@@ -408,6 +528,9 @@
 {
 "text": "byssin",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 246.0,
 285.8,
@@ -418,6 +541,9 @@
 {
 "text": "108",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 287.2,
 286.5,
@@ -428,6 +554,9 @@
 {
 "text": "$130,170.04",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 315.0,
 285.8,
@@ -438,6 +567,9 @@
 {
 "text": "SKU-2BZIIE80",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 307.5,
@@ -448,6 +580,9 @@
 {
 "text": "estimate",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 150.0,
 307.5,
@@ -458,6 +593,9 @@
 {
 "text": "unit",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 207.8,
 307.5,
@@ -468,6 +606,9 @@
 {
 "text": "325",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 237.8,
 307.5,
@@ -478,6 +619,9 @@
 {
 "text": "$7,898.98",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 265.5,
 306.8,
@@ -488,6 +632,9 @@
 {
 "text": "UE5AS2TZ",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 328.5,
@@ -498,6 +645,9 @@
 {
 "text": "refringent",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 131.2,
 327.8,
@@ -508,6 +658,9 @@
 {
 "text": "customer",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 196.5,
 329.2,
@@ -518,6 +671,9 @@
 {
 "text": "code",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 256.5,
 327.8,
@@ -528,6 +684,9 @@
 {
 "text": "459",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 290.2,
 328.5,
@@ -538,6 +697,9 @@
 {
 "text": "$122,513.00",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 318.0,
 327.8,
@@ -548,6 +710,9 @@
 {
 "text": "SKU-60804VPG",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 349.5,
@@ -558,6 +723,9 @@
 {
 "text": "cost",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 158.2,
 350.2,
@@ -568,6 +736,9 @@
 {
 "text": "full",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 189.0,
 348.8,
@@ -578,6 +749,9 @@
 {
 "text": "288",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 215.2,
 349.5,
@@ -588,6 +762,9 @@
 {
 "text": "$3,185.37",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 243.0,
 348.8,
@@ -598,6 +775,9 @@
 {
 "text": "E78MJQ80l",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 369.8,
@@ -608,6 +788,9 @@
 {
 "text": "tax",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 135.8,
 371.2,
@@ -618,6 +801,9 @@
 {
 "text": "after",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 162.0,
 369.8,
@@ -628,6 +814,9 @@
 {
 "text": "425",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 198.0,
 370.5,
@@ -638,6 +827,9 @@
 {
 "text": "$42.41",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 225.8,
 369.8,
@@ -648,6 +840,9 @@
 {
 "text": "ACCT-P1SR5",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 391.5,
@@ -658,6 +853,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 143.2,
 390.8,
@@ -668,6 +866,9 @@
 {
 "text": "by",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 197.2,
 390.8,
@@ -678,6 +879,9 @@
 {
 "text": "54",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 217.5,
 391.5,
@@ -688,6 +892,9 @@
 {
 "text": "$35.64",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 238.5,
 390.8,
@@ -698,6 +905,9 @@
 {
 "text": "CLM-65S8JZ",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 412.5,
@@ -708,6 +918,9 @@
 {
 "text": "lamentive",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 141.8,
 411.8,
@@ -718,6 +931,9 @@
 {
 "text": "apoxyomenos",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 205.5,
 414.8,
@@ -728,6 +944,9 @@
 {
 "text": "56",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 288.8,
 412.5,
@@ -738,6 +957,9 @@
 {
 "text": "$6,782.15",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 309.8,
 411.8,
@@ -748,6 +970,9 @@
 {
 "text": "TX-S98HW",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 433.5,
@@ -758,6 +983,9 @@
 {
 "text": "department",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 132.0,
 432.8,
@@ -768,6 +996,9 @@
 {
 "text": "endosteoma",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 206.2,
 432.8,
@@ -778,6 +1009,9 @@
 {
 "text": "remit",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 282.0,
 433.5,
@@ -788,6 +1022,9 @@
 {
 "text": "125",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 321.0,
 433.5,
@@ -798,6 +1035,9 @@
 {
 "text": "$8.51",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 348.8,
 432.8,
@@ -808,6 +1048,9 @@
 {
 "text": "0OS0H1N0A",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 454.5,
@@ -818,6 +1061,9 @@
 {
 "text": "toddler",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 140.2,
 453.8,
@@ -828,6 +1074,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 189.0,
 453.8,
@@ -838,6 +1087,9 @@
 {
 "text": "455",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 243.0,
 454.5,
@@ -848,6 +1100,9 @@
 {
 "text": "$8,141.33",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 270.8,
 453.8,
@@ -858,6 +1113,9 @@
 {
 "text": "YF3BJFF3l",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 474.8,
@@ -868,6 +1126,9 @@
 {
 "text": "indue",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 133.5,
 474.8,
@@ -878,6 +1139,9 @@
 {
 "text": "on",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 171.8,
 477.8,
@@ -888,6 +1152,9 @@
 {
 "text": "136",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 192.8,
 475.5,
@@ -898,6 +1165,9 @@
 {
 "text": "$33,586.00",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 220.5,
 474.8,
@@ -908,6 +1178,9 @@
 {
 "text": "TX-7O7241",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 496.5,
@@ -918,6 +1191,9 @@
 {
 "text": "statement",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 135.8,
 497.2,
@@ -928,6 +1204,9 @@
 {
 "text": "please",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 201.8,
 495.8,
@@ -938,6 +1217,9 @@
 {
 "text": "contagion",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 245.2,
 496.5,
@@ -948,6 +1230,9 @@
 {
 "text": "278",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 308.2,
 496.5,
@@ -958,6 +1243,9 @@
 {
 "text": "$7,506.73",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 336.0,
 495.8,
@@ -968,6 +1256,9 @@
 {
 "text": "TX-WSFBLV1U",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 517.5,
@@ -978,6 +1269,9 @@
 {
 "text": "polycotyly",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 153.7,
 516.8,
@@ -988,6 +1282,9 @@
 {
 "text": "policy",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 218.2,
 516.8,
@@ -998,6 +1295,9 @@
 {
 "text": "174",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 258.7,
 517.5,
@@ -1008,6 +1308,9 @@
 {
 "text": "$97.00",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 286.5,
 516.8,
@@ -1018,6 +1321,9 @@
 {
 "text": "TX-PW369",
 "kind": "id",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 538.5,
@@ -1028,6 +1334,9 @@
 {
 "text": "contact",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 131.2,
 539.2,
@@ -1038,6 +1347,9 @@
 {
 "text": "full",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 181.5,
 537.8,
@@ -1048,6 +1360,9 @@
 {
 "text": "49",
 "kind": "quantity",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 207.8,
 538.5,
@@ -1058,6 +1373,9 @@
 {
 "text": "$95,648.78",
 "kind": "amount",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 228.8,
 537.8,
@@ -1068,6 +1386,9 @@
 {
 "text": "bluestone",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 558.8,
@@ -1078,6 +1399,9 @@
 {
 "text": "chevrony",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 129.8,
 558.8,
@@ -1088,6 +1412,9 @@
 {
 "text": "domesday",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 187.5,
 558.8,
@@ -1098,6 +1425,9 @@
 {
 "text": "item",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 250.5,
 559.5,
@@ -1108,6 +1438,9 @@
 {
 "text": "payment",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 284.2,
 560.2,
@@ -1118,6 +1451,9 @@
 {
 "text": "bromoketone",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 340.5,
 558.8,
@@ -1128,6 +1464,9 @@
 {
 "text": "tax",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 581.2,
@@ -1138,6 +1477,9 @@
 {
 "text": "to",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 93.8,
 581.2,
@@ -1148,6 +1490,9 @@
 {
 "text": "year",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 113.2,
 582.8,
@@ -1158,6 +1503,9 @@
 {
 "text": "prismoid",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 145.5,
 579.8,
@@ -1168,6 +1516,9 @@
 {
 "text": "phone",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 201.8,
 579.8,
@@ -1178,6 +1529,9 @@
 {
 "text": "supply",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 243.0,
 579.8,
@@ -1188,6 +1542,9 @@
 {
 "text": "delivery",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 285.8,
 579.8,
@@ -1198,6 +1555,9 @@
 {
 "text": "general",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 338.2,
 579.8,
@@ -1208,6 +1568,9 @@
 {
 "text": "check",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 600.8,
@@ -1218,6 +1581,9 @@
 {
 "text": "item",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 107.2,
 601.5,
@@ -1228,6 +1594,9 @@
 {
 "text": "interroad",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 141.0,
 600.8,
@@ -1238,6 +1607,9 @@
 {
 "text": "claim",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 201.8,
 600.8,
@@ -1248,6 +1620,9 @@
 {
 "text": "signature",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 240.0,
 601.5,
@@ -1258,6 +1633,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 300.8,
 600.8,
@@ -1268,6 +1646,9 @@
 {
 "text": "cothe",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 354.0,
 600.8,
@@ -1278,6 +1659,9 @@
 {
 "text": "paid",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 393.0,
 600.8,
@@ -1288,6 +1672,9 @@
 {
 "text": "amitosis",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 622.5,
@@ -1298,6 +1685,9 @@
 {
 "text": "return",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 122.2,
 623.2,
@@ -1308,6 +1698,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 165.8,
 621.8,
@@ -1318,6 +1711,9 @@
 {
 "text": "company",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 219.8,
 624.8,
@@ -1328,6 +1724,9 @@
 {
 "text": "proverbic",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 276.8,
 621.8,
@@ -1338,6 +1737,9 @@
 {
 "text": "shipshape",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 337.5,
 621.8,
@@ -1348,6 +1750,9 @@
 {
 "text": "remit",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 399.8,
 622.5,
@@ -1358,6 +1763,9 @@
 {
 "text": "after",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 438.8,
 621.8,
@@ -1368,6 +1776,9 @@
 {
 "text": "remit",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 643.5,
@@ -1378,6 +1789,9 @@
 {
 "text": "shipping",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 106.5,
 642.8,
@@ -1388,6 +1802,9 @@
 {
 "text": "endearment",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 160.5,
 642.8,
@@ -1398,6 +1815,9 @@
 {
 "text": "sunk",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 236.2,
 642.8,
@@ -1408,6 +1828,9 @@
 {
 "text": "endamage",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 269.2,
 642.8,
@@ -1418,6 +1841,9 @@
 {
 "text": "name",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 334.5,
 645.8,
@@ -1428,6 +1854,9 @@
 {
 "text": "week",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 372.8,
 642.8,
@@ -1438,6 +1867,9 @@
 {
 "text": "urethritis",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 663.8,
@@ -1448,6 +1880,9 @@
 {
 "text": "day",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 129.0,
 663.8,
@@ -1458,6 +1893,9 @@
 {
 "text": "fallotomy",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 156.0,
 663.8,
@@ -1468,6 +1906,9 @@
 {
 "text": "details",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 217.5,
 663.8,
@@ -1478,6 +1919,9 @@
 {
 "text": "period",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 263.2,
 663.8,
@@ -1488,6 +1932,9 @@
 {
 "text": "collier",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 306.8,
 663.8,
@@ -1498,6 +1945,9 @@
 {
 "text": "diglossia",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 350.2,
 663.8,
@@ -1508,6 +1958,9 @@
 {
 "text": "aloofly",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 406.5,
 663.8,
@@ -1518,6 +1971,9 @@
 {
 "text": "period",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 684.8,
@@ -1528,6 +1984,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 111.0,
 684.8,
@@ -1538,6 +1997,9 @@
 {
 "text": "balance",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 164.2,
 684.8,
@@ -1548,6 +2010,9 @@
 {
 "text": "return",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 215.2,
 686.2,
@@ -1558,6 +2023,9 @@
 {
 "text": "to",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 258.8,
 686.2,
@@ -1568,6 +2036,9 @@
 {
 "text": "vendor",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 278.2,
 684.8,
@@ -1578,6 +2049,9 @@
 {
 "text": "cyclophoric",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 324.0,
 684.8,
@@ -1588,6 +2062,9 @@
 {
 "text": "convergence",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 708.0,
@@ -1598,6 +2075,9 @@
 {
 "text": "revulsive",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 145.5,
 705.8,
@@ -1608,6 +2088,9 @@
 {
 "text": "on",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 203.2,
 708.8,
@@ -1618,6 +2101,9 @@
 {
 "text": "unimpaired",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 224.2,
 705.8,
@@ -1628,6 +2114,9 @@
 {
 "text": "other",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 295.5,
 705.8,
@@ -1638,6 +2127,9 @@
 {
 "text": "return",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 333.8,
 707.2,
@@ -1648,6 +2140,9 @@
 {
 "text": "isopoda",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 377.2,
 705.8,
@@ -1658,6 +2153,9 @@
 {
 "text": "gleefulness",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 427.5,
 705.8,
@@ -1668,6 +2166,9 @@
 {
 "text": "department",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 726.8,
@@ -1678,6 +2179,9 @@
 {
 "text": "details",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 141.8,
 726.8,
@@ -1688,6 +2192,9 @@
 {
 "text": "seetulputty",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 187.5,
 726.8,
@@ -1698,6 +2205,9 @@
 {
 "text": "polyaxonic",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 259.5,
 726.8,
@@ -1708,6 +2218,9 @@
 {
 "text": "insurance",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 327.0,
 727.5,
@@ -1718,6 +2231,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 388.5,
 726.8,
@@ -1728,6 +2244,9 @@
 {
 "text": "orangite",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 442.5,
 727.5,
@@ -1738,6 +2257,9 @@
 {
 "text": "new",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 498.0,
 729.8,
@@ -1748,6 +2270,9 @@
 {
 "text": "grasswards",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 747.8,
@@ -1758,6 +2283,9 @@
 {
 "text": "wellborn",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 138.0,
 747.8,
@@ -1768,6 +2296,9 @@
 {
 "text": "woolpress",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 195.0,
 747.8,
@@ -1778,6 +2309,9 @@
 {
 "text": "muddybreast",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 258.8,
 747.8,
@@ -1788,6 +2322,9 @@
 {
 "text": "scrivening",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 339.0,
 748.5,
@@ -1798,6 +2335,9 @@
 {
 "text": "labor",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 403.5,
 747.8,
@@ -1808,6 +2348,9 @@
 {
 "text": "daggletail",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 440.2,
 747.8,
@@ -1818,6 +2361,9 @@
 {
 "text": "net",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 770.2,
@@ -1828,6 +2374,9 @@
 {
 "text": "vendor",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 93.8,
 768.8,
@@ -1838,6 +2387,9 @@
 {
 "text": "reobscure",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 139.5,
 768.8,
@@ -1848,6 +2400,9 @@
 {
 "text": "supply",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 202.5,
 768.8,
@@ -1858,6 +2413,9 @@
 {
 "text": "full",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 245.2,
 768.8,
@@ -1868,6 +2426,9 @@
 {
 "text": "oleraceous",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 271.5,
 768.8,
@@ -1878,6 +2439,9 @@
 {
 "text": "etalon",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 789.8,
@@ -1888,6 +2452,9 @@
 {
 "text": "each",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 111.0,
 789.8,
@@ -1898,6 +2465,9 @@
 {
 "text": "company",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 144.8,
 792.8,
@@ -1908,6 +2478,9 @@
 {
 "text": "uncous",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 201.8,
 792.8,
@@ -1918,6 +2491,9 @@
 {
 "text": "each",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 247.5,
 789.8,
@@ -1928,6 +2504,9 @@
 {
 "text": "uroleucinic",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 281.2,
 789.8,
@@ -1938,6 +2517,9 @@
 {
 "text": "entice",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 811.5,
@@ -1948,6 +2530,9 @@
 {
 "text": "to",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 110.2,
 812.2,
@@ -1958,6 +2543,9 @@
 {
 "text": "your",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 129.8,
 813.8,
@@ -1968,6 +2556,9 @@
 {
 "text": "please",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 162.0,
 810.8,
@@ -1978,6 +2569,9 @@
 {
 "text": "beneventan",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 205.5,
 810.8,
@@ -1988,6 +2582,9 @@
 {
 "text": "phrymaceous",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 278.2,
 810.8,
@@ -1998,6 +2595,9 @@
 {
 "text": "work",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 359.2,
 810.8,
@@ -2008,6 +2608,9 @@
 {
 "text": "hostie",
 "kind": "rare_word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 395.2,
 810.8,
@@ -2018,6 +2621,9 @@
 {
 "text": "remit",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 437.2,
 811.5,
@@ -2028,6 +2634,9 @@
 {
 "text": "work",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 67.5,
 831.8,
@@ -2038,6 +2647,9 @@
 {
 "text": "signature",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 103.5,
 832.5,
@@ -2048,6 +2660,9 @@
 {
 "text": "description",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 164.2,
 831.8,
@@ -2058,6 +2673,9 @@
 {
 "text": "day",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 234.8,
 831.8,
@@ -2068,6 +2686,9 @@
 {
 "text": "estimate",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 261.8,
 832.5,
@@ -2078,6 +2699,9 @@
 {
 "text": "city",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 319.5,
 832.5,
@@ -2088,6 +2712,9 @@
 {
 "text": "period",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 348.0,
 831.8,
@@ -2098,6 +2725,9 @@
 {
 "text": "goods",
 "kind": "word",
+"font": "Trebuchet MS",
+"size": 17,
+"bold": false,
 "box": [
 391.5,
 831.8,

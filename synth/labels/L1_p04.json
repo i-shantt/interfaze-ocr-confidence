@@ -8,6 +8,9 @@
 {
 "text": "REMITTANCE",
 "kind": "label",
+"font": "Georgia",
+"size": 30,
+"bold": true,
 "box": [
 67.5,
 72.8,
@@ -18,6 +21,9 @@
 {
 "text": "53T1GAI2l",
 "kind": "id",
+"font": "Georgia",
+"size": 30,
+"bold": true,
 "box": [
 246.8,
 71.2,
@@ -28,6 +34,9 @@
 {
 "text": "Contact:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 115.5,
@@ -38,6 +47,9 @@
 {
 "text": "03/05/1986",
 "kind": "date",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 124.5,
 115.5,
@@ -48,6 +60,9 @@
 {
 "text": "Report:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 203.2,
 115.5,
@@ -58,6 +73,9 @@
 {
 "text": "$32.81",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 255.0,
 115.5,
@@ -68,6 +86,9 @@
 {
 "text": "Price:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 138.0,
@@ -78,6 +99,9 @@
 {
 "text": "ORD-FWOCO",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 108.0,
 138.0,
@@ -88,6 +112,9 @@
 {
 "text": "Per:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 198.8,
 138.0,
@@ -98,6 +125,9 @@
 {
 "text": "12/26/1988",
 "kind": "date",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 229.5,
 138.0,
@@ -108,6 +138,9 @@
 {
 "text": "Week:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 66.8,
 159.8,
@@ -118,6 +151,9 @@
 {
 "text": "(700)633-8045",
 "kind": "phone",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 112.5,
 160.5,
@@ -128,6 +164,9 @@
 {
 "text": "On:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 211.5,
 160.5,
@@ -138,6 +177,9 @@
 {
 "text": "priapulu22@gratis.com",
 "kind": "email",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 240.0,
 159.8,
@@ -148,6 +190,9 @@
 {
 "text": "Please:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 182.2,
@@ -158,6 +203,9 @@
 {
 "text": "cranelik23@reshuffle.com",
 "kind": "email",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 116.2,
 182.2,
@@ -168,6 +216,9 @@
 {
 "text": "Date:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 279.8,
 183.0,
@@ -178,6 +229,9 @@
 {
 "text": "INV-OQ29VJ",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 318.0,
 183.0,
@@ -188,6 +242,9 @@
 {
 "text": "Contact:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 205.5,
@@ -198,6 +255,9 @@
 {
 "text": "$6,569.24",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 124.5,
 205.5,
@@ -208,6 +268,9 @@
 {
 "text": "Part:",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 191.2,
 205.5,
@@ -218,6 +281,9 @@
 {
 "text": "2026-04-24",
 "kind": "date",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 226.5,
 205.5,
@@ -228,6 +294,9 @@
 {
 "text": "Item",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": true,
 "box": [
 67.5,
 228.0,
@@ -238,6 +307,9 @@
 {
 "text": "Description",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": true,
 "box": [
 107.2,
 227.2,
@@ -248,6 +320,9 @@
 {
 "text": "Qty",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": true,
 "box": [
 195.0,
 228.0,
@@ -258,6 +333,9 @@
 {
 "text": "Amount",
 "kind": "label",
+"font": "Georgia",
+"size": 18,
+"bold": true,
 "box": [
 225.8,
 228.0,
@@ -268,6 +346,9 @@
 {
 "text": "INV-2OJ9SW",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 255.0,
@@ -278,6 +359,9 @@
 {
 "text": "rhapsodism",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 156.0,
 254.2,
@@ -288,6 +372,9 @@
 {
 "text": "full",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 231.8,
 254.2,
@@ -298,6 +385,9 @@
 {
 "text": "141",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 257.2,
 257.2,
@@ -308,6 +398,9 @@
 {
 "text": "$29,972.47",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 282.8,
 255.0,
@@ -318,6 +411,9 @@
 {
 "text": "TX-AEUOG5H4U",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 277.5,
@@ -328,6 +424,9 @@
 {
 "text": "prepalatal",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 181.5,
 276.8,
@@ -338,6 +437,9 @@
 {
 "text": "address",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 246.8,
 276.8,
@@ -348,6 +450,9 @@
 {
 "text": "labor",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 298.5,
 276.8,
@@ -358,6 +463,9 @@
 {
 "text": "20",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 335.2,
 279.8,
@@ -368,6 +476,9 @@
 {
 "text": "$66,641.62",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 357.0,
 277.5,
@@ -378,6 +489,9 @@
 {
 "text": "SGWJZ7LCD",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 300.0,
@@ -388,6 +502,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 153.0,
 299.2,
@@ -398,6 +515,9 @@
 {
 "text": "approved",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 207.0,
 299.2,
@@ -408,6 +528,9 @@
 {
 "text": "credit",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 268.5,
 299.2,
@@ -418,6 +541,9 @@
 {
 "text": "139",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 308.2,
 302.2,
@@ -428,6 +554,9 @@
 {
 "text": "$3,439.32",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 335.2,
 300.0,
@@ -438,6 +567,9 @@
 {
 "text": "HQIBU",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 322.5,
@@ -448,6 +580,9 @@
 {
 "text": "aroxyl",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 119.2,
 321.8,
@@ -458,6 +593,9 @@
 {
 "text": "delivery",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 162.0,
 321.8,
@@ -468,6 +606,9 @@
 {
 "text": "9",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 215.2,
 324.8,
@@ -478,6 +619,9 @@
 {
 "text": "$166,957.91",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 228.8,
 322.5,
@@ -488,6 +632,9 @@
 {
 "text": "ZNIXW0",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 345.0,
@@ -498,6 +645,9 @@
 {
 "text": "general",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 129.0,
 344.2,
@@ -508,6 +658,9 @@
 {
 "text": "yengeese",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 178.5,
 348.0,
@@ -518,6 +671,9 @@
 {
 "text": "155",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 240.0,
 347.2,
@@ -528,6 +684,9 @@
 {
 "text": "$7,846.53",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 267.0,
 345.0,
@@ -538,6 +697,9 @@
 {
 "text": "ZLU5S",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 367.5,
@@ -548,6 +710,9 @@
 {
 "text": "vendor",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 114.8,
 366.8,
@@ -558,6 +723,9 @@
 {
 "text": "received",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 163.5,
 366.8,
@@ -568,6 +736,9 @@
 {
 "text": "reddendum",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 219.0,
 366.8,
@@ -578,6 +749,9 @@
 {
 "text": "8",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 294.0,
 367.5,
@@ -588,6 +762,9 @@
 {
 "text": "$5,112.16",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 308.2,
 367.5,
@@ -598,6 +775,9 @@
 {
 "text": "SKU-X5B6S7N4B",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 390.0,
@@ -608,6 +788,9 @@
 {
 "text": "peakward",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 181.5,
 389.2,
@@ -618,6 +801,9 @@
 {
 "text": "puntel",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 245.2,
 389.2,
@@ -628,6 +814,9 @@
 {
 "text": "134",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 289.5,
 392.2,
@@ -638,6 +827,9 @@
 {
 "text": "$89,746.10",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 316.5,
 390.0,
@@ -648,6 +840,9 @@
 {
 "text": "CLM-YW6OFOFO",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 412.5,
@@ -658,6 +853,9 @@
 {
 "text": "year",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 183.0,
 415.5,
@@ -668,6 +866,9 @@
 {
 "text": "statement",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 215.2,
 413.2,
@@ -678,6 +879,9 @@
 {
 "text": "liberality",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 281.2,
 411.8,
@@ -688,6 +892,9 @@
 {
 "text": "399",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 339.8,
 414.8,
@@ -698,6 +905,9 @@
 {
 "text": "$6,083.26",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 368.2,
 412.5,
@@ -708,6 +918,9 @@
 {
 "text": "PMW6KRAVQ",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 435.0,
@@ -718,6 +931,9 @@
 {
 "text": "canari",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 162.8,
 435.0,
@@ -728,6 +944,9 @@
 {
 "text": "year",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 204.8,
 438.0,
@@ -738,6 +957,9 @@
 {
 "text": "tectal",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 237.0,
 434.2,
@@ -748,6 +970,9 @@
 {
 "text": "25",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 275.2,
 437.2,
@@ -758,6 +983,9 @@
 {
 "text": "$8,507.78",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 296.2,
 435.0,
@@ -768,6 +996,9 @@
 {
 "text": "ACCT-9S0XK92",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 66.8,
 457.5,
@@ -778,6 +1009,9 @@
 {
 "text": "mailclad",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 171.8,
 456.8,
@@ -788,6 +1022,9 @@
 {
 "text": "assimilator",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 228.0,
 456.8,
@@ -798,6 +1035,9 @@
 {
 "text": "department",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 300.0,
 456.8,
@@ -808,6 +1048,9 @@
 {
 "text": "362",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 375.8,
 457.5,
@@ -818,6 +1061,9 @@
 {
 "text": "$5,638.92",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 404.2,
 457.5,
@@ -828,6 +1074,9 @@
 {
 "text": "Q8O1W",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 480.0,
@@ -838,6 +1087,9 @@
 {
 "text": "puffer",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 120.8,
 479.2,
@@ -848,6 +1100,9 @@
 {
 "text": "remit",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 162.8,
 480.0,
@@ -858,6 +1113,9 @@
 {
 "text": "417",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 201.0,
 482.2,
@@ -868,6 +1126,9 @@
 {
 "text": "$1,997.20",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 227.2,
 480.0,
@@ -878,6 +1139,9 @@
 {
 "text": "ORD-1MIZY",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 502.5,
@@ -888,6 +1152,9 @@
 {
 "text": "statement",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 148.5,
 503.2,
@@ -898,6 +1165,9 @@
 {
 "text": "approved",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 214.5,
 501.8,
@@ -908,6 +1178,9 @@
 {
 "text": "204",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 276.0,
 504.8,
@@ -918,6 +1191,9 @@
 {
 "text": "$58.45",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 305.2,
 502.5,
@@ -928,6 +1204,9 @@
 {
 "text": "ORD-O3852CB",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 525.0,
@@ -938,6 +1217,9 @@
 {
 "text": "department",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 166.5,
 524.2,
@@ -948,6 +1230,9 @@
 {
 "text": "order",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 242.2,
 524.2,
@@ -958,6 +1243,9 @@
 {
 "text": "128",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 280.5,
 525.0,
@@ -968,6 +1256,9 @@
 {
 "text": "$123,319.16",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 308.2,
 525.0,
@@ -978,6 +1269,9 @@
 {
 "text": "ORD-ZEUANRBC",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 547.5,
@@ -988,6 +1282,9 @@
 {
 "text": "amount",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 183.0,
 548.2,
@@ -998,6 +1295,9 @@
 {
 "text": "please",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 235.5,
 546.8,
@@ -1008,6 +1308,9 @@
 {
 "text": "246",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 279.0,
 547.5,
@@ -1018,6 +1321,9 @@
 {
 "text": "$95.83",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 307.5,
 547.5,
@@ -1028,6 +1334,9 @@
 {
 "text": "TX-EOTJ81l5T",
 "kind": "id",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 569.2,
@@ -1038,6 +1347,9 @@
 {
 "text": "slinkweed",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 164.2,
 569.2,
@@ -1048,6 +1360,9 @@
 {
 "text": "reachless",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 230.2,
 569.2,
@@ -1058,6 +1373,9 @@
 {
 "text": "dampishly",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 291.0,
 569.2,
@@ -1068,6 +1386,9 @@
 {
 "text": "8",
 "kind": "quantity",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 358.5,
 570.0,
@@ -1078,6 +1399,9 @@
 {
 "text": "$94.09",
 "kind": "amount",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 372.8,
 570.0,
@@ -1088,6 +1412,9 @@
 {
 "text": "address",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 591.8,
@@ -1098,6 +1425,9 @@
 {
 "text": "policy",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 119.2,
 591.8,
@@ -1108,6 +1438,9 @@
 {
 "text": "unsoul",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 160.5,
 591.8,
@@ -1118,6 +1451,9 @@
 {
 "text": "date",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 207.0,
 591.8,
@@ -1128,6 +1464,9 @@
 {
 "text": "insurance",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 238.5,
 592.5,
@@ -1138,6 +1477,9 @@
 {
 "text": "cost",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 303.0,
 593.2,
@@ -1148,6 +1490,9 @@
 {
 "text": "dollmaker",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 333.0,
 591.8,
@@ -1158,6 +1503,9 @@
 {
 "text": "details",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 399.8,
 591.8,
@@ -1168,6 +1516,9 @@
 {
 "text": "check",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 444.8,
 591.8,
@@ -1178,6 +1529,9 @@
 {
 "text": "unbreast",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 614.2,
@@ -1188,6 +1542,9 @@
 {
 "text": "balky",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 125.2,
 614.2,
@@ -1198,6 +1555,9 @@
 {
 "text": "description",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 164.2,
 614.2,
@@ -1208,6 +1568,9 @@
 {
 "text": "return",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 237.0,
 615.8,
@@ -1218,6 +1581,9 @@
 {
 "text": "last",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 280.5,
 614.2,
@@ -1228,6 +1594,9 @@
 {
 "text": "sales",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 307.5,
 614.2,
@@ -1238,6 +1607,9 @@
 {
 "text": "total",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 636.8,
@@ -1248,6 +1620,9 @@
 {
 "text": "buckstone",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 99.8,
 636.8,
@@ -1258,6 +1633,9 @@
 {
 "text": "vocally",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 167.2,
 636.8,
@@ -1268,6 +1646,9 @@
 {
 "text": "swonken",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 215.2,
 636.8,
@@ -1278,6 +1659,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 275.2,
 636.8,
@@ -1288,6 +1672,9 @@
 {
 "text": "silky",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 329.2,
 636.8,
@@ -1298,6 +1685,9 @@
 {
 "text": "chemitype",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 363.0,
 636.8,
@@ -1308,6 +1698,9 @@
 {
 "text": "predetest",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 430.5,
 636.8,
@@ -1318,6 +1711,9 @@
 {
 "text": "nature",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 660.8,
@@ -1328,6 +1724,9 @@
 {
 "text": "by",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 111.8,
 659.2,
@@ -1338,6 +1737,9 @@
 {
 "text": "clairschach",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 132.8,
 659.2,
@@ -1348,6 +1750,9 @@
 {
 "text": "number",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 204.0,
 659.2,
@@ -1358,6 +1763,9 @@
 {
 "text": "cash",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 257.2,
 659.2,
@@ -1368,6 +1776,9 @@
 {
 "text": "unbrained",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 289.5,
 659.2,
@@ -1378,6 +1789,9 @@
 {
 "text": "credit",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 357.0,
 659.2,
@@ -1388,6 +1802,9 @@
 {
 "text": "in",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 682.5,
@@ -1398,6 +1815,9 @@
 {
 "text": "price",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 85.5,
 682.5,
@@ -1408,6 +1828,9 @@
 {
 "text": "description",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 120.8,
 681.8,
@@ -1418,6 +1841,9 @@
 {
 "text": "with",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 192.8,
 681.8,
@@ -1428,6 +1854,9 @@
 {
 "text": "remit",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 225.0,
 682.5,
@@ -1438,6 +1867,9 @@
 {
 "text": "maturity",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 263.2,
 682.5,
@@ -1448,6 +1880,9 @@
 {
 "text": "estimate",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 320.2,
 682.5,
@@ -1458,6 +1893,9 @@
 {
 "text": "company",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 377.2,
 685.5,
@@ -1468,6 +1906,9 @@
 {
 "text": "magic",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 438.0,
 682.5,
@@ -1478,6 +1919,9 @@
 {
 "text": "wildness",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 66.8,
 704.2,
@@ -1488,6 +1932,9 @@
 {
 "text": "net",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 125.2,
 705.8,
@@ -1498,6 +1945,9 @@
 {
 "text": "amount",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 150.8,
 705.8,
@@ -1508,6 +1958,9 @@
 {
 "text": "coexistence",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 203.2,
 705.0,
@@ -1518,6 +1971,9 @@
 {
 "text": "toshly",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 278.2,
 704.2,
@@ -1528,6 +1984,9 @@
 {
 "text": "ship",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 320.2,
 704.2,
@@ -1538,6 +1997,9 @@
 {
 "text": "abthainry",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 726.8,
@@ -1548,6 +2010,9 @@
 {
 "text": "business",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 129.8,
 726.8,
@@ -1558,6 +2023,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 188.2,
 726.8,
@@ -1568,6 +2036,9 @@
 {
 "text": "notharctus",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 241.5,
 726.8,
@@ -1578,6 +2049,9 @@
 {
 "text": "unrespired",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 311.2,
 726.8,
@@ -1588,6 +2062,9 @@
 {
 "text": "ilicaceae",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 381.8,
 726.8,
@@ -1598,6 +2075,9 @@
 {
 "text": "phone",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 438.0,
 726.8,
@@ -1608,6 +2088,9 @@
 {
 "text": "remit",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 481.5,
 727.5,
@@ -1618,6 +2101,9 @@
 {
 "text": "due",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 749.2,
@@ -1628,6 +2114,9 @@
 {
 "text": "fictionize",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 95.2,
 749.2,
@@ -1638,6 +2127,9 @@
 {
 "text": "vendor",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 155.2,
 749.2,
@@ -1648,6 +2140,9 @@
 {
 "text": "from",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 204.0,
 749.2,
@@ -1658,6 +2153,9 @@
 {
 "text": "total",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 239.2,
 749.2,
@@ -1668,6 +2166,9 @@
 {
 "text": "claim",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 272.2,
 749.2,
@@ -1678,6 +2179,9 @@
 {
 "text": "labor",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 310.5,
 749.2,
@@ -1688,6 +2192,9 @@
 {
 "text": "with",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 66.8,
 771.8,
@@ -1698,6 +2205,9 @@
 {
 "text": "day",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 99.0,
 771.8,
@@ -1708,6 +2218,9 @@
 {
 "text": "runtiness",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 126.0,
 772.5,
@@ -1718,6 +2231,9 @@
 {
 "text": "week",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 187.5,
 771.8,
@@ -1728,6 +2244,9 @@
 {
 "text": "department",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 225.0,
 771.8,
@@ -1738,6 +2257,9 @@
 {
 "text": "reference",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 300.8,
 771.8,
@@ -1748,6 +2270,9 @@
 {
 "text": "tree",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 363.0,
 773.2,
@@ -1758,6 +2283,9 @@
 {
 "text": "chromyl",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 392.2,
 771.8,
@@ -1768,6 +2296,9 @@
 {
 "text": "goods",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 794.2,
@@ -1778,6 +2309,9 @@
 {
 "text": "eatberry",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 108.8,
 794.2,
@@ -1788,6 +2322,9 @@
 {
 "text": "freemasonry",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 164.2,
 794.2,
@@ -1798,6 +2335,9 @@
 {
 "text": "micropterus",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 246.0,
 795.0,
@@ -1808,6 +2348,9 @@
 {
 "text": "unprocure",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 324.0,
 798.0,
@@ -1818,6 +2361,9 @@
 {
 "text": "return",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 391.5,
 795.8,
@@ -1828,6 +2374,9 @@
 {
 "text": "ship",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 435.0,
 794.2,
@@ -1838,6 +2387,9 @@
 {
 "text": "jumbly",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 464.2,
 794.2,
@@ -1848,6 +2400,9 @@
 {
 "text": "approved",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 816.8,
@@ -1858,6 +2413,9 @@
 {
 "text": "manicole",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 129.0,
 816.8,
@@ -1868,6 +2426,9 @@
 {
 "text": "dipterology",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 189.8,
 816.8,
@@ -1878,6 +2439,9 @@
 {
 "text": "adoperation",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 263.2,
 816.8,
@@ -1888,6 +2452,9 @@
 {
 "text": "workmanly",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 340.5,
 816.8,
@@ -1898,6 +2465,9 @@
 {
 "text": "afteract",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 414.8,
 816.8,
@@ -1908,6 +2478,9 @@
 {
 "text": "neotropic",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 465.8,
 817.5,
@@ -1918,6 +2491,9 @@
 {
 "text": "sales",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 528.8,
 816.8,
@@ -1928,6 +2504,9 @@
 {
 "text": "cost",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 564.0,
 818.2,
@@ -1938,6 +2517,9 @@
 {
 "text": "capsid",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 839.2,
@@ -1948,6 +2530,9 @@
 {
 "text": "claim",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 111.0,
 839.2,
@@ -1958,6 +2543,9 @@
 {
 "text": "unhewn",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 149.2,
 839.2,
@@ -1968,6 +2556,9 @@
 {
 "text": "engreen",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 203.2,
 843.0,
@@ -1978,6 +2569,9 @@
 {
 "text": "number",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 258.0,
 839.2,
@@ -1988,6 +2582,9 @@
 {
 "text": "kentuckian",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 311.2,
 839.2,
@@ -1998,6 +2595,9 @@
 {
 "text": "subtotal",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 384.0,
 839.2,
@@ -2008,6 +2608,9 @@
 {
 "text": "each",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 438.0,
 839.2,
@@ -2018,6 +2621,9 @@
 {
 "text": "petalomania",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 861.8,
@@ -2028,6 +2634,9 @@
 {
 "text": "call",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 147.8,
 861.8,
@@ -2038,6 +2647,9 @@
 {
 "text": "transfer",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 174.0,
 861.8,
@@ -2048,6 +2660,9 @@
 {
 "text": "in",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 227.2,
 862.5,
@@ -2058,6 +2673,9 @@
 {
 "text": "details",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 245.2,
 861.8,
@@ -2068,6 +2686,9 @@
 {
 "text": "your",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 289.5,
 865.5,
@@ -2078,6 +2699,9 @@
 {
 "text": "amount",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 323.2,
 863.2,
@@ -2088,6 +2712,9 @@
 {
 "text": "ship",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 375.8,
 861.8,
@@ -2098,6 +2725,9 @@
 {
 "text": "per",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 406.5,
 865.5,
@@ -2108,6 +2738,9 @@
 {
 "text": "change",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 67.5,
 884.2,
@@ -2118,6 +2751,9 @@
 {
 "text": "dicentrine",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 115.5,
 884.2,
@@ -2128,6 +2764,9 @@
 {
 "text": "with",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 181.5,
 884.2,
@@ -2138,6 +2777,9 @@
 {
 "text": "extinguish",
 "kind": "rare_word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 213.8,
 884.2,
@@ -2148,6 +2790,9 @@
 {
 "text": "approved",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 281.2,
 884.2,
@@ -2158,6 +2803,9 @@
 {
 "text": "for",
 "kind": "word",
+"font": "Georgia",
+"size": 18,
+"bold": false,
 "box": [
 342.8,
 884.2,

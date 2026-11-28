@@ -145,7 +145,8 @@ def render(lines) -> tuple["Image.Image", list[dict]]:
             if x + width > PAGE_W - MARGIN:  # wrap
                 x, y = MARGIN, y + int(size * 1.6)
             draw.text((x, y), t.text, font=font, fill=0)
-            words.append({"text": t.text, "kind": t.kind, "box": list(draw.textbbox((x, y), t.text, font=font))})
+            words.append({"text": t.text, "kind": t.kind, "font": font_name, "size": size, "bold": bold,
+                          "box": list(draw.textbbox((x, y), t.text, font=font))})
             x += width + space * 2
         y += int(size * (2.0 if bold else 1.7))
         if y > PAGE_H - MARGIN - size:
