@@ -111,23 +111,24 @@ def font(name: str, size: int, bold: bool = False):
 
 def compose(rng: random.Random, src: TokenSource) -> list[tuple[list[Token], str, int, bool]]:
     """Lines of a form page: (tokens, font, size, bold). Header, key-value block, line-item table, notes."""
-    font = rng.choice(FONTS)
+    font_name = rng.choice(FONTS)  # one font per page
     size = rng.randint(17, 24)
     lines: list[tuple[list[Token], str, int, bool]] = []
-    lines.append(([Token(w.upper(), "label") for w in rng.sample(["statement", "invoice", "claim", "order", "remittance"], 1)]
-                  + [src.ident()], font, size + 12, True))
+    # sample(..., 1) rather than choice: it consumes the random stream the committed pages were made with
+    title = rng.sample(["statement", "invoice", "claim", "order", "remittance"], 1)[0]
+    lines.append(([Token(title.upper(), "label"), src.ident()], font_name, size + 12, True))
     for kind_pair in rng.sample([("id", "date"), ("phone", "email"), ("date", "amount"), ("id", "phone"),
                                  ("amount", "date"), ("email", "id")], 5):
         row: list[Token] = []
         for kind in kind_pair:
             row += [Token(rng.choice(COMMON).capitalize() + ":", "label"), src.value(kind)]
-        lines.append((row, font, size, False))
-    lines.append(([Token(h, "label") for h in ("Item", "Description", "Qty", "Amount")], font, size, True))
+        lines.append((row, font_name, size, False))
+    lines.append(([Token(h, "label") for h in ("Item", "Description", "Qty", "Amount")], font_name, size, True))
     for _ in range(rng.randint(12, 15)):
         desc = [src.word() if rng.random() < 0.5 else src.rare_word() for _ in range(rng.randint(2, 3))]
-        lines.append(([src.ident(), *desc, src.quantity(), src.amount()], font, size, False))
+        lines.append(([src.ident(), *desc, src.quantity(), src.amount()], font_name, size, False))
     for _ in range(14):  # notes fill the rest of the page; render() stops at the bottom margin
-        lines.append(([src.word() if rng.random() < 0.6 else src.rare_word() for _ in range(rng.randint(6, 9))], font, size, False))
+        lines.append(([src.word() if rng.random() < 0.6 else src.rare_word() for _ in range(rng.randint(6, 9))], font_name, size, False))
     return lines
 
 
@@ -161,10 +162,22 @@ def rotate_point(x: float, y: float, cx: float, cy: float, degrees: float) -> tu
     return cx + dx * math.cos(t) + dy * math.sin(t), cy - dx * math.sin(t) + dy * math.cos(t)
 
 
+def blur_scale_fade(img, p: dict):
+    """The deterministic steps of a degradation level after rotation: blur, downscale, contrast."""
+    from PIL import Image, ImageEnhance, ImageFilter
+    if p["blur"]:
+        img = img.filter(ImageFilter.GaussianBlur(p["blur"]))
+    if p["scale"] != 1.0:
+        img = img.resize((round(img.width * p["scale"]), round(img.height * p["scale"])), Image.LANCZOS)
+    if p["fade"] != 1.0:
+        img = ImageEnhance.Contrast(img).enhance(p["fade"])
+    return img
+
+
 def degrade(img, words: list[dict], level: int, rng: random.Random, clean: bool = False):
     """Apply a level's degradations. clean=True stops after the deterministic steps (rotate, blur, scale, fade),
     giving the noise-free page the noisy one was made from; the rotation angle is drawn first, so it is the same."""
-    from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
+    from PIL import Image, ImageChops, ImageDraw
     p = LEVELS[level]
     if p["rotate"]:
         angle = rng.uniform(-p["rotate"], p["rotate"])
@@ -174,14 +187,10 @@ def degrade(img, words: list[dict], level: int, rng: random.Random, clean: bool 
             x0, y0, x1, y1 = w["box"]
             pts = [rotate_point(x, y, cx, cy, angle) for x, y in ((x0, y0), (x1, y0), (x1, y1), (x0, y1))]
             w["box"] = [min(p_[0] for p_ in pts), min(p_[1] for p_ in pts), max(p_[0] for p_ in pts), max(p_[1] for p_ in pts)]
-    if p["blur"]:
-        img = img.filter(ImageFilter.GaussianBlur(p["blur"]))
+    img = blur_scale_fade(img, p)
     if p["scale"] != 1.0:
-        img = img.resize((round(img.width * p["scale"]), round(img.height * p["scale"])), Image.LANCZOS)
         for w in words:
             w["box"] = [v * p["scale"] for v in w["box"]]
-    if p["fade"] != 1.0:
-        img = ImageEnhance.Contrast(img).enhance(p["fade"])
     if clean:
         p = {**p, "noise": 0, "speckle": 0, "jpeg": None}
     if p["noise"]:

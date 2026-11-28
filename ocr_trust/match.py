@@ -26,6 +26,7 @@ class Word:
     conf: float | None = None
     line: int | None = None
     kind: str | None = None  # synthetic labels only: word, rare_word, amount, quantity, date, id, phone, email, label
+    index: int | None = None  # labels only: position in the label file's word list
 
 
 @dataclass
@@ -42,9 +43,9 @@ def load_gt(annotation: Path) -> list[Word]:
     else:
         raw = [(w["text"], w["box"], w["kind"]) for w in data["words"]]
     words = []
-    for text, (x0, y0, x1, y1), kind in raw:
+    for k, (text, (x0, y0, x1, y1), kind) in enumerate(raw):
         if text.strip():
-            words.append(Word(text, (min(x0, x1), min(y0, y1), max(x0, x1), max(y0, y1)), kind=kind))
+            words.append(Word(text, (min(x0, x1), min(y0, y1), max(x0, x1), max(y0, y1)), kind=kind, index=k))
     return words
 
 

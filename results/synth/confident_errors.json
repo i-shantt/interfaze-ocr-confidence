@@ -1,7 +1,12 @@
 {
  "threshold": 0.9,
  "errors": 31,
- "lookalike": 28,
+ "by_category": {
+  "case": 3,
+  "lookalike": 24,
+  "other": 3,
+  "punctuation": 1
+ },
  "by_kind": {
   "amount": 1,
   "id": 21,
@@ -9,10 +14,12 @@
   "word": 4
  },
  "repeated_in_run2": 31,
+ "both_characters_read_right_elsewhere_on_page": 31,
+ "read_right_count_min": 1,
+ "read_right_count_median": 21.0,
  "noise_free_pages": 3,
- "d_prime_min": 5.3467242641,
- "d_prime_median": 28.5851778183,
- "ideal_observer_error_max": 0.0037547568,
+ "d_prime_min": 4.3399480893,
+ "d_prime_median": 23.7784522856,
  "ids_without_lowercase": {
   "accepted": 141,
   "silent_errors": 16,

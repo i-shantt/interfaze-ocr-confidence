@@ -71,17 +71,24 @@ class Pages(unittest.TestCase):
     @unittest.skipUnless(HAVE_PIL and synth.FONT_DIR.exists(), "needs Pillow and the macOS fonts")
     def test_clean_render_is_the_page_without_noise(self):
         """The noise-free render used to measure page noise lines up with the committed page: identical on a
-        level-0 page (no noise at all), and within the added noise on a rotated level-2 page."""
-        from PIL import Image
+        level-0 page; on light-scan and rotated level-2 pages, within the added noise and at most half the
+        mismatch a one-pixel shift would cause."""
+        from PIL import Image, ImageChops
         dictionary = synth.load_dictionary()
-        for page, sigma_max in (("L0_p01", 0.0), ("L2_p03", 2.5 * synth.LEVELS[2]["noise"])):
+
+        def rms(a, b) -> float:
+            x, y = a.tobytes(), b.tobytes()
+            return (sum((p - q) ** 2 for p, q in zip(x, y)) / len(x)) ** 0.5
+
+        for page in ("L0_p01", "L1_p02", "L2_p03"):
             label = json.loads((ROOT / "synth" / "labels" / f"{page}.json").read_text())
             clean, clean_label = synth.make_page(page, label["level"], label["seed"], dictionary, clean=True)
             real = Image.open(ROOT / "synth" / "images" / f"{page}.png").convert("L")
             self.assertEqual(clean_label["words"], label["words"])
-            r, c = real.tobytes(), clean.tobytes()
-            rms = (sum((x - y) ** 2 for x, y in zip(r, c)) / len(r)) ** 0.5
-            self.assertLessEqual(rms, sigma_max, page)
+            aligned = rms(real, clean)
+            self.assertLessEqual(aligned, synth.LEVELS[label["level"]]["noise"], page)
+            if label["level"]:
+                self.assertLess(aligned, 0.5 * rms(real, ImageChops.offset(clean, 1, 0)), page)
 
     def test_token_kinds(self):
         src = synth.TokenSource(random.Random(0), ["alpha", "bravo"])
