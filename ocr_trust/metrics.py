@@ -127,6 +127,16 @@ def spearman(x: Sequence[float], y: Sequence[float]) -> float:
     return cov / (sx * sy) if sx and sy else float("nan")
 
 
+def percentile_interval(values, alpha: float = 0.05) -> tuple[float, float]:
+    """Central (1 - alpha) interval of bootstrap values, NaNs dropped. With n values, as many lie below the
+    lower end as above the upper one (for n = 1000: values[25] and values[974])."""
+    vals = sorted(v for v in values if not math.isnan(v))
+    if not vals:
+        return (float("nan"), float("nan"))
+    k = math.floor(alpha / 2 * len(vals))
+    return vals[k], vals[len(vals) - 1 - k]
+
+
 def bootstrap_ci(docs: dict[str, list[tuple[float, bool]]], stat: Callable[[list[float], list[bool]], float],
                  n_boot: int = 1000, seed: int = 0, alpha: float = 0.05) -> tuple[float, float]:
     """95% interval by resampling whole documents (words within a document are not independent)."""
@@ -139,11 +149,6 @@ def bootstrap_ci(docs: dict[str, list[tuple[float, bool]]], stat: Callable[[list
             for c, y in docs[k]:
                 conf.append(c)
                 corr.append(y)
-        v = stat(conf, corr)
-        if not math.isnan(v):
-            vals.append(v)
-    vals.sort()
-    if not vals:
-        return (float("nan"), float("nan"))
-    return vals[int(alpha / 2 * len(vals))], vals[min(len(vals) - 1, int((1 - alpha / 2) * len(vals)))]
+        vals.append(stat(conf, corr))
+    return percentile_interval(vals, alpha)
 

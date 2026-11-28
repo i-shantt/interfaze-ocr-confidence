@@ -12,7 +12,7 @@ Left out of every number below: 5 documents matching `L3_*`. On them, 549 words 
 | mean stated confidence | 94.8% | 94.8% |
 | ECE, 10 bins (lower is better) | 0.020 [0.010, 0.034] | 0.018 [0.009, 0.030] |
 | Brier score | 0.030 | 0.032 |
-| AUROC, confidence separates right from wrong | 0.906 [0.875, 0.929] | 0.900 [0.866, 0.927] |
+| AUROC, confidence separates right from wrong | 0.906 [0.875, 0.928] | 0.900 [0.866, 0.927] |
 | words with confidence ≥ 0.995 | 19.2% | 19.2% |
 | their accuracy vs. labels | 100.0% | 100.0% |
 | document mean confidence vs. document error rate (Spearman) | -0.57 | -0.62 |
@@ -47,15 +47,15 @@ Silent errors: wrong words with confidence ≥ 0.9, which a review threshold at 
 
 | | words | accuracy | mean confidence | ECE | AUROC | accepted at ≥ 0.9 | silent errors | silent error rate among accepted (95% range) | share of errors that are silent |
 |---|---|---|---|---|---|---|---|---|---|
-| amount | 233 | 96.1% | 92.7% | 0.042 | 0.928 | 180 (77.3%) | 1 | 0.56% (0.00%–1.98%) | 11.1% |
+| amount | 233 | 96.1% | 92.7% | 0.042 | 0.928 | 180 (77.3%) | 1 | 0.56% (0.00%–1.97%) | 11.1% |
 | date | 40 | 100.0% | 96.7% | 0.033 | – | 37 (92.5%) | 0 | 0.00% (0.00%–0.00%) | – |
 | email | 23 | 100.0% | 83.9% | 0.161 | – | 15 (65.2%) | 0 | 0.00% (0.00%–0.00%) | – |
-| id | 256 | 77.7% | 85.4% | 0.100 | 0.717 | 147 (57.4%) | 21 | 14.29% (7.34%–21.01%) | 36.8% |
+| id | 256 | 77.7% | 85.4% | 0.100 | 0.717 | 147 (57.4%) | 21 | 14.29% (7.34%–20.93%) | 36.8% |
 | label | 225 | 99.6% | 95.8% | 0.038 | 0.915 | 198 (88.0%) | 0 | 0.00% (0.00%–0.00%) | 0.0% |
 | mixed | 1 | 100.0% | 59.0% | 0.410 | – | 0 (0.0%) | 0 | – | – |
 | phone | 25 | 100.0% | 94.7% | 0.053 | – | 20 (80.0%) | 0 | 0.00% (0.00%–0.00%) | – |
 | quantity | 205 | 99.5% | 96.8% | 0.027 | 0.995 | 192 (93.7%) | 0 | 0.00% (0.00%–0.00%) | 0.0% |
-| rare_word | 912 | 96.8% | 94.9% | 0.019 | 0.932 | 779 (85.4%) | 5 | 0.64% (0.12%–1.43%) | 17.2% |
+| rare_word | 912 | 96.8% | 94.9% | 0.019 | 0.932 | 779 (85.4%) | 5 | 0.64% (0.12%–1.42%) | 17.2% |
 | word | 1166 | 99.2% | 96.7% | 0.025 | 0.894 | 1074 (92.1%) | 4 | 0.37% (0.08%–0.87%) | 44.4% |
 
 Ranges resample whole pages (1,000 resamples).

@@ -14,6 +14,7 @@ import csv
 import fnmatch
 import json
 import math
+import random
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -90,14 +91,12 @@ def _ratio_estimate(sample: list[dict], weight: dict, pool_size: int, bad: set) 
 
 def _doc_bootstrap(sample: list[dict], fn, n_boot: int = 2000, seed: int = 0) -> tuple[float, float]:
     """95% percentile interval, resampling whole documents (checked items from one form are not independent)."""
-    import random
     by_doc: dict[str, list[dict]] = defaultdict(list)
     for a in sample:
         by_doc[a["doc"]].append(a)
     docs = sorted(by_doc)
     rng = random.Random(seed)
-    vals = sorted(fn([a for d in (rng.choice(docs) for _ in docs) for a in by_doc[d]]) for _ in range(n_boot))
-    return vals[int(0.025 * n_boot)], vals[int(0.975 * n_boot) - 1]
+    return metrics.percentile_interval(fn([a for d in (rng.choice(docs) for _ in docs) for a in by_doc[d]]) for _ in range(n_boot))
 
 
 def corrected(rows: list[dict], adjudication: list[dict]) -> dict:
