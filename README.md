@@ -1,8 +1,8 @@
 # Sure and wrong: Interfaze's OCR confidence on ID codes
 
-Interfaze's homepage suggests using its OCR confidence to *"send low-confidence values to review instead of trusting them blindly"* ([interfaze.ai](https://interfaze.ai)), and its `llms.txt` says the raw OCR in `precontext` *"is what you want for auditing or confidence thresholds."* I tested that advice on pages where the right answer for every word is known exactly, and on real scanned forms.
+Interfaze's homepage suggests using its OCR confidence to *"send low-confidence values to review instead of trusting them blindly"* ([interfaze.ai](https://interfaze.ai)), and its `llms.txt` says the raw OCR in `precontext` *"is what you want for auditing or confidence thresholds."* I tested that advice on generated pages where the right answer for every word is known exactly, and on real scanned forms.
 
-For ordinary words the advice works. For ID codes (invoice, account and policy numbers, the fields document extraction exists to capture) it doesn't. Interfaze is confidently wrong about look-alike characters, it makes the same mistake every time, and the fix only needs what is already in its response.
+For ordinary words the advice works. For ID codes such as invoice and account numbers, it doesn't: Interfaze confidently swaps look-alike characters, and a second call returns the same answer.
 
 ![Confident errors](results/synth/confident_errors.png)
 
@@ -10,23 +10,29 @@ For ordinary words the advice works. For ID codes (invoice, account and policy n
 
 ## Findings
 
-1. **Confidence is trustworthy for words.** On the exact-label pages, 10 of the 2,495 non-code words accepted at confidence ≥ 0.9 are wrong (0.4%). Calibration error is 0.018. On real scanned forms (FUNSD), words at ≥ 0.99 are about 99.6% right once label errors are taken out by hand.
+1. **For words, confidence is about right.** On the exact-label pages, 10 of the 2,495 non-code words accepted at confidence ≥ 0.9 are wrong (0.4%). On real scanned forms (FUNSD), words at ≥ 0.99 are about 99.6% right once label errors are taken out by hand.
 
-2. **It is not trustworthy for codes.** On the same pages, **21 of the 147 ID codes accepted at ≥ 0.9 are wrong (14%; page-resampled range 7–21%)**, about 35 times the rate for other words. Even at ≥ 0.99, 4 of 76 codes are wrong, against 1 of 2,063 other words. 28 of the 31 confident errors are swaps between look-alike characters (`0`/`O`/`o`, `1`/`I`/`l`, `5`/`S`, `8`/`B`). The same kind of error shows up on real scans: `lowa` for *Iowa* and `Retall` for *Retail*, both at 0.99.
+2. **For codes, it overstates.** 21 of the 147 ID codes accepted at ≥ 0.9 are wrong: **14%** (95% page-bootstrap interval 7–21%), more than ten times the rate for other words (interval 14–157×).
+   - The accepted codes average 0.97 confidence but are 86% right.
+   - At ≥ 0.99, 4 of 76 codes are wrong, against 1 of 2,063 other words.
+   - Of the 31 confident errors, 24 are look-alike swaps (`0`/`O`/`o`, `1`/`I`/`l`, `5`/`S`, `8`/`B`), 3 are capitalisation changes (`in` → `In`), 1 is punctuation (`$84.07` → `$84,07`) and 3 are other misreads.
 
-3. **The printed text was visible in the pixels.** On every noisy page, the swapped characters differ by at least 5.3 standard deviations of that page's own noise (d′, explained below). An observer who knew the font would make each of these swaps less than 0.4% of the time. Three more errors are on noise-free pages, where the image is exactly the printed text.
+3. **The page didn't make these impossible.** In all 31 cases, Interfaze read both characters of every swap correctly elsewhere on the same page, in the same font, a median of 21 times each. On the page where it read `TX-0O0OC92` as `TX-0000C92`, it read `0` correctly in 15 other places and `O` in 4.
 
-4. **Asking twice does not help, and the score does not describe the text it is attached to.** All 31 confident errors came back identically on a second run. Across 4,770 words sent twice, confidence never changed between runs, not even for the 24 words whose text did. `Scattle` and `Seattle` both scored 0.61 on the same word. Two readings of one word cannot both be right, so 0.61 cannot be the chance that each is right.
+4. **Asking again doesn't catch them.** All 31 came back identically on a second call. Across 4,770 words sent twice, confidence never changed between calls, not even for the 24 words whose text did: `Scattle` and `Seattle` both scored 0.61 for the same word. So the score doesn't describe the string it is attached to.
 
-5. **A fix with three numbers.** I recalibrated confidence using two facts already in the response: whether a word mixes letters and digits, and what share of its characters have look-alikes. At the same review budget as a 0.95 threshold, this **cuts confident code errors from 11 to 3** (fitted and tested on different pages). Fitted only on synthetic pages and applied to real FUNSD forms, it also ranks errors better there: AUROC 0.781 → 0.807, gain 0.011–0.041.
+5. **A small recalibration moves review toward codes.** The recalibration has four fitted numbers and uses two features already in the response: whether a word mixes letters and digits, and its share of look-alike characters. It reviews the same number of words as a plain threshold. The models were fitted and scored on different pages, and intervals resample pages.
+   - **At the budget of a 0.9 threshold,** confident errors fall from 31 to 22 (change −17 to −2). Code errors fall from 21 to 7; other errors rise from 10 to 15.
+   - **At the budget of a 0.95 threshold,** confident errors fall from 14 to 9 (−10 to +1, so not clearly fewer). Code errors fall from 11 to 3; other errors rise from 3 to 6.
+   - **On FUNSD,** which was never used to fit the weights, error ranking improves: AUROC 0.781 → 0.807, gain 0.011–0.041. That is a general ranking gain; FUNSD has too few codes to test the code result.
 
 ## What I'd change in Interfaze
 
-- **Make confidence aware of look-alike characters in codes.** Lower the score when a token mixes letters and digits and contains characters that have look-alikes. Better still, return a per-character confidence or the runner-up character, so a code's weakest position is visible. Today a code's score looks like a word's score, but it is far less reliable.
-- **Say what the score means.** It stays the same when the text changes between runs, so it reflects something like the image region rather than the returned string. Users choosing a review threshold need to know that.
+- **Make confidence aware of look-alike characters in codes.** A per-character confidence, or the runner-up character, would show a code's weakest position. Today a code's score looks like a word's score but is much less reliable.
+- **Say what the score measures.** It stays fixed when the returned text changes between calls, so it is not the probability that this string is right. Users choosing a review threshold need to know what it is.
 - **Smaller output fixes:**
   - Don't repeat text when one printed word is split into two boxes (`NO` + `NO.:` → `NONO.:`).
-  - Return checkboxes in one documented format (I saw 8: `[ ]`, `[x]`, `[]`, `[`, `I`, `x`, `B`, `xx`).
+  - Return checkboxes in one documented format. I saw 8 renderings, some of them misreads: `[ ]`, `[x]`, `[]`, `[`, `I`, `x`, `B`, `xx`.
   - Keep returning boxes on very degraded pages: on the worst synthetic pages, 366 of 946 words came back with no bounds.
 
 Two developer-experience points:
@@ -36,44 +42,49 @@ Two developer-experience points:
 ## Objections I expected
 
 **"Synthetic pages aren't real documents."**
-They are used where exact labels are needed: real datasets have label errors (FUNSD's do, see below), and those errors swamp a 1% effect. Two checks against real scans support the synthetic result:
-- The same look-alike errors appear in FUNSD's top confidence band.
-- The calibrator, fitted only on synthetic pages, improves error ranking on real forms it never saw.
+Exact labels need generated pages: FUNSD's labels have errors, and those errors are larger than the effects measured here. FUNSD can't test the code result directly, because it has few codes: of 87 letter-and-digit tokens at ≥ 0.9, 4 disagree with the labels and none is a look-alike swap. What FUNSD does show:
+- Look-alike swaps happen at 0.99 on real scans too, in words: `lowa` for *Iowa*, `Retall` for *Retail*.
+- The recalibration's features improve error ranking on real forms.
 
-The pages use seven common business fonts at three degradation levels, from a clean render to an office scan.
+**"Your IDs are adversarial."**
+They are random strings. About half of their characters come from the look-alike set, and they have no structure, so no prior helps. That is deliberate, and it makes the 14% an upper-end rate rather than a typical one.
 
-**"Your IDs are adversarial: random strings full of look-alikes."**
-On purpose, because that is where OCR goes wrong, and real codes contain these characters. VINs leave out I, O and Q for exactly this reason; most invoice, policy and order numbers don't.
+The finding is the gap between codes and words at the same confidence. Real formats do mix these characters; VINs leave out I, O and Q precisely because of this confusion. Some of my codes contain a lowercase `l`, which real all-caps codes rarely do. Leaving those out, 16 of 141 confident codes are still wrong (11%).
 
-The claim is about confidence, not accuracy. However hard codes are, the score should say so, and it doesn't: 14% of confident codes are wrong against 0.4% of confident words. Some of my codes contain a lowercase `l`, which real all-caps codes rarely do. Leaving those out, **16 of 141 confident codes are still wrong (11%)**.
+**"Some of those characters look identical in some fonts. Georgia's 0 looks like an o."**
+The model itself is the evidence: on each of those pages it reads both characters correctly elsewhere (finding 3). Georgia's old-style `0` read as `o` accounts for 4 of the 21 code errors, and on those pages Interfaze read `0` correctly 14–15 times and `o` 61–87 times.
 
-**"Some of those characters are identical in some fonts. Georgia's 0 looks like an o."**
-I measured it instead of arguing it. For each confident error, the printed character and the returned one are drawn alone, in the word's font and size, and put through the page's blur, downscale and contrast. The returned character may slide 3 px sideways to fit best, so width and position earn no credit. The difference is divided by the noise measured on that page, giving d′. The smallest is 5.3; Georgia's `0` read as `o` scores 40–54. Even a truly ambiguous character should get about 50% confidence, not 0.99.
+As a second, weaker check, [`confident_errors.csv`](results/synth/confident_errors.csv) gives each error's d′. That is the separation between the two characters for a template matcher that knows the font, in units of the noise on that word's ink. Every error on a noisy page scores at least 4.3. It assumes the font is known and the noise is white, so it describes the image rather than giving a probability. Either way, a near-tie should not score 0.99.
 
 **"Your labels are wrong" / "you checked them yourself."**
-The synthetic labels come from the code that drew the text: every word's text and box is known exactly. A test checks that on one page per level, rotated pages included, no ink falls outside the label boxes and every box contains ink. For FUNSD, all 130 hand-check verdicts are published with form and box, so anyone can dispute them.
+The synthetic labels come from the code that drew the text. A test checks, on one page per level, including rotated pages, that no ink falls outside the label boxes and every box contains ink. For FUNSD, all 130 hand-check verdicts are published with form and box (122 still count under the current matching rules).
 
 **"15 pages is small."**
-Every range resamples whole pages, not words. The ranges for codes (7–21%) and words (0.1–0.9%) are far apart. More pages would tighten them; the keyless API allows 50 calls a day, and these took two days of quota.
+Intervals resample whole pages. The code result rests on 147 confidently accepted codes:
+- 14 of the 21 code errors are on level-1 pages.
+- Fonts aren't balanced across levels: level 0 is Times and Trebuchet only; Georgia and Verdana appear only at levels 1–2.
+- More pages would tighten this. The keyless API allows 50 calls a day.
 
 **"`precontext` is the raw OCR; the model's final answer is corrected."**
-`precontext` is where the confidence lives, and Interfaze's own `llms.txt` points there for thresholds. I didn't test whether the structured output repairs codes. That depends on the prompt, and it carries no score to threshold on.
+`precontext` is where the confidence lives, and Interfaze's `llms.txt` points there for thresholds. I didn't test whether the structured output repairs codes. That depends on the prompt, and it carries no score to threshold on.
 
-**"You tuned the calibrator on FUNSD."**
-No. All four feature sets I tried were fitted only on synthetic pages, and FUNSD was used only to score them. All four are reported below, including the 12-feature model, which does well on synthetic pages but worse than doing nothing on FUNSD (0.765). That failure is why the proposed model is the small one.
+**"You chose the calibrator using FUNSD."**
+Partly. The weights never saw FUNSD. But I added the two small feature sets after seeing the 12-feature model do worse than nothing on FUNSD, so FUNSD is not a clean test of which features to use. The small model is also the best of the four out of fold on the synthetic pages (AUROC 0.922 against 0.916 and 0.912). Its look-alike character set is the same one the code generator over-samples. All four models are reported.
 
-**"The keyless endpoint might not be the production model."**
-Every one of the 100 responses reports `"model": "interfaze-1"`. All calls were made on 27 November 2026 (US Pacific time).
+**"Is this the production model, and was the second call cached?"**
+Every one of the 100 responses reports `"model": "interfaze-1"`. Calls were made on 27 November 2026, Pacific time. FUNSD run 1 was at 01:00. The keyless quota resets at 00:00 UTC (16:00 Pacific), and the rest ran after that.
+
+The synthetic second run came minutes after the first, so server-side caching can't be ruled out there. The FUNSD repeats were 15 hours apart and show the same pattern. Each page was sent twice, not more.
 
 ## Details
 
 ### Exact labels, by field type
 
-15 synthetic pages (levels 0–2), 3,086 words, each scored against its exact label. A *silent error* is a wrong word at or above the review threshold, so nobody looks at it. Ranges resample whole pages. Full tables: [`results/synth/REPORT.md`](results/synth/REPORT.md).
+15 synthetic pages (levels 0–2), 3,086 words, each scored against its exact label. A *silent error* is a wrong word at or above the review threshold, so nobody looks at it. Intervals are 95% page-bootstrap intervals. Full tables: [`results/synth/REPORT.md`](results/synth/REPORT.md).
 
 | field | words | accuracy | mean confidence | accepted at ≥ 0.9 | silent errors | wrong among accepted |
 |---|---|---|---|---|---|---|
-| ID code | 256 | 77.7% | 85.4% | 147 | 21 | **14.3%** (7.3–21.0%) |
+| ID code | 256 | 77.7% | 85.4% | 147 | 21 | **14.3%** (7.3–20.9%) |
 | amount | 233 | 96.1% | 92.7% | 180 | 1 | 0.6% (0–2.0%) |
 | common word | 1,166 | 99.2% | 96.7% | 1,074 | 4 | 0.4% (0.1–0.9%) |
 | rare word | 912 | 96.8% | 94.9% | 779 | 5 | 0.6% (0.1–1.4%) |
@@ -81,24 +92,28 @@ Every one of the 100 responses reports `"model": "interfaze-1"`. All calls were 
 | quantity | 205 | 99.5% | 96.8% | 192 | 0 | 0% |
 | date, phone, email | 88 | 100% | 92.8% | 72 | 0 | 0% |
 
-By level: clean renders are 99.7% right, light scans 98.4%, office scans 91.6%, with calibration error 0.008–0.042.
+One more word, whose match group spans two fields, is in the report but not this table.
 
-Level-3 pages (a bad fax at about 67 dpi) are left out of every number. Interfaze reads only 6% of their words correctly, but it says so: mean confidence is 0.32, and 0.2% of words reach 0.9. It returns 366 of their 946 words with no bounds, so word-level scoring is not meaningful there.
+By level:
+
+| level | page | words right |
+|---|---|---|
+| 0 | clean render, 150 dpi | 99.7% |
+| 1 | light scan, about 112 dpi | 98.4% |
+| 2 | rotated, faded scan, about 82 dpi | 91.6% |
+
+Level-3 pages (about 67 dpi, with speckle) are left out of every number. Interfaze reads only 6% of their words correctly, but it says so: mean confidence is 0.32, and 0.2% of words reach 0.9. It returns 366 of their 946 words with no bounds, so word-level scoring is not meaningful there.
 
 ### The confident errors
 
-[`results/synth/confident_errors.csv`](results/synth/confident_errors.csv) lists all 31, with the edits, font, d′ and whether run 2 repeated them.
-- 21 are ID codes, 5 rare words, 4 common words and 1 amount (`$84.07` read as `$84,07`).
-- Only 3 are not look-alike swaps: `eorthkin`, `tabor`, `closcal`.
+[`results/synth/confident_errors.csv`](results/synth/confident_errors.csv) has one row per error, with these columns:
+- the edits, and the category (look-alike, capitalisation, punctuation, other);
+- font and level;
+- `read_right`: how often each swapped character was read correctly elsewhere on the page;
+- d′;
+- whether the second run repeated it.
 
-How d′ is computed:
-1. Draw each printed character and the character returned in its place on their own, in the word's font and size.
-2. Apply the page's blur, downscale and contrast to both.
-3. Let the returned character slide up to 3 px sideways to its best fit.
-4. Sum the squared pixel differences over the swapped characters to get S.
-5. Measure the page's own noise, σ: re-render the whole page without noise ([`synth.make_page(clean=True)`](ocr_trust/synth.py)) and compare it with the real crop. JPEG loss counts as noise, so σ is if anything too large.
-
-Then d′ = √S / σ. An observer who knew the font and had to choose between the two characters would choose wrongly with probability Φ(−d′/2). The median d′ is 29 and the minimum 5.3.
+21 of the errors are ID codes, 5 rare dictionary words, 4 common words and 1 amount.
 
 ### Repeat runs
 
@@ -109,29 +124,41 @@ Then d′ = √S / σ. An observer who knew the font and had to choose between t
 | synthetic, levels 0–2 | 3,086 | 100% | 16 | 12 |
 | FUNSD, 10 forms | 1,684 | 100% | 8 | 8 |
 
-All the text changes are below 0.9, so a 0.9 threshold already sends them to review. Repeat-and-compare is a cheap guard a user might add, and it would not catch a single one of the 31 confident errors.
+All 24 text changes are below 0.9, so a 0.9 threshold already reviews them.
 
-### The fix
+### The recalibration
 
-[`results/synth/routing.json`](results/synth/routing.json). Each policy reviews exactly as many words as a plain threshold would (14.4% of words for 0.9, 19.2% for 0.95), so only which words get reviewed changes.
+[`results/synth/routing.json`](results/synth/routing.json). Each model reviews exactly as many words as a plain threshold would (14.4% of words for 0.9, 19.2% for 0.95), so only which words are reviewed changes.
 
-Synthetic results are out of fold: 5 folds by page, so no page is scored by a model fitted on it. FUNSD results come from models fitted on all synthetic pages and on no FUNSD data, scored against FUNSD's labels with case and punctuation ignored. AUROC gain ranges resample whole pages.
+How each column was produced:
+- **Synthetic:** out of fold, with 5 folds by page.
+- **FUNSD:** models fitted on all synthetic pages (strict labels), scored against FUNSD's labels with case and punctuation ignored.
+- **Silent errors** are given as total (codes / other words).
 
-| model | synthetic AUROC | silent errors (codes), budget of 0.9 | budget of 0.95 | FUNSD AUROC (gain) |
-|---|---|---|---|---|
-| raw confidence | 0.900 | 31 (21) | 14 (11) | 0.781 |
-| Platt scaling | 0.897 | 31 (21) | 14 (11) | 0.781 (0) |
-| + letters and digits | 0.912 | 22 (10) | 9 (6) | 0.785 (−0.000 to 0.010) |
-| **+ look-alike share** | **0.922** | **22 (7)** | **9 (3)** | **0.807 (0.011 to 0.041)** |
-| all 12 features | 0.916 | 21 (6) | 11 (3) | 0.765 (−0.035 to 0.002) |
+| model | synthetic AUROC | silent errors, budget of 0.9 | budget of 0.95 | FUNSD AUROC (gain) | FUNSD silent errors, 0.9 / 0.95 |
+|---|---|---|---|---|---|
+| raw confidence | 0.900 | 31 (21 / 10) | 14 (11 / 3) | 0.781 | 147 / 127 |
+| Platt scaling | 0.897 | 31 (21 / 10) | 14 (11 / 3) | 0.781 (0) | 147 / 127 |
+| + letters and digits | 0.912 | 22 (10 / 12) | 9 (6 / 3) | 0.785 (−0.0001 to 0.009) | 152 / 129 |
+| **+ look-alike share** | **0.922** | **22 (7 / 15)** | **9 (3 / 6)** | **0.807 (0.011 to 0.041)** | **144 / 121** |
+| all 12 features | 0.916 | 21 (6 / 15) | 11 (3 / 8) | 0.765 (−0.035 to 0.002) | 170 / 147 |
 
-The proposed model, fitted on all 3,086 synthetic words ([`results/synth/calibrator.json`](results/synth/calibrator.json)):
+How sure the look-alike model's changes from raw confidence are (95% page-bootstrap intervals; the range over 30 reshuffled fold assignments in brackets):
+
+| | total | codes | other words |
+|---|---|---|---|
+| budget of 0.9 | −9 (−17 to −2) [−14 to −7] | −14 (−20 to −6) [−16 to −13] | +5 (0 to +9) [+2 to +7] |
+| budget of 0.95 | −5 (−10 to +1) [−6 to −2] | −8 (−13 to −3) [−8 to −7] | +3 (0 to +7) [+2 to +5] |
+
+FUNSD silent errors are counted against labels that are themselves often wrong at high confidence (see below), so treat its AUROC as the cleaner comparison.
+
+The model, fitted on all 3,086 synthetic words ([`results/synth/calibrator.json`](results/synth/calibrator.json)):
 
 ```
 p(correct) = σ(1.49 + 0.81·logit(confidence) − 0.79·[mixes letters and digits] − 1.61·(share of look-alike characters))
 ```
 
-It lowers a code stated at 0.95 with 60% look-alike characters to 0.89. It raises an ordinary word stated at 0.90 to 0.96, which matches FUNSD, where the low end of the scale understates accuracy. To apply it to any Interfaze OCR response:
+Look-alike characters here are `0 O 1 l I 5 S 8 B 2 Z 6 G`. The model lowers a code stated at 0.95 with 60% look-alike characters to 0.89, and raises an ordinary word stated at 0.90 to 0.96. To apply it to an Interfaze OCR response:
 
 ```bash
 python -m ocr_trust.calibrate apply results/synth/calibrator.json response.json   # confidence, p(correct), word
@@ -143,43 +170,60 @@ The 50 test forms of [FUNSD](https://guillaumejaume.github.io/FUNSD/) (noisy bus
 
 ![FUNSD reliability](results/funsd/reliability.png)
 
-- **Top band.** 65% of words come back at ≥ 0.99, and 98.4% of them match the labels. Of 37 hand-checked disagreements there, 27 were label mistakes (the page says `638-6532` where the label has `638-5532`), 8 real OCR errors and 2 ambiguous. That puts real accuracy at an estimated **99.6%** (99.2–99.9%), against a stated 99.2%.
-- **Below 0.9 the scale understates accuracy.** These 1,362 words average 0.67 confidence but are an estimated **87% right** (78–95%), counting the words with no label under them, which were checked separately.
+- **Top band.** 65% of words come back at ≥ 0.99, and 98.4% of them match the labels. Of 37 hand-checked disagreements there:
+  - 27 were label mistakes (the page says `638-6532` where the label has `638-5532`);
+  - 8 were real OCR errors: 4 duplicated split text, 1 dropped line, and `lowa`, `Retall` and `Pago`;
+  - 2 were ambiguous.
+
+  That puts real accuracy at an estimated **99.6%** (99.2–99.9%), against a stated 99.2%.
+- **Below 0.9 the scale understates accuracy.** These 1,362 words average 0.67 confidence but are an estimated **87% right** (78–95%). That count includes the words with no label under them, which were checked separately.
 - **Ranking.** AUROC 0.78 [0.73, 0.83]. A form's mean confidence tracks its error rate (Spearman −0.62).
 - **Duplicated split text.** A printed `NO.:` comes back as `NO` (0.99) followed by a narrow box reading `NO.:`. It is flagged 9 times in 2 forms, always with the duplicate box below 0.9.
-- **Strict comparison against FUNSD mostly measures label conventions.** All 16 sampled case- or punctuation-only disagreements were label conventions or label errors. That is why FUNSD numbers ignore case and punctuation.
+- **Strict comparison against FUNSD mostly measures label conventions.** All 16 sampled case- or punctuation-only disagreements were label conventions or label errors, so FUNSD numbers ignore case and punctuation.
 
 ## How it works
 
-- **Matching** ([`match.py`](ocr_trust/match.py)). Interfaze and the labels split text differently (`Fax:614-466-5087` can be one word or two), so predicted and labelled boxes that overlap by at least half of the smaller box are joined into groups. A group is right when its text, read in row order, matches. Words returned without bounds can't be placed and aren't scored.
-- **Synthetic pages** ([`synth.py`](ocr_trust/synth.py)). Seeded and byte-for-byte reproducible. Each page has a header, a key-value block, a 12–15 row line-item table and notes, every token tagged by kind. Level 0 is a clean 150 dpi render. Level 1 adds a light scan (blur, 75% scale, noise, JPEG 70). Level 2 adds an office scan (55% scale, up to 1° rotation, faded contrast, JPEG 50). The images and labels are committed.
+- **Matching** ([`match.py`](ocr_trust/match.py)). Interfaze and the labels split text differently (`Fax:614-466-5087` can be one word or two). So predicted and labelled boxes that overlap by at least half of the smaller box are joined into groups, and a group is right when its text, read in row order, matches. Words returned without bounds can't be placed and aren't scored.
+- **Synthetic pages** ([`synth.py`](ocr_trust/synth.py)).
+  - Seeded and byte-for-byte reproducible; the images and labels are committed.
+  - One font per page, from six common fonts on the scored pages.
+  - Each page has a header, a key-value block, a 12–15 row line-item table and notes, with every token tagged by kind.
+- **Confident errors** ([`lookalike.py`](ocr_trust/lookalike.py)). Categories, same-page evidence, d′, repeat check, and the figure.
+- **Recalibration** ([`calibrate.py`](ocr_trust/calibrate.py)). Logistic regression fitted by Newton's method, equal-budget routing, and the uncertainty above.
 - **Metrics** ([`metrics.py`](ocr_trust/metrics.py)). ECE, Brier, AUROC with tied ranks, risk–coverage, and bootstraps that resample whole documents. Standard library only.
 
 ## Run it
 
-Needs Python 3.10+ and nothing else; matplotlib is optional and only draws the reliability figures.
-
 ```bash
-make check    # tests, plus rebuilding every published number from the committed CSVs (no API calls)
+make check    # tests, then rebuild the published numbers below from committed CSVs; Python 3.10+, no dependencies
 ```
 
-CI runs this on Python 3.10 and 3.13 and fails if any committed result changes. The committed CSVs hold confidences, boxes, features and right/wrong labels, but no OCR text.
+`make check` rebuilds these from `word_scores.csv` and `word_features.csv`, which hold no OCR text:
+- `summary.json` and `REPORT.md` for both datasets;
+- `routing.json`;
+- `calibrator.json`.
 
-To reproduce from scratch (the keyless API allows 50 calls a day; the client caches responses and stops cleanly at the limit, so rerun the next day; set `INTERFAZE_API_KEY` to use a key):
+CI runs it on Python 3.10 and 3.13 and fails if any of them changes.
+
+Some outputs can't be rebuilt that way:
+- `confident_errors.*`, `consistency.json` and `defects.json` need the raw responses, which aren't published. These files quote the misread words.
+- The synthetic ones also need Pillow and the macOS fonts, so the font-dependent tests skip in CI.
+
+To reproduce everything (keyless API: 50 calls a day; the client caches responses and stops cleanly at the limit; set `INTERFAZE_API_KEY` to use a key):
 
 ```bash
 make data collect collect-run2 analyze      # FUNSD: download, 50 + 10 calls, score
-make collect-synth analyze-synth            # synthetic pages: 40 calls, score; needs Pillow and the macOS fonts
+make collect-synth analyze-synth            # synthetic pages: 40 calls, score
 make sheets                                 # crops of sampled disagreements, for hand checking
 ```
 
 ## Limitations
 
-- **One run date, one model** (`interfaze-1`, keyless), and English, printed text only.
-- **15 exact-label pages.** The ranges allow for it, but the code result rests on 147 confidently accepted codes.
-- **The ID generator is mine.** It over-represents look-alike characters on purpose. The silent-error *rate* on real codes depends on how often they contain such characters; the *gap* between codes and words is the finding.
-- **One person did the FUNSD hand check**, and words between 0.90 and 0.99 weren't checked. Lenient matching counts `1.5` and `15` as equal.
-- **The calibrator has been tested on two datasets.** Users with their own labelled pages should refit it: `python -m ocr_trust.calibrate fit`.
-- **Raw API responses are not included**, because Interfaze's terms restrict redistributing output. Short quoted errors are included for discussion. FUNSD is for non-commercial research use and is downloaded from its source, not redistributed.
+- **Coverage.** One model (`interfaze-1`, keyless), one day, two calls per page. English printed text only.
+- **15 exact-label pages,** with fonts confounded with degradation level.
+- **The ID generator is mine** and over-represents look-alike characters on purpose. The *rate* on real codes depends on how often they contain such characters; the *gap* between codes and words at equal confidence is the finding.
+- **FUNSD hand check.** One person did it, and words between 0.90 and 0.99 weren't checked. Lenient matching counts `1.5` and `15` as equal.
+- **The recalibration has been tested on two datasets.** Refit it on your own labelled pages with `python -m ocr_trust.calibrate features` and `fit`.
+- **Raw API responses are not included,** because Interfaze's terms restrict redistributing output. FUNSD is for non-commercial research use and is downloaded from its source, not redistributed.
 
 Not affiliated with Interfaze.

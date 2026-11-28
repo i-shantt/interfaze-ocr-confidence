@@ -1,8 +1,7 @@
 """Does the same image give the same OCR twice?
 
-Interfaze markets itself for deterministic tasks and reports #1 on consistency benchmarks. For a review
-threshold the question is narrower: if the same page is sent twice, do the words, their confidences, and
-the side of the threshold each word falls on, stay the same?
+For a review threshold the question is: if the same page is sent twice, do the words, their confidences,
+and the side of the threshold each word falls on, stay the same?
 
 Words from two runs are paired when their boxes overlap (IoU >= 0.5, greedy by IoU); words returned
 without bounds cannot be paired and count as unpaired. Reported per image set: identical full text, share
